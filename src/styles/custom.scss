@@ -78,4 +78,16 @@ $primary: cornflowerblue;
         color: $primary;
         font-size: 1.5em;
     }
+
+    .active-nav-link {
+        color: $white;
+    }
+}
+
+.main-wrapper {
+    @media (max-width: 1000px) {
+        margin-left: 0;
+    }
+
+    margin-left: 300px;
 }

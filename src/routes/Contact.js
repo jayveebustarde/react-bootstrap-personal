@@ -1,12 +1,12 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 
-const Home = () => {
+const Contact = () => {
     return (
-        <Container className="main-wrapper">
-            test
+        <Container>
+            contact test
         </Container>
     );
 }
 
-export default Home;
+export default Contact;
