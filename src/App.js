@@ -1,7 +1,7 @@
+import './styles/custom.scss';
 import './App.css';
 import React from "react";
 import Layout from'./routes/Layout';
-import './styles/custom.scss';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './routes/Home';
 import Resume from './routes/Resume';
