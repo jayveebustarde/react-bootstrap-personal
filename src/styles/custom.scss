@@ -2,6 +2,7 @@
 
 $primary: cornflowerblue;
 
+$sidebar-width: 280px;
 
 .app-header {
     background-color: $primary;
@@ -12,7 +13,7 @@ $primary: cornflowerblue;
     bottom: 0;
     position: fixed;
     overflow-y: auto;
-    width: 280px;
+    width: $sidebar-width;
 
     @media(max-width: 1000px) {
         position: relative;
@@ -89,5 +90,5 @@ $primary: cornflowerblue;
         margin-left: 0;
     }
 
-    margin-left: 300px;
+    margin-left: $sidebar-width;
 }
