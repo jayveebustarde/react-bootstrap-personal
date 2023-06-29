@@ -1,0 +1,163 @@
+{
+    "name": "Jayvee Bustarde",
+    "position": "Full-stack .Net Developer",
+    "overview": "Lorem ipsum dolor amet",
+    "whatIDo": {
+        "overview": "I have more than 9 years experience building software for clients all over the world. Below is a quick overview of my main technical skill sets and technologies I use. Want to find out more about my experience? Check out my online resume and project portfolio.",
+        "skills": [
+            {
+                "tools": [
+                    {
+                        "icon": "Csharp",
+                        "name": "C#",
+                        "color": "#9b4f97"
+                    },
+                    {
+                        "icon": "Dotnet",
+                        "name": ".Net Framework and .Net Core",
+                        "color": "#682a7b"
+                    },
+                    {
+                        "icon": "Microsoftsqlserver",
+                        "name": "MS SQL Server",
+                        "color": "#c26166"
+                    }
+                ],
+                "title": "Backend & Database Development",
+                "overview" : "I bring extensive experience in C# and .NET, proficiently utilizing the framework's power and flexibility to construct robust, scalable applications throughout the entire software stack."
+            },
+            {
+                "tools": [
+                    {
+                        "icon": "Html5",
+                        "name": "HTML5",
+                        "color": "#e44d25"
+                    },
+                    {
+                        "icon": "Css3",
+                        "name": "CSS3",
+                        "color": "#315fa2"
+                    },
+                    {
+                        "icon": "Javascript",
+                        "name": "Javascript",
+                        "color": "#f0db4f"
+                    }
+                ],
+                "title": "Web Development",
+                "overview" : "Lorem ipsum dolor amet"
+            },
+            {
+                "tools": [
+                    {
+                        "icon": "Typescript",
+                        "name": "Typescript",
+                        "color": "#2d79c8"
+                    },
+                    {
+                        "icon": "React",
+                        "name": "React",
+                        "color": "#01d8ff"
+                    },
+                    {
+                        "icon": "Angular",
+                        "name": "Angular",
+                        "color": "#e23137 "
+                    }
+                ],
+                "title": "Frontend Libraries & Frameworks",
+                "overview" : "Lorem ipsum dolor amet"
+            },
+            {
+                "tools": [
+                    {
+                        "icon": "Nodedotjs",
+                        "name": "NodeJS",
+                        "color": "#689f63"
+                    },
+                    {
+                        "icon": "Npm",
+                        "name": "NPM",
+                        "color": "#cc0100"
+                    },
+                    {
+                        "icon": "Webpack",
+                        "name": "Webpack",
+                        "color": "#02c1f7" 
+                    }
+                ],
+                "title": "Node Development, Packages & Bundling",
+                "overview" : ""
+            },
+            {
+                "tools": [
+                    {
+                        "icon": "Microsoftazure",
+                        "name": "Azure",
+                        "color": "#217cf7"
+                    },
+                    {
+                        "icon": "Amazonaws",
+                        "name": "Amazon Web Services",
+                        "color": "#fe9901"
+                    },
+                    {
+                        "icon": "Git",
+                        "name": "Git",
+                        "color": "#f05133"
+                    }
+                ],
+                "title": "Azure & AWS Cloud Services",
+                "overview" : "Lorem ipsum dolor amet"
+            },
+            {
+                "tools": [
+                    {
+                        "icon": "Bootstrap",
+                        "name": "Bootstrap",
+                        "color": "#8412fa"
+                    },
+                    {
+                        "icon": "Sass",
+                        "name": "Sass",
+                        "color": "#c67ba2"
+                    }
+                ],
+                "title": "CSS Libraries & Frameworkds",
+                "overview" : "Lorem ipsum dolor amet"
+            },
+            {
+                "tools": [
+                    {
+                        "icon": "Mulesoft",
+                        "name": "Mulesoft",
+                        "color": "#01a1e0"
+                    },
+                    {
+                        "icon": "Postman",
+                        "name": "Postman",
+                        "color": "#fd6c34"
+                    }
+                ],
+                "title": "API Development & Testing",
+                "overview" : "Lorem ipsum dolor amet"
+            },
+            {
+                "tools": [
+                    {
+                        "icon": "Jirasoftware",
+                        "name": "Jira",
+                        "color": "#217cf7"
+                    },
+                    {
+                        "icon": "Confluence",
+                        "name": "Confluence",
+                        "color": "#217cf7"
+                    }
+                ],
+                "title": "Agile Project Management",
+                "overview" : "Lorem ipsum dolor amet"
+            }
+        ]
+    }
+}

@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { Container, Row, Col, Navbar, Nav, Image, Stack, Button } from 'react-bootstrap';
 import { BsFillPersonFill, BsFillFileTextFill, BsFillEnvelopePaperFill, BsLinkedin, BsGithub } from "react-icons/bs";
-import profileImg from "../assets/images/bwprofile.jpg";
+import profileImg from "../../assets/images/bwprofile.jpg";
 
 const CircleIconLink = () => {
     const linkedinUrl = "https://www.linkedin.com/in/jayveebustarde/";

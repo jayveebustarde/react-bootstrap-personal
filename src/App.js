@@ -1,11 +1,11 @@
 import './styles/custom.scss';
 import './App.css';
 import React from "react";
-import Layout from'./routes/Layout';
+import Layout from'./routes/Layout/Layout';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from './routes/Home';
-import Resume from './routes/Resume';
-import Contact from './routes/Contact';
+import Home from './routes/Home/Home';
+import Resume from './routes/Resume/Resume';
+import Contact from './routes/Contact/Contact';
 
 function App() {
   return (
