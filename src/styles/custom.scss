@@ -84,3 +84,12 @@ $sidebar-width: 280px;
         color: $white;
     }
 }
+
+
+.stack-justify {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+}
