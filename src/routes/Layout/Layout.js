@@ -3,6 +3,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import { Container, Row, Col, Navbar, Nav, Image, Stack, Button } from 'react-bootstrap';
 import { BsFillPersonFill, BsFillFileTextFill, BsFillEnvelopePaperFill, BsLinkedin, BsGithub } from "react-icons/bs";
 import profileImg from "../../assets/images/bwprofile.jpg";
+import PfConfig from "../../data/portfolioConfig.json"
 
 const CircleIconLink = () => {
     const linkedinUrl = "https://www.linkedin.com/in/jayveebustarde/";
@@ -37,7 +38,7 @@ const Layout = () => {
                             <Navbar expand="lg" className="flex-column">
                                 <div className="nav-header">
                                     <Navbar.Brand href="#">
-                                        <h4 className="m-auto py-3 header-brand">Jayvee Bustarde</h4>
+                                        <h4 className="m-auto py-3 header-brand">{PfConfig.name}</h4>
                                     </Navbar.Brand>
                                     <Navbar.Toggle aria-controls="sidebar-nav" />
                                 </div>

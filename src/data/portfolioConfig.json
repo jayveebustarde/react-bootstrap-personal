@@ -1,9 +1,9 @@
 {
     "name": "Jayvee Bustarde",
     "position": "Full-stack .Net Developer",
-    "overview": "Lorem ipsum dolor amet",
+    "overview": "I am a software engineer with expertise in both frontend and backend development for complex and scalable web applications. I'm constantly eager to learn and explore new web frameworks and technologies. If you're looking for someone up for challenging requirements and happy to try new technologies, please take a look at my profile and online resume. Let's connect and discuss how I can contribute to your project!",
     "whatIDo": {
-        "overview": "I have more than 9 years experience building software for clients all over the world. Below is a quick overview of my main technical skill sets and technologies I use. Want to find out more about my experience? Check out my online resume and project portfolio.",
+        "overview": "",
         "skills": [
             {
                 "tools": [
@@ -45,7 +45,7 @@
                     }
                 ],
                 "title": "Web Development",
-                "overview" : "Lorem ipsum dolor amet"
+                "overview" : "With expertise in HTML5, CSS3, and JavaScript, I create visually appealing and interactive user interfaces, incorporating modern design principles and responsive web development techniques."
             },
             {
                 "tools": [
@@ -66,7 +66,55 @@
                     }
                 ],
                 "title": "Frontend Libraries & Frameworks",
-                "overview" : "Lorem ipsum dolor amet"
+                "overview" : "Leveraging TypeScript, React, and Angular, I develop dynamic and feature-rich frontend applications, harnessing the power of these frameworks to deliver exceptional user experiences."
+            },
+            {
+                "tools": [
+                    {
+                        "icon": "Microsoftazure",
+                        "name": "Azure",
+                        "color": "#217cf7"
+                    },
+                    {
+                        "icon": "Amazonaws",
+                        "name": "Amazon Web Services",
+                        "color": "#fe9901"
+                    }
+                ],
+                "title": "Azure & AWS Cloud Services",
+                "overview" : "With my experience in both Azure and Amazon Web Services, I am capable in choosing the right cloud services, deployment, and overall management of scalable applications in the cloud."
+            },
+            {
+                "tools": [
+                    {
+                        "icon": "Mulesoft",
+                        "name": "Mulesoft",
+                        "color": "#01a1e0"
+                    },
+                    {
+                        "icon": "Postman",
+                        "name": "Postman",
+                        "color": "#fd6c34"
+                    }
+                ],
+                "title": "API Development & Testing",
+                "overview" : "I am experienced in creating web apis, api gateways and overall api development including using tools like Mulesoft and Postman."
+            },
+            {
+                "tools": [
+                    {
+                        "icon": "Bootstrap",
+                        "name": "Bootstrap",
+                        "color": "#8412fa"
+                    },
+                    {
+                        "icon": "Sass",
+                        "name": "Sass",
+                        "color": "#c67ba2"
+                    }
+                ],
+                "title": "CSS Libraries & Frameworkds",
+                "overview" : "Using libraries like Bootstrap and SASS, I create visually cohesive and responsive designs, ensuring cross-browser compatibility and efficient styling for enhanced user experiences."
             },
             {
                 "tools": [
@@ -87,60 +135,7 @@
                     }
                 ],
                 "title": "Node Development, Packages & Bundling",
-                "overview" : ""
-            },
-            {
-                "tools": [
-                    {
-                        "icon": "Microsoftazure",
-                        "name": "Azure",
-                        "color": "#217cf7"
-                    },
-                    {
-                        "icon": "Amazonaws",
-                        "name": "Amazon Web Services",
-                        "color": "#fe9901"
-                    },
-                    {
-                        "icon": "Git",
-                        "name": "Git",
-                        "color": "#f05133"
-                    }
-                ],
-                "title": "Azure & AWS Cloud Services",
-                "overview" : "Lorem ipsum dolor amet"
-            },
-            {
-                "tools": [
-                    {
-                        "icon": "Bootstrap",
-                        "name": "Bootstrap",
-                        "color": "#8412fa"
-                    },
-                    {
-                        "icon": "Sass",
-                        "name": "Sass",
-                        "color": "#c67ba2"
-                    }
-                ],
-                "title": "CSS Libraries & Frameworkds",
-                "overview" : "Lorem ipsum dolor amet"
-            },
-            {
-                "tools": [
-                    {
-                        "icon": "Mulesoft",
-                        "name": "Mulesoft",
-                        "color": "#01a1e0"
-                    },
-                    {
-                        "icon": "Postman",
-                        "name": "Postman",
-                        "color": "#fd6c34"
-                    }
-                ],
-                "title": "API Development & Testing",
-                "overview" : "Lorem ipsum dolor amet"
+                "overview" : "Through tools like Node.js, NPM, and Webpack, I streamline the development process by automating tasks, managing dependencies, and optimizing performance, enabling efficient module bundling and deployment."
             },
             {
                 "tools": [
@@ -153,10 +148,15 @@
                         "icon": "Confluence",
                         "name": "Confluence",
                         "color": "#217cf7"
+                    },
+                    {
+                        "icon": "Git",
+                        "name": "Git",
+                        "color": "#f05133"
                     }
                 ],
-                "title": "Agile Project Management",
-                "overview" : "Lorem ipsum dolor amet"
+                "title": "Source Control & Agile Project Management",
+                "overview" : "I effectively manage project workflows, track issues, manage code versions, collaborate with teams, and document development processes, ensuring efficient project management and documentation using Git, Jira and Confluence."
             }
         ]
     }

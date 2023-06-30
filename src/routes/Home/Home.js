@@ -26,7 +26,6 @@ const Home = () => {
                             </Stack>
                         </Stack>
                     </Col>
-                    <Col></Col>
                 </Row>
             </Section>
             <Section>
@@ -38,7 +37,6 @@ const Home = () => {
                             <Col key={index} xs={6} md={6} lg={3}>
                                 <SkillsCard tools={item.tools}>
                                     <h6>{item.title}</h6>
-                                    <p >{item.overview}</p>
                                 </SkillsCard>
                             </Col>
                         );
