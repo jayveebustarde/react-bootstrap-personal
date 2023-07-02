@@ -1,7 +1,7 @@
 import React from "react";
 import MainWrapper from "../../components/MainWrapper/MainWrapper";
 import Section from "../../components/Section/Section";
-import { Button, Col, Row, Stack } from "react-bootstrap";
+import { Col, Row, Stack } from "react-bootstrap";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import SkillsCard from "../../components/SkillsCard/SkillsCard";
 import PfConfig from "../../data/portfolioConfig.json"
