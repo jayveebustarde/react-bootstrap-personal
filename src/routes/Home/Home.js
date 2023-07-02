@@ -5,6 +5,8 @@ import { Button, Col, Row, Stack } from "react-bootstrap";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import SkillsCard from "../../components/SkillsCard/SkillsCard";
 import PfConfig from "../../data/portfolioConfig.json"
+import MinorText from "../../components/MinorText/MinorText";
+import PfButton from "../../components/PfButton/PfButton";
 
 const Home = () => {
     return (
@@ -17,12 +19,12 @@ const Home = () => {
                             <p className="lead">{PfConfig.position}</p>
                             <p>{PfConfig.overview}</p>
                             <Stack direction="horizontal" gap={3}>
-                                <Button variant="primary">
+                                <PfButton variant="primary">
                                     View Portfolio
-                                </Button>
-                                <Button variant="secondary">
+                                </PfButton>
+                                <PfButton variant="secondary">
                                     View Resume
-                                </Button>
+                                </PfButton>
                             </Stack>
                         </Stack>
                     </Col>
@@ -37,6 +39,7 @@ const Home = () => {
                             <Col key={index} xs={6} md={6} lg={3}>
                                 <SkillsCard tools={item.tools}>
                                     <h6>{item.title}</h6>
+                                    <MinorText>{item.overview}</MinorText>
                                 </SkillsCard>
                             </Col>
                         );

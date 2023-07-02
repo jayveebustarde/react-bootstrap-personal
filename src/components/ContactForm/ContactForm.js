@@ -1,8 +1,10 @@
 import React, { useRef, useState } from "react";
-import { Button, Col, Form, Row } from "react-bootstrap";
+import { Col, Form, Row } from "react-bootstrap";
 import emailjs from '@emailjs/browser';
+import { IoIosSend } from "react-icons/io";
 import FormInput from "../FormInput/FormInput";
 import FormTextArea from "../FormInput/FormTextArea";
+import PfButton from "../PfButton/PfButton";
 
 const ContactForm = () => {
     const [validated, setValidated] = useState(false);
@@ -50,7 +52,7 @@ const ContactForm = () => {
                     <FormTextArea required label="Message" placeholder="Message" cId="msgInput" name="message" />
                 </Form.Group>
             </Row>
-            <Button type="submit">Send</Button>
+            <PfButton type="submit"><IoIosSend /> Send Now</PfButton>
         </Form>
     );
 }
