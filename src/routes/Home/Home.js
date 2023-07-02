@@ -6,7 +6,7 @@ import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import SkillsCard from "../../components/SkillsCard/SkillsCard";
 import PfConfig from "../../data/portfolioConfig.json"
 import MinorText from "../../components/MinorText/MinorText";
-import PfButton from "../../components/PfButton/PfButton";
+// import PfButton from "../../components/PfButton/PfButton";
 
 const Home = () => {
     return (
@@ -18,14 +18,14 @@ const Home = () => {
                             <h1>{PfConfig.name}</h1>
                             <p className="lead">{PfConfig.position}</p>
                             <p>{PfConfig.overview}</p>
-                            <Stack direction="horizontal" gap={3}>
+                            {/* <Stack direction="horizontal" gap={3}>
                                 <PfButton variant="primary">
                                     View Portfolio
                                 </PfButton>
                                 <PfButton variant="secondary">
                                     View Resume
                                 </PfButton>
-                            </Stack>
+                            </Stack> */}
                         </Stack>
                     </Col>
                 </Row>
