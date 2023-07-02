@@ -53,7 +53,7 @@ const Layout = () => {
                                         </Stack>
                                         <hr />
                                         <HeaderNavLink BsIcon={BsFillPersonFill} hrefLink="/" navText="About Me" />
-                                        {/* <HeaderNavLink BsIcon={BsFillFileTextFill} hrefLink="/resume" navText="Resume" /> */}
+                                        <HeaderNavLink BsIcon={BsFillFileTextFill} hrefLink="/resume" navText="Resume" />
                                         <HeaderNavLink BsIcon={BsFillEnvelopePaperFill} hrefLink="/contact" navText="Contact" />
                                     </Nav>
                                 </Navbar.Collapse>
