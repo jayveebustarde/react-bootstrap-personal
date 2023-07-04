@@ -23,11 +23,11 @@ const SkillsCard = ({tools, children}) => {
                         const IconComponent = SiIcons[item.icon];
                         const iconStyle = { color: item.color };
                         return (
-                            <OverlayTrigger overlay={
+                            <OverlayTrigger key={index}  overlay={
                                 <Tooltip id={item.icon}>{item.name}</Tooltip>
                             } placement="top">
                                 <span>
-                                    <IconComponent key={index} style={iconStyle} className="skills-icon" />
+                                    <IconComponent style={iconStyle} className="skills-icon" />
                                 </span>
                             </OverlayTrigger>        
                         );

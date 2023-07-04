@@ -14,7 +14,7 @@ const Resume =() => {
         <MainWrapper>
             <Section isHeader>
                 <Row className="justify-content-md-center">
-                    <Col xs lg="8">
+                    <Col xs lg={8}>
                         <Stack gap={1} className="stack-justify">
                             <h1>Resume</h1>
                             <PfDlButton href={resumePdf} fileName={fileName} >
@@ -26,9 +26,11 @@ const Resume =() => {
             </Section>
             <Section>
                 <Row className="justify-content-md-center">
-                    <Col xs lg="8">
+                    <Col></Col>
+                    <Col>
                         <PdfViewer file={resumePdf}></PdfViewer>
                     </Col>
+                    <Col></Col>
                 </Row>
             </Section>
         </MainWrapper>

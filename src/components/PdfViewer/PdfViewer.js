@@ -21,6 +21,8 @@ const PdfViewer = ({ file }) => {
           <Page
             key={`page_${index + 1}`}
             pageNumber={index + 1}
+            scale={1.5}
+            className="justify-content-md-center shadow-lg my-3"
           />
         ),
       )}

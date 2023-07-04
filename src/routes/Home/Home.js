@@ -7,6 +7,8 @@ import SkillsCard from "../../components/SkillsCard/SkillsCard";
 import PfConfig from "../../data/portfolioConfig.json"
 import MinorText from "../../components/MinorText/MinorText";
 import PfButton from "../../components/PfButton/PfButton";
+import { Link } from "react-router-dom";
+import { CgFileDocument } from "react-icons/cg";
 
 const Home = () => {
     return (
@@ -19,12 +21,14 @@ const Home = () => {
                             <p className="lead">{PfConfig.position}</p>
                             <p>{PfConfig.overview}</p>
                             <Stack direction="horizontal" gap={3}>
-                                <PfButton variant="primary">
+                                {/* <PfButton variant="primary">
                                     View Portfolio
-                                </PfButton>
-                                <PfButton variant="secondary">
-                                    View Resume
-                                </PfButton>
+                                </PfButton> */}
+                                <Link to="/resume">
+                                    <PfButton variant="secondary">
+                                        <CgFileDocument /> View Resume
+                                    </PfButton>
+                                </Link>
                             </Stack>
                         </Stack>
                     </Col>
