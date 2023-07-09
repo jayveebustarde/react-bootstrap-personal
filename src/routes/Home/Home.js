@@ -50,6 +50,10 @@ const Home = () => {
                     })}
                 </Row>
             </Section>
+            <Section>
+                <SectionTitle>Where I worked</SectionTitle>
+                 
+            </Section>
         </MainWrapper>
     );
 }
