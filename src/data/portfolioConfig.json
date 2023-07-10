@@ -1,7 +1,8 @@
 {
     "name": "Jayvee Bustarde",
     "position": "Full-stack .Net Developer",
-    "overview": "I am a software engineer with expertise in both frontend and backend development for complex and scalable web applications. I'm constantly eager to learn and explore new web frameworks and technologies. If you're looking for someone up for challenging requirements and happy to try new technologies, please take a look at my profile and online resume. Let's connect and discuss how I can contribute to your project!",
+    "heading": "Hey! I am Jayvee, a software developer. Welcome to my personal website.",
+    "overview": "I am a software developer with expertise in both frontend and backend development for complex and scalable web applications. I'm constantly eager to learn and explore new web frameworks and technologies. If you're looking for someone up for challenging requirements and happy to try new technologies, please take a look at my profile and online resume. Let's connect and discuss how I can contribute to your project!",
     "whatIDo": {
         "overview": "",
         "skills": [
