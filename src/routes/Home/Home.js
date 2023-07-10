@@ -9,6 +9,7 @@ import MinorText from "../../components/MinorText/MinorText";
 import PfButton from "../../components/PfButton/PfButton";
 import { Link } from "react-router-dom";
 import { CgFileDocument } from "react-icons/cg";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
 const Home = () => {
     return (
@@ -52,7 +53,11 @@ const Home = () => {
             </Section>
             <Section>
                 <SectionTitle>Where I worked</SectionTitle>
-                 
+                <Row className="mt-2 g-5">
+                    <Col xs md={6}>
+                        <ProjectCard project={{title: "Project Title", overview : "Lorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor amet", client:"X corp"}}></ProjectCard>
+                    </Col>
+                </Row>
             </Section>
         </MainWrapper>
     );
