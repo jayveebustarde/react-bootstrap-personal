@@ -25,9 +25,9 @@ const Resume =() => {
                 </Row>
             </Section>
             <Section>
-                <Row className="justify-content-md-center">
+                <Row className="justify-content-md-center overflow-auto">
                     <Col></Col>
-                    <Col>
+                    <Col className="p-5">
                         <PdfViewer file={resumePdf}></PdfViewer>
                     </Col>
                     <Col></Col>
