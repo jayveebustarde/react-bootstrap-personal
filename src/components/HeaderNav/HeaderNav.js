@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Col, Container, Image, Nav, Navbar, Row, Stack } from "react-bootstrap";
 import { BsFillEnvelopePaperFill, BsFillFileTextFill, BsFillPersonFill, BsGithub, BsLinkedin } from "react-icons/bs";
+import { FaLaptopCode } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import profileData from "../../data/portfolioConfig.json";
 import profileImg from "../../assets/images/bwprofile.jpg"
@@ -53,6 +54,7 @@ const HeaderNav = () => {
                                     <hr />
                                     <HeaderNavLink BsIcon={BsFillPersonFill} hrefLink="/" navText="About Me" />
                                     <HeaderNavLink BsIcon={BsFillFileTextFill} hrefLink="/resume" navText="Resume" />
+                                    <HeaderNavLink BsIcon={FaLaptopCode} hrefLink="/projects" navText="Projects" />
                                     <HeaderNavLink BsIcon={BsFillEnvelopePaperFill} hrefLink="/contact" navText="Contact" />
                                 </Nav>
                             </Navbar.Collapse>
