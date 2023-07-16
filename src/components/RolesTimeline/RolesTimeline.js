@@ -10,7 +10,7 @@ const RolesTimeline = ({ roles }) => {
                 mode="VERTICAL_ALTERNATING"
                 hideControls="true"
                 disableClickOnCircle="true"
-                cardHeight="100"
+                cardHeight="150"
                 theme={{
                   primary: 'cornflowerblue'
                 }}
