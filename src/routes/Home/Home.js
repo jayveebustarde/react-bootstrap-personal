@@ -9,6 +9,7 @@ import MinorText from "../../components/MinorText/MinorText";
 import PfButton from "../../components/PfButton/PfButton";
 import { Link } from "react-router-dom";
 import { CgFileDocument } from "react-icons/cg";
+import RolesTimeline from "../../components/RolesTimeline/RolesTimeline";
 
 const Home = () => {
     return (
@@ -49,6 +50,11 @@ const Home = () => {
                         );
                     })}
                 </Row>
+            </Section>
+            <hr />
+            <Section>
+                <SectionTitle>Roles and Experience</SectionTitle>
+                <RolesTimeline roles={PfConfig.roles} />
             </Section>
         </MainWrapper>
     );

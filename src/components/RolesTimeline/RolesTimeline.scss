@@ -1,0 +1,11 @@
+@import "../../styles/custom.scss";
+
+.timeline-item-title.active {
+    background-color: transparent !important;
+}
+
+.timeline-vertical-circle {
+    .active {
+        background-color: $primary !important;
+    }
+}

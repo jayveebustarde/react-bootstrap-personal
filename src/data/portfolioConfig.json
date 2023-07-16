@@ -160,5 +160,26 @@
                 "overview" : "I effectively manage project workflows, track issues, manage code versions, collaborate with teams, and document development processes, ensuring efficient project management and documentation using Git, Jira and Confluence."
             }
         ]
-    }
+    },
+    "roles": [{
+        "title": "2022 - 2023",
+        "cardTitle": "Software Developer Consultant",
+        "cardSubtitle": "CSAM Health Group (via LuunaX) | Gothenburg, Sweden",
+        "cardDetailedText": "I was part of a consultant team developing new features and maintaining an ambulance software used by municipalities across the Nordic region."
+    },{
+        "title": "2018 - 2022",
+        "cardTitle": "Full Stack Web Engineer",
+        "cardSubtitle": "Edenred Japan (via iScale Solutions) | Makati, Philippines",
+        "cardDetailedText": "I developed and maintained multiple interconnected customer-facing websites, led and trained other developers, migrated legacy systems, implemented new architecture, and collaborated with onshore teams for API integration."
+    },{
+        "title": "2017 - 2018",
+        "cardTitle": "Senior Software Developer",
+        "cardSubtitle": "Panalitix (via Emapta) | Makati, Philippines",
+        "cardDetailedText": " I created web pages following AngularJS material design, developed RESTful Web APIs, generated code-first migrations, deployed build packages to AWS cloud, and optimized existing codes to enhance system performance for the Panalitix Engager System in Australia/USA."
+    },{
+        "title": "2014 - 2017",
+        "cardTitle": "Software Engineer",
+        "cardSubtitle": "Pointwest Innovations Corp | Quezon City, Philippines",
+        "cardDetailedText": "I wast part of an agile/scrum team that developed web applications, conducted code reviews, interpreted business requirements, optimized server response time, and addressed client-endorsed UAT issues for ABS-CBN's Full Internal Traffic System (FITS) and Pelican Corp's projects."
+    }]
 }
