@@ -114,7 +114,7 @@
                         "color": "#c67ba2"
                     }
                 ],
-                "title": "CSS Libraries & Frameworkds",
+                "title": "CSS Libraries & Frameworks",
                 "overview" : "Using libraries like Bootstrap and SASS, I create visually cohesive and responsive designs, ensuring cross-browser compatibility and efficient styling for enhanced user experiences."
             },
             {
@@ -135,7 +135,7 @@
                         "color": "#02c1f7" 
                     }
                 ],
-                "title": "Node Development, Packages & Bundling",
+                "title": "Node Development & Modules",
                 "overview" : "Through tools like Node.js, NPM, and Webpack, I streamline the development process by automating tasks, managing dependencies, and optimizing performance, enabling efficient module bundling and deployment."
             },
             {
