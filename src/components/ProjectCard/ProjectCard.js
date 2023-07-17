@@ -1,14 +1,14 @@
 import React from "react";
 import { Col, Image, Row, Stack } from "react-bootstrap";
-import projectImg from "../../assets/images/edenred.png";
 import MinorText from "../MinorText/MinorText";
 import "./ProjectCard.scss"
 
 const ProjectCard = ({ project }) => {
+    // const projImg = imp
     return (
         <Row className="project-card">
             <Col xs md={5} className="image-container">
-                <Image src={projectImg} alt="ProjectImage" className="project-card-img" />
+                <Image src={require(`../../assets/images/${project.img}`)} alt="ProjectImage" className="project-card-img" />
             </Col>
             <Col xs md={7}>
                 <Stack>

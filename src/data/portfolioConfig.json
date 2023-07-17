@@ -181,5 +181,36 @@
         "cardTitle": "Software Engineer",
         "cardSubtitle": "Pointwest Innovations Corp | Quezon City, Philippines",
         "cardDetailedText": "I wast part of an agile/scrum team that developed web applications, conducted code reviews, interpreted business requirements, optimized server response time, and addressed client-endorsed UAT issues for ABS-CBN's Full Internal Traffic System (FITS) and Pelican Corp's projects."
+    }],
+    "projects": [{
+        "id": "proj_edenred",
+        "title": "Ticket Restaurant Touch",
+        "client": "Edenred Japan",
+        "overview": "Lorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor amet",
+        "img": "proj_edenred.png"
+    },{
+        "id": "proj_panalitix",
+        "title": "Engager",
+        "client": "Panalitix",
+        "overview": "Lorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor amet",
+        "img": "proj_engager.png"
+    },{
+        "id": "proj_zipadoo",
+        "title": "Zipadoo",
+        "client": "Zipadoo",
+        "overview": "Lorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor amet",
+        "img": "proj_zipadoo.jpg"
+    },{
+        "id": "proj_paratus",
+        "title": "Paratus EMR",
+        "client": "CSAM Health",
+        "overview": "Lorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor amet",
+        "img": "proj_paratus.jpeg"
+    },{
+        "id": "proj_pmon",
+        "title": "Project Monitor & Manager",
+        "client": "Pelican Corp",
+        "overview": "Lorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor amet",
+        "img": "proj_pelican.jpg"
     }]
 }

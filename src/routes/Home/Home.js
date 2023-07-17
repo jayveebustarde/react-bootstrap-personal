@@ -16,25 +16,21 @@ const Home = () => {
     return (
         <MainWrapper>
             <Section isHeader>
-                <Row>
-                    <Col>
-                        <Stack>
-                            <h1>{PfConfig.name}</h1>
-                            <p className="lead">{PfConfig.position}</p>
-                            <p>{PfConfig.overview}</p>
-                            <Stack direction="horizontal" gap={3}>
-                                {/* <PfButton variant="primary">
-                                    View Portfolio
-                                </PfButton> */}
-                                <Link to="/resume">
-                                    <PfButton variant="secondary">
-                                        <CgFileDocument /> View Resume
-                                    </PfButton>
-                                </Link>
-                            </Stack>
-                        </Stack>
-                    </Col>
-                </Row>
+                <Stack>
+                    <h1>{PfConfig.name}</h1>
+                    <p className="lead">{PfConfig.position}</p>
+                    <p>{PfConfig.overview}</p>
+                    <Stack direction="horizontal" gap={3}>
+                        {/* <PfButton variant="primary">
+                            View Portfolio
+                        </PfButton> */}
+                        <Link to="/resume">
+                            <PfButton variant="secondary">
+                                <CgFileDocument /> View Resume
+                            </PfButton>
+                        </Link>
+                    </Stack>
+                </Stack>
             </Section>
             <Section>
                 <SectionTitle>What I do</SectionTitle>
@@ -57,12 +53,17 @@ const Home = () => {
                 <SectionTitle>Roles and Experience</SectionTitle>
                 <RolesTimeline roles={PfConfig.roles} />
             </Section>
+            <hr />
             <Section>
-                <SectionTitle>Where I worked</SectionTitle>
-                <Row className="mt-2 g-5">
-                    <Col xs md={6}>
-                        <ProjectCard project={{title: "Project Title", overview : "Lorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor amet", client:"X corp"}}></ProjectCard>
-                    </Col>
+                <SectionTitle>Projects</SectionTitle>
+                <Row className="g-5">
+                    {PfConfig.projects.map((item, index) => {
+                        return (
+                            <Col key={index} xs md={6}>
+                                <ProjectCard project={item}></ProjectCard>
+                            </Col>
+                        );
+                    })}
                 </Row>
             </Section>
         </MainWrapper>
