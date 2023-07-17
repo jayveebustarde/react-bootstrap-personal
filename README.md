@@ -1,5 +1,7 @@
 # My Portfolio Website
 
+[![Azure Static Web Apps CI/CD](https://github.com/jayveebustarde/react-bootstrap-personal/actions/workflows/azure-static-web-apps-salmon-hill-03f366300.yml/badge.svg)](https://github.com/jayveebustarde/react-bootstrap-personal/actions/workflows/azure-static-web-apps-salmon-hill-03f366300.yml)
+
 This project was bootstrapped using [Create React App](https://github.com/facebook/create-react-app).
 
 ## Other Dependencies
