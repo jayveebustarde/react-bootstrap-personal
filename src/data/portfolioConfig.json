@@ -186,31 +186,31 @@
         "id": "proj_edenred",
         "title": "Ticket Restaurant Touch",
         "client": "Edenred Japan",
-        "overview": "Lorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor amet",
+        "overview": "Complex migrations, process optimizations, and full SDLC for Edenred Japan's high-traffic web and mobile app.",
         "img": "proj_edenred.png"
     },{
         "id": "proj_panalitix",
         "title": "Engager",
         "client": "Panalitix",
-        "overview": "Lorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor amet",
+        "overview": "Design and development of multi tenant web-based tools and learning platform for accountants.",
         "img": "proj_engager.png"
     },{
         "id": "proj_zipadoo",
         "title": "Zipadoo",
         "client": "Zipadoo",
-        "overview": "Lorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor amet",
+        "overview": "Multiple 3rd party API integrations and synchronization for pulling product inventory of client vendors.",
         "img": "proj_zipadoo.jpg"
     },{
         "id": "proj_paratus",
         "title": "Paratus EMR",
         "client": "CSAM Health",
-        "overview": "Lorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor amet",
+        "overview": "Maintenance and feature development of ambulance system for real time communication with on-call doctors.",
         "img": "proj_paratus.jpeg"
     },{
         "id": "proj_pmon",
         "title": "Project Monitor & Manager",
         "client": "Pelican Corp",
-        "overview": "Lorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor amet",
+        "overview": "Feature development of multiple interconnected websites protecting underground assets in AU and NZ.",
         "img": "proj_pelican.jpg"
     }]
 }

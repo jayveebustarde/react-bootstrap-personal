@@ -34,8 +34,7 @@ const Home = () => {
             </Section>
             <Section>
                 <SectionTitle>What I do</SectionTitle>
-                <p>{PfConfig.whatIDo.overview}</p>
-                <Row className="mt-2 g-5">
+                <Row className="mt-1 g-5">
                     {PfConfig.whatIDo.skills.map((item, index) => {
                         return (
                             <Col key={index} xs={6} md={6} lg={3}>
@@ -56,7 +55,7 @@ const Home = () => {
             <hr />
             <Section>
                 <SectionTitle>Projects</SectionTitle>
-                <Row className="g-5">
+                <Row className="g-5 py-4 ">
                     {PfConfig.projects.map((item, index) => {
                         return (
                             <Col key={index} xs md={6}>

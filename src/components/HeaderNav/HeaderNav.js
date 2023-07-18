@@ -54,7 +54,7 @@ const HeaderNav = () => {
                                     <hr />
                                     <HeaderNavLink BsIcon={BsFillPersonFill} hrefLink="/" navText="About Me" />
                                     <HeaderNavLink BsIcon={BsFillFileTextFill} hrefLink="/resume" navText="Resume" />
-                                    <HeaderNavLink BsIcon={FaLaptopCode} hrefLink="/projects" navText="Projects" />
+                                    {/* <HeaderNavLink BsIcon={FaLaptopCode} hrefLink="/projects" navText="Projects" /> */}
                                     <HeaderNavLink BsIcon={BsFillEnvelopePaperFill} hrefLink="/contact" navText="Contact" />
                                 </Nav>
                             </Navbar.Collapse>
