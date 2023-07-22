@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Col, Container, Image, Nav, Navbar, Row, Stack } from "react-bootstrap";
 import { BsFillEnvelopePaperFill, BsFillFileTextFill, BsFillPersonFill, BsGithub, BsLinkedin } from "react-icons/bs";
-import { FaLaptopCode } from "react-icons/fa";
+// import { FaLaptopCode } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import profileData from "../../data/portfolioConfig.json";
 import profileImg from "../../assets/images/bwprofile.jpg"

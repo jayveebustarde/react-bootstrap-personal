@@ -58,7 +58,7 @@ const Home = () => {
                 <Row className="g-5 py-4 ">
                     {PfConfig.projects.map((item, index) => {
                         return (
-                            <Col key={index} xs md={6}>
+                            <Col key={index} sm={12} md={6}>
                                 <ProjectCard project={item}></ProjectCard>
                             </Col>
                         );
