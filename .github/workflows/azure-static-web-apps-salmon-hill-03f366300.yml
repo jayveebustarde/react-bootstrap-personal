@@ -16,6 +16,9 @@ jobs:
     name: Build and Deploy Job
     env:
       CI: false
+      REACT_APP_EMAILJS_API_KEY: ${{ secrets.REACT_APP_EMAILJS_API_KEY }}
+      REACT_APP_EMAILJS_SERVICE_ID: ${{ secrets.REACT_APP_EMAILJS_SERVICE_ID }}
+      REACT_APP_EMAILJS_TEMPLATE_ID: ${{ secrets.REACT_APP_EMAILJS_TEMPLATE_ID }}
     steps:
       - uses: actions/checkout@v3
         with:
