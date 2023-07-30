@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Chrono } from "react-chrono";
 import "../RolesTimeline/RolesTimeline.scss";
+import { ProfileDataContext } from "../../contexts/ProfileDataProvider";
 
-const RolesTimeline = ({ roles }) => {
+const RolesTimeline = () => {
+    const profile = useContext(ProfileDataContext);
     return (
         <div>
             <Chrono
-                items={roles}
+                items={profile.roles}
                 mode="VERTICAL_ALTERNATING"
                 hideControls="true"
                 disableClickOnCircle="true"

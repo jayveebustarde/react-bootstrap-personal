@@ -2,22 +2,17 @@ import React from "react";
 import MainWrapper from "../../components/MainWrapper/MainWrapper";
 import Section from "../../components/Section/Section";
 import { Link } from 'react-router-dom';
-import { Stack, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import ContactForm from "../../components/ContactForm/ContactForm";
+import PageOverview from "../../components/PageOverview/PageOverview";
 
 const Contact = () => {
     return (
         <MainWrapper>
-            <Section isHeader>
-                <Row className="justify-content-md-center">
-                    <Col xs lg="8">
-                        <Stack gap={1} className="stack-justify">
-                            <h1>Contact</h1>
-                            <p>Interested in hiring me for your project or just want to say hi? You can fill in the contact form below or send me an email to <Link to="mailto:jayvee.bustarde@gmail.com">jayvee.bustarde@gmail.com</Link></p>
-                        </Stack>
-                    </Col>
-                </Row>
-            </Section>
+            <PageOverview>
+                <h1>Contact</h1>
+                <p>Interested in hiring me for your project or just want to say hi? You can fill in the contact form below or send an email to <Link to="mailto:jayvee.bustarde@gmail.com">jayvee.bustarde@gmail.com</Link></p>
+            </PageOverview>
             <Section>
                 <Row className="justify-content-md-center">
                     <Col xs lg="8">

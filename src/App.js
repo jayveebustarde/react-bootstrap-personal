@@ -2,29 +2,57 @@ import './styles/custom.scss';
 import './App.css';
 import React from "react";
 import Layout from'./routes/Layout/Layout';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './routes/Home/Home';
 import Resume from './routes/Resume/Resume';
 import Contact from './routes/Contact/Contact';
 import ProjectDetails from './routes/ProjectDetails/ProjectDetails';
 import Projects from './routes/Projects/Projects';
+import NotFound from './routes/NotFound/NotFound';
+import ProfileDataProvider from './contexts/ProfileDataProvider';
 
 function App() {
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: "resume",
+          element: <Resume />,
+        },
+        {
+          path: "contact",
+          element: <Contact />,
+        },
+        {
+          path: "projects",
+          element: <Projects />,
+          children: [ 
+            {
+              path: "details",
+              element: <ProjectDetails />,
+            },
+          ],
+        },
+        {
+          path: "*",
+          element: <NotFound />,
+        },
+      ]
+    }
+  ]);
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route exact path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="resume" element={<Resume />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="projects" element={<Projects />} >
-              <Route path="details" element={<ProjectDetails />} />
-            </Route>
-          </Route>
-        </Routes>
-      </div>
-    </Router>
+    <RouterProvider router={router}>
+      <ProfileDataProvider>
+        <div className="App" />
+      </ProfileDataProvider>
+    </RouterProvider>
   );
 }
 

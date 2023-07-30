@@ -1,21 +1,17 @@
 import React from "react";
 import MainWrapper from "../../components/MainWrapper/MainWrapper";
 import Section from "../../components/Section/Section";
-import { Col, Row } from "react-bootstrap";
-import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import ProjectList from "../../components/ProjectList/ProjectList";
+import PageOverview from "../../components/PageOverview/PageOverview";
 
 const Projects = () => {
     return (
         <MainWrapper>
-            <Section isHeader>
+            <PageOverview>
                 <h1>Portfolio</h1>
-            </Section>
+            </PageOverview>
             <Section>
-                <Row className="mt-2 g-5">
-                    <Col xs md={6}>
-                        <ProjectCard project={{title: "Project Title", overview : "Lorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor ametLorem ipsum dolor amet", client:"X corp"}}></ProjectCard>
-                    </Col>
-                </Row>
+                <ProjectList />
             </Section>
         </MainWrapper>
     );

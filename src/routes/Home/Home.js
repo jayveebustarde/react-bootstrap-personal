@@ -1,25 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 import MainWrapper from "../../components/MainWrapper/MainWrapper";
 import Section from "../../components/Section/Section";
 import { Col, Row, Stack } from "react-bootstrap";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import SkillsCard from "../../components/SkillsCard/SkillsCard";
-import PfConfig from "../../data/portfolioConfig.json"
 import MinorText from "../../components/MinorText/MinorText";
 import PfButton from "../../components/PfButton/PfButton";
 import { Link } from "react-router-dom";
 import { CgFileDocument } from "react-icons/cg";
 import RolesTimeline from "../../components/RolesTimeline/RolesTimeline";
-import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import { ProfileDataContext } from "../../contexts/ProfileDataProvider";
+import ProjectList from "../../components/ProjectList/ProjectList";
 
 const Home = () => {
+    const profile = useContext(ProfileDataContext);
     return (
         <MainWrapper>
             <Section isHeader>
                 <Stack>
-                    <h1>{PfConfig.name}</h1>
-                    <p className="lead">{PfConfig.position}</p>
-                    <p>{PfConfig.overview}</p>
+                    <h1>{profile.name}</h1>
+                    <p className="lead">{profile.position}</p>
+                    <p>{profile.overview}</p>
                     <Stack direction="horizontal" gap={3}>
                         {/* <PfButton variant="primary">
                             View Portfolio
@@ -35,7 +36,7 @@ const Home = () => {
             <Section>
                 <SectionTitle>What I do</SectionTitle>
                 <Row className="mt-1 g-5">
-                    {PfConfig.whatIDo.skills.map((item, index) => {
+                    {profile.whatIDo.skills.map((item, index) => {
                         return (
                             <Col key={index} xs={6} md={6} lg={3}>
                                 <SkillsCard tools={item.tools}>
@@ -50,20 +51,12 @@ const Home = () => {
             <hr />
             <Section>
                 <SectionTitle>Roles and Experience</SectionTitle>
-                <RolesTimeline roles={PfConfig.roles} />
+                <RolesTimeline />
             </Section>
             <hr />
             <Section>
-                <SectionTitle>Projects</SectionTitle>
-                <Row className="g-5 py-4 ">
-                    {PfConfig.projects.map((item, index) => {
-                        return (
-                            <Col key={index} sm={12} md={6}>
-                                <ProjectCard project={item}></ProjectCard>
-                            </Col>
-                        );
-                    })}
-                </Row>
+                <SectionTitle>Featured Projects</SectionTitle>
+                <ProjectList />
             </Section>
         </MainWrapper>
     );
