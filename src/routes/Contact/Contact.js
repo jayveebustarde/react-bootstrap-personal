@@ -9,8 +9,7 @@ import PageOverview from "../../components/PageOverview/PageOverview";
 const Contact = () => {
     return (
         <MainWrapper>
-            <PageOverview>
-                <h1>Contact</h1>
+            <PageOverview title={"Contact"}>
                 <p>Interested in hiring me for your project or just want to say hi? You can fill in the contact form below or send an email to <Link to="mailto:jayvee.bustarde@gmail.com">jayvee.bustarde@gmail.com</Link></p>
             </PageOverview>
             <Section>

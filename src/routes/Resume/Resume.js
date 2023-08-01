@@ -1,29 +1,23 @@
 import React from "react";
 import MainWrapper from "../../components/MainWrapper/MainWrapper";
-import { Col, Row, Stack } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import Section from "../../components/Section/Section";
 import PdfViewer from "../../components/PdfViewer/PdfViewer";
 import resumePdf from '../../assets/files/resume.pdf';
 import { GrDocumentPdf } from "react-icons/gr";
 import PfDlButton from "../../components/PfButton/PfDlButton";
+import PageOverview from "../../components/PageOverview/PageOverview";
 
 const Resume =() => {
     const fileName = "JayveeBustarde.pdf";
 
     return (
         <MainWrapper>
-            <Section isHeader>
-                <Row className="justify-content-md-center">
-                    <Col xs lg={8}>
-                        <Stack gap={1} className="stack-justify">
-                            <h1>Resume</h1>
-                            <PfDlButton href={resumePdf} fileName={fileName} >
-                                <GrDocumentPdf /> Download Pdf
-                            </PfDlButton>
-                        </Stack>
-                    </Col>
-                </Row>
-            </Section>
+            <PageOverview title={"Resume"}>
+                <PfDlButton href={resumePdf} fileName={fileName} >
+                    <GrDocumentPdf /> Download Pdf
+                </PfDlButton>
+            </PageOverview>
             <Section>
                 <Row className="justify-content-md-center overflow-auto">
                     <Col></Col>
