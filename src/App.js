@@ -32,13 +32,11 @@ function App() {
         },
         {
           path: "projects",
-          element: <Projects />,
-          children: [ 
-            {
-              path: "details",
-              element: <ProjectDetails />,
-            },
-          ],
+          element: <Projects />
+        },
+        {
+          path: "projects/:id",
+          element: <ProjectDetails />
         },
         {
           path: "*",

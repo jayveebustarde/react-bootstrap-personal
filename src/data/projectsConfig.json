@@ -1,0 +1,39 @@
+[
+    {
+        "id": "zipadoo",
+        "title": "Zipadoo Product Sync",
+        "client": "Zipadoo",
+        "address": "Sweden",
+        "industry": "Online Retail / eCommerce",
+        "website": "https://zipadoo.se",
+        "intro": "Vendor management and API integraton for multi-vendor eCommerce platform.",
+        "image": "proj_zipadoo.jpg",
+        "requirements": [
+            "Create a web application that will manage vendor api integration with Zipadoo's woocommerce platform.",
+            "Add a form that will handle mapping of vendor products configuration and categories to zipadoo.",
+            "Setup an automted job that will upload, update and sync vendor products on a pre-defined regular schedule."
+        ],
+        "sections": [
+            {
+                "title": "Project Overview",
+                "content": [
+                    "Zipadoo is an eCommerce platform based on Sweden that aims to partner up with local merchants and vendors to create a centralized same-day delivery online retail platform within the city. The main web application uses Wordpress and Woocommerce to manage the products, orders, and everything related to the eCommerce management of the website."
+                ],
+                "images": []
+            }, {
+                "title": "The Challenge",
+                "content": [
+                    "Zipadoo faced the task of integrating a diverse array of eCommerce platforms from multiple vendors, each with its unique infrastructure. This variability demanded a tailored synchronization approach. The primary hurdle was developing a universal tool that ensured seamless integration and user experience.",
+                    "The integration challenge was multi-faceted: while many vendors operated on major eCommerce systems like Shopify and WooCommerce, others utilized niche platforms like BoxNet and Jetshop. Some vendors, limited in their digital capabilities, only provided inventory access through XML files from their Google Shopping feed. Simplifying and unifying these varied approaches was essential to realize Zipadoo's vision."
+                ],
+                "images": []
+            },{
+                "title": "Utilizing Google Shopping Feed",
+                "content": [
+                    "Zipadoo faced challenges integrating diverse vendors' platforms, but the common use of Google Shopping Feed by many vendors provided a solution. This feed, popular among vendors, presented product details in a consistent XML format, making data extraction easier for Zipadoo. By tapping into these pre-existing feeds, Zipadoo efficiently unified various vendors, streamlining product listings and simplifying the overall integration process."
+                ],
+                "images": ["integrations.png"]
+            }
+        ]
+    }
+]

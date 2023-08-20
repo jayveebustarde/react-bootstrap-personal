@@ -7,9 +7,7 @@ import PageOverview from "../../components/PageOverview/PageOverview";
 const Projects = () => {
     return (
         <MainWrapper>
-            <PageOverview>
-                <h1>Portfolio</h1>
-            </PageOverview>
+            <PageOverview title={"Portfolio"} />
             <Section>
                 <ProjectList />
             </Section>
