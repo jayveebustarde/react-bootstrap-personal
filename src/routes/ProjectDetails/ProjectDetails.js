@@ -13,8 +13,19 @@ const ProjectSection = ({ projectSection }) => {
     return (
         <section className="mb-3">
             <h4 className="fw-bold">{projectSection.title}</h4>
-            {projectSection.content.map((item, ix) => <p key={ix}>{item}</p>)}
-            {projectSection.images.map((img, ix) => <Image key={ix} src={require(`../../assets/images/${img}`)} />)}
+            <Row>
+                <Col lg={projectSection.imgInline ? 6 : 12}>
+                    {projectSection.content.map((item, ix) => <p key={ix}>{item}</p>)}
+                </Col>
+                {projectSection.imgInline && (
+                    <Col lg={6}>
+                        <Image className="project-section-img" src={require(`../../assets/images/${projectSection.images[0]}`)} />
+                    </Col>
+                )}
+            </Row>
+            {projectSection.images && projectSection.images.length > 0 && !projectSection.imgInline && (
+                <Row> {projectSection.images.map((img, ix) => <Col key={ix} lg={6}><Image className="project-section-img" src={require(`../../assets/images/${img}`)} /></Col>)} </Row>)
+            }
         </section>
     );
 }
@@ -44,7 +55,7 @@ const ProjectDetails = () => {
             </PageOverview>
             <Section>
                 <Stack>
-                    <Row className="project-overview p-3 mx-0 mb-3">
+                    <Row className="project-overview p-3 mx-0 mb-5">
                         <Col lg="3" className="project-image-container">
                             <Image src={require(`../../assets/images/${project.image}`)} alt="ProjectImage" className="project-intro-img rounded-2" />
                         </Col>

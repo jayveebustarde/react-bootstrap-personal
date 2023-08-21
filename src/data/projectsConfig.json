@@ -9,9 +9,9 @@
         "intro": "Vendor management and API integraton for multi-vendor eCommerce platform.",
         "image": "proj_zipadoo.jpg",
         "requirements": [
-            "Create a web application that will manage vendor api integration with Zipadoo's woocommerce platform.",
-            "Add a form that will handle mapping of vendor products configuration and categories to zipadoo.",
-            "Setup an automted job that will upload, update and sync vendor products on a pre-defined regular schedule."
+            "Develop a web application to manage vendor API integrations with Zipadoo's WooCommerce platform.",
+            "Implement a mapping form for vendor product configurations and category alignment with Zipadoo.",
+            "Establish automated synchronization for regular product uploads, updates, and inventory management from various vendor sources, including APIs and web crawlers."
         ],
         "sections": [
             {
@@ -19,20 +19,33 @@
                 "content": [
                     "Zipadoo is an eCommerce platform based on Sweden that aims to partner up with local merchants and vendors to create a centralized same-day delivery online retail platform within the city. The main web application uses Wordpress and Woocommerce to manage the products, orders, and everything related to the eCommerce management of the website."
                 ],
-                "images": []
+                "images": ["butiker.png"],
+                "imgInline": true
             }, {
                 "title": "The Challenge",
                 "content": [
                     "Zipadoo faced the task of integrating a diverse array of eCommerce platforms from multiple vendors, each with its unique infrastructure. This variability demanded a tailored synchronization approach. The primary hurdle was developing a universal tool that ensured seamless integration and user experience.",
                     "The integration challenge was multi-faceted: while many vendors operated on major eCommerce systems like Shopify and WooCommerce, others utilized niche platforms like BoxNet and Jetshop. Some vendors, limited in their digital capabilities, only provided inventory access through XML files from their Google Shopping feed. Simplifying and unifying these varied approaches was essential to realize Zipadoo's vision."
                 ],
-                "images": []
+                "images": ["integrations.png", "piechart.png"]
             },{
                 "title": "Utilizing Google Shopping Feed",
                 "content": [
                     "Zipadoo faced challenges integrating diverse vendors' platforms, but the common use of Google Shopping Feed by many vendors provided a solution. This feed, popular among vendors, presented product details in a consistent XML format, making data extraction easier for Zipadoo. By tapping into these pre-existing feeds, Zipadoo efficiently unified various vendors, streamlining product listings and simplifying the overall integration process."
                 ],
-                "images": ["integrations.png"]
+                "images": []
+            },{
+                "title": "API-Driven Inventory Integration",
+                "content": [
+                    "Addressing the distinct challenges posed by different eCommerce platforms, Zipadoo further tapped into the APIs of Shopify, WooCommerce, and Sitoo to effectively integrate vendor inventories. This integration was pivotal to ensuring real-time consistency across products displayed on Zipadoo's platform. It wasn't just about showcasing products; it was vital that Zipadoo's inventory mirrored the actual stock availability from each vendor, regardless of their primary platform. Utilizing these APIs allowed for an agile approach to inventory management, ensuring that whether a customer was viewing a product from a major eCommerce system or a niche platform, the stock information was accurate, enhancing user trust and streamlining the purchase process."
+                ],
+                "images": []
+            },{
+                "title": "Customized Web Crawlers for Seamless Data Retrieval",
+                "content": [
+                    "To address vendors that didn't readily provide API access or those on unconventional platforms, Zipadoo employed customized web crawlers. These specialized crawlers were designed to navigate vendor websites, meticulously extracting product data and inventory details. By regularly scanning and retrieving essential product information, these crawlers filled the gaps where traditional API integration might not have been feasible. This ensured that even for the most unconventional or less digitally-equipped vendors, their products and inventories were consistently updated on Zipadoo, ensuring a comprehensive and up-to-date product catalog for users."
+                ],
+                "images": []
             }
         ]
     }
