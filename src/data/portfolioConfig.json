@@ -182,7 +182,15 @@
         "cardSubtitle": "Pointwest Innovations Corp | Quezon City, Philippines",
         "cardDetailedText": "I wast part of an agile/scrum team that developed web applications, conducted code reviews, interpreted business requirements, optimized server response time, and addressed client-endorsed UAT issues for ABS-CBN's Full Internal Traffic System (FITS) and Pelican Corp's projects."
     }],
-    "projects": [{
+    "projects": [
+    {
+        "id": "proj_zipadoo",
+        "title": "Zipadoo",
+        "client": "Zipadoo",
+        "overview": "Multiple 3rd party API integrations and synchronization for pulling product inventory of client vendors.",
+        "img": "proj_zipadoo.jpg",
+        "isFeatured": true
+    },{
         "id": "proj_edenred",
         "title": "Ticket Restaurant Touch",
         "client": "Edenred Japan",
@@ -194,12 +202,6 @@
         "client": "Panalitix",
         "overview": "Design and development of multi tenant web-based tools and learning platform for accountants.",
         "img": "proj_engager.png"
-    },{
-        "id": "proj_zipadoo",
-        "title": "Zipadoo",
-        "client": "Zipadoo",
-        "overview": "Multiple 3rd party API integrations and synchronization for pulling product inventory of client vendors.",
-        "img": "proj_zipadoo.jpg"
     },{
         "id": "proj_paratus",
         "title": "Paratus EMR",

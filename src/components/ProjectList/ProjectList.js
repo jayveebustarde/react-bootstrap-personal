@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Col, Row } from "react-bootstrap";
 import ProjectCard from "../ProjectCard/ProjectCard";
-import { ProfileDataContext } from "../../contexts/ProfileDataProvider";
+import { ProfileDataContext } from "../../contexts/ProfileContext/ProfileContext";
 
 const ProjectList = () => {
     const profile = useContext(ProfileDataContext);

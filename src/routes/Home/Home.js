@@ -9,7 +9,7 @@ import PfButton from "../../components/PfButton/PfButton";
 import { Link } from "react-router-dom";
 import { CgFileDocument } from "react-icons/cg";
 import RolesTimeline from "../../components/RolesTimeline/RolesTimeline";
-import { ProfileDataContext } from "../../contexts/ProfileDataProvider";
+import { ProfileDataContext } from "../../contexts/ProfileContext/ProfileContext";
 import ProjectList from "../../components/ProjectList/ProjectList";
 
 const Home = () => {

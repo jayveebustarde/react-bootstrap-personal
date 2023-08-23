@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Chrono } from "react-chrono";
 import "../RolesTimeline/RolesTimeline.scss";
-import { ProfileDataContext } from "../../contexts/ProfileDataProvider";
+import { ProfileDataContext } from "../../contexts/ProfileContext/ProfileContext";
 
 const RolesTimeline = () => {
     const profile = useContext(ProfileDataContext);

@@ -9,7 +9,8 @@ import Contact from './routes/Contact/Contact';
 import ProjectDetails from './routes/ProjectDetails/ProjectDetails';
 import Projects from './routes/Projects/Projects';
 import NotFound from './routes/NotFound/NotFound';
-import ProfileDataProvider from './contexts/ProfileDataProvider';
+import ProfileProvider from './contexts/ProfileContext/ProfileProvider';
+import ProjectProvider from './contexts/ProjectContext/ProjectProvider';
 
 function App() {
 
@@ -46,11 +47,13 @@ function App() {
     }
   ]);
   return (
-    <RouterProvider router={router}>
-      <ProfileDataProvider>
-        <div className="App" />
-      </ProfileDataProvider>
-    </RouterProvider>
+    <ProfileProvider>
+      <ProjectProvider>
+        <RouterProvider router={router}>
+            <div className="App" />
+        </RouterProvider>
+      </ProjectProvider>
+    </ProfileProvider>
   );
 }
 
