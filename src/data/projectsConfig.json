@@ -107,6 +107,7 @@
                 "Edenred Japan's Beneficiary Systems were at a crossroads. Their legacy system, although once cutting-edge, was no longer meeting the evolving demands of the beneficiaries. The key challenges? An outdated framework, disjointed customer-facing sites, and a lack of efficient data connectivity across platforms."
             ],
             "isMainSection": true,
+            "fullWidthImg": true,
             "images": ["trtss.png"]
         },{
             "title": "The Solution Journey",
@@ -129,29 +130,53 @@
                 "This shift to Azure modernized our infrastructure, setting us up for future growth and adaptability."
             ]
         },{
-            "title": "Evolving as a Team Leader:",
+            "title": "Team Formation and System Overhaul",
             "content": [
-                "As the project grew, so did our team. I took on the mantle of training and guiding newer members. Together, we standardized our coding practices, discussed project nuances, and brainstormed innovative solutions."
-            ]
+                "Following the infrastructure updates, the Japan office recognized the need for a more centralized team to manage the back office system. They tasked me with forming a new team in the Philippines, with the goal to transition responsibilities from the previous team based in India.",
+                "This changeover process involved a significant knowledge transfer phase. Members from the Indian team shared their insights, workflows, and system intricacies to ensure that the new Philippine team could pick up where they left off without any gaps in operations.",
+                "Part of this transition also demanded a technology upgrade. We decided to move from the older .Net framework to the more modern .Net Core. This transition promised better performance, modularity, and cross-platform capabilities. Alongside this, we also migrated our code repository. The sources previously held in SourceSafe were transitioned to Azure Git, offering a more robust and collaborative version control system.",
+                "Overall, this move aimed to enhance our back office operations, ensuring more streamlined processes and a cohesive team structure."
+            ],
+            "imgInline": true,
+            "images": ["erjpteam.jpeg"]
         },{
-            "title": "Tackling Legacy System Migration",
+            "title": "MuleSoft API Gateway Implementation",
             "content": [
-                "One of the more daunting tasks was transitioning away from the old framework. Using Azure DevOps, I steered the project to migrate to a fresher .Net framework, ensuring we didn’t miss a beat during the transition."
-            ]
+                "In parallel with the ongoing systems migrations and team formation, another pivotal task was handed to me: the integration of a MuleSoft API gateway. Edenred Global had specific requirements regarding the Ticket Restaurant API contracts, which were fundamental across all Edenred systems globally. My primary responsibility was to ensure that this API gateway not only adhered to MuleSoft's best practices but was also tailored to suit Edenred Japan's unique business operations.",
+                "The challenge was intricate; I was to construct a three-tier API that would bridge the gap between the global contract requirements and the specific backend system for Edenred Japan. This undertaking was made possible through a close-knit collaboration with the API and mobile app team based in France. Our joint efforts were instrumental in rolling out a backend that was compatible with Edenred Japan's needs and could be effortlessly consumed by the newly unveiled mobile application.",
+                "A crucial aspect of this API development was ensuring its robustness, especially given the predictable surges in traffic. I recognized that lunchtime would witness a spike in users accessing the app to scout for restaurants. To address this, I focused on enhancing the API's scalability and elasticity. This way, the system was adept at accommodating the increased workload during peak hours, ensuring users had a seamless and responsive experience when using the app."
+            ],
+            "images": ["erjpmule.png"]
         },{
-            "title": "Iterative Improvements",
+            "title": "The Result",
             "content": [
-                "While the core system was taking shape, I consistently sought ways to enhance it. This meant refining web pages, rolling out new modules, and integrating innovative implementations based on stakeholder feedback."
+                "The entire journey of overhauling Edenred Japan's system and transitioning teams, along with implementing a modern API gateway, culminated in a series of noteworthy results:"
+            ],
+            "isMainSection": true
+        }, {
+            "title": "Enhanced Efficiency:",
+            "content": [
+                "With a centralized team in the Philippines, a shift to Azure cloud, and a streamlined back office, we significantly reduced system redundancies and operational bottlenecks. The transition enabled more rapid responses to challenges and paved the way for agile software development."
             ]
-        },{
-            "title": "Architecting for the Future",
+        }, {
+            "title": "Seamless User Experience:",
             "content": [
-                "Recognizing the vital role of efficient data exchange, I ventured into the design and execution of an API gateway. With Mulesoft API tools and Anypoint Studio at our disposal, we bridged the container app for seamless consumption."
+                "The MuleSoft API Gateway's implementation, tailored to Edenred Japan's needs, allowed for smooth interaction between the mobile app and backend system. Especially during peak usage times, the optimizations ensured users had a responsive and uninterrupted experience when accessing restaurant information."
             ]
-        },{
-            "title": "Seamless Connectivity",
+        }, {
+            "title": "Cohesive Global Collaboration:",
             "content": [
-                "Collaboration was a cornerstone of our success. I frequently synced with onshore teams, ensuring our web services and system connectivity meshed perfectly with broader organizational goals."
+                "Working closely with teams from different parts of the world, particularly France, showcased the power of collaborative efforts in IT projects. It underlined the importance of knowledge sharing and leveraging global expertise to meet local business needs."
+            ]
+        }, {
+            "title": "Future-Ready Infrastructure: ",
+            "content": [
+                "The transitions and upgrades carried out ensured that Edenred Japan's systems were not just meeting current demands but were also equipped to handle future growth and changes in the industry. The adoption of .Net Core and the shift to Azure Git meant that the systems were built on modern tech stacks that would remain relevant and efficient in the years to come."
+            ]
+        }, {
+            "title": "Positive Business Impact:",
+            "content": [
+                "All these changes directly translated to business benefits. With optimized systems and processes, Edenred Japan was better positioned to serve its customers, maintain its leading position in the market, and explore new opportunities for expansion and innovation."
             ]
         }]
     }

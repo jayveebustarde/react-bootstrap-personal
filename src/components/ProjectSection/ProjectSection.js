@@ -8,7 +8,7 @@ const ProjectSection = ({ projectSection }) => {
             {projectSection.content && (
                 <Row>
                     <Col xl={projectSection.imgInline ? 6 : 12}>
-                        {projectSection.content.map((item, ix) => <p key={ix}>{item}</p>)}
+                        {projectSection.content.map((item, ix) => <p key={ix} className="text-justify">{item}</p>)}
                     </Col>
                     {projectSection.imgInline && (
                         <Col xl={6}>
@@ -18,10 +18,13 @@ const ProjectSection = ({ projectSection }) => {
                 </Row>)}
             {projectSection.images && projectSection.images.length > 0 && !projectSection.imgInline && (
                 <Row className="my-3">
+                    {projectSection.images.length === 1 && <Col />}
                     {projectSection.images.map((img, ix) => (
-                        <Col key={ix} lg={12/(projectSection.images.length)}>
+                        <Col key={ix} lg={projectSection.images.length === 1 && projectSection.fullWidthImg ? 12 : 6}>
                             <Image className="project-section-img rounded-3" src={require(`../../assets/images/${img}`)} />
-                        </Col>))}
+                        </Col>))
+                    }
+                    {projectSection.images.length === 1 && <Col />}
                 </Row>)
             }
         </section>
