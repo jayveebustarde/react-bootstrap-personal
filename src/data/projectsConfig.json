@@ -76,5 +76,83 @@
             }
 
         ]
+    }, {
+        "id": "erjp",
+        "title": "Modernization of Beneficiary Systems",
+        "client": "Edrenred Japan",
+        "address": "Tokyo, Japan",
+        "industry": "Employee Benefits (B2B)",
+        "website": "https://edenred.jp/",
+        "intro": "Revamping digital infrastructure and enhancing user experience for Edenred (Japan) beneficiaries.",
+        "image": "proj_edenred.png",
+        "requirements": [
+            "Design and develop cohesive and integrated customer-facing websites, ensuring seamless navigation and a user-friendly experience for Edenred's beneficiaries in Japan.",
+            "Transition from the legacy system to an updated .Net solution, maintaining data integrity and ensuring uninterrupted services during the migration phase.",
+            "Implement a robust Mulesoft API gateway to enable efficient data exchange across platforms and better system connectivity"
+        ],
+        "sections": [{
+            "title": "Project Overview",
+            "content": [
+                "Edenred, a global giant in the realm of transactional solutions, has carved a unique niche in Japan. While they offer a variety of services, one that stands out prominently is the 'Ticket Restaurant' system.",
+                "'Ticket Restaurant' encapsulates Edenred's essence. It's a simple yet powerful concept: businesses provide their employees with meal vouchers. These vouchers, or 'tickets,' are then accepted by a vast network of eateries, cafes, and restaurants. This not only ensures that employees have access to quality meals but also drives footfall to associated eateries, fostering a win-win ecosystem.",
+                "In Japan, a country where work culture is deeply ingrained, such a benefit is more than just a meal ticket. It's a gesture of appreciation, a nod to the employee's hard work. Moreover, for the local restaurants, it's an opportunity to welcome new patrons, ensuring a steady flow of customers, especially during typical business hours.",
+                "By seamlessly blending this global concept with the unique tastes and preferences of the Japanese populace, Edenred Japan champions a harmonious balance. They connect businesses to restaurants, employees to delightful meals, and create a cycle of mutual benefit and appreciation."
+            ],
+            "images": ["erjphow.png", "trtsteps.png"],
+            "isMainSection": true
+        },{
+            "title": "The Challenge",
+            "content": [
+                "Upon joining iScale Solutions in June 2018 as a Full-Stack Web Engineer, I was immediately intrigued by the challenges and opportunities presented by the Edenred Japan Beneficiary Systems project. Over the next four years, I dove deep into reimagining the platform to cater to the dynamic needs of our beneficiaries.",
+                "Edenred Japan's Beneficiary Systems were at a crossroads. Their legacy system, although once cutting-edge, was no longer meeting the evolving demands of the beneficiaries. The key challenges? An outdated framework, disjointed customer-facing sites, and a lack of efficient data connectivity across platforms."
+            ],
+            "isMainSection": true,
+            "images": ["trtss.png"]
+        },{
+            "title": "The Solution Journey",
+            "isMainSection": true
+        },{
+            "title": "Centralizing and Refactoring Web Application Backends",
+            "content": [
+                "One of my initial tasks was to overhaul the backend architecture of the web applications. Even though the beneficiary, client, and admin websites operated from a single SQL database, they lacked unified services. There was a substantial amount of duplicated code across these applications, complicating maintenance and making synchronized updates cumbersome.",
+                "Using C# and ASP.Net MVC, I deconstructed the previous hefty system into concise, efficient components. Each was designed to function independently, yet also efficiently interlink when required. Leveraging Entity Framework, I harmonized access to our existing MSSQL database, ensuring every section of our applications could swiftly and seamlessly tap into the necessary data. This not only streamlined processes but also eliminated redundant data instances.",
+                "Furthermore, as I delved into these updates, I found opportunities to optimize and refine various code segments and algorithms. The revised structure also made it more straightforward to integrate third-party APIs from external vendors, enhancing the versatility and capabilities of our applications."
+            ],
+            "imgInline": true,
+            "images": ["trtbe.png"]
+        },{
+            "title": "Transitioning to Azure Cloud",
+            "content": [
+                "After updating the backend architecture, the next step was modernizing our infrastructure. Our existing on-premises setup was functional, but moving to a cloud platform like Azure promised better scalability and efficiency.",
+                "Working alongside the Infrastructure team, we initiated the migration process. First, we shifted our database to an Azure VM instance, ensuring smooth data transition and optimized operations. Next, our web application was relocated to Azure, capitalizing on its enhanced security and performance features.",
+                "To streamline our development processes, we utilized Azure DevOps repositories for better version control. The introduction of a Continuous Integration/Continuous Deployment (CI/CD) pipeline was a game-changer. It automated testing and deployment of code updates, making our release cycles faster and more reliable.",
+                "This shift to Azure modernized our infrastructure, setting us up for future growth and adaptability."
+            ]
+        },{
+            "title": "Evolving as a Team Leader:",
+            "content": [
+                "As the project grew, so did our team. I took on the mantle of training and guiding newer members. Together, we standardized our coding practices, discussed project nuances, and brainstormed innovative solutions."
+            ]
+        },{
+            "title": "Tackling Legacy System Migration",
+            "content": [
+                "One of the more daunting tasks was transitioning away from the old framework. Using Azure DevOps, I steered the project to migrate to a fresher .Net framework, ensuring we didn’t miss a beat during the transition."
+            ]
+        },{
+            "title": "Iterative Improvements",
+            "content": [
+                "While the core system was taking shape, I consistently sought ways to enhance it. This meant refining web pages, rolling out new modules, and integrating innovative implementations based on stakeholder feedback."
+            ]
+        },{
+            "title": "Architecting for the Future",
+            "content": [
+                "Recognizing the vital role of efficient data exchange, I ventured into the design and execution of an API gateway. With Mulesoft API tools and Anypoint Studio at our disposal, we bridged the container app for seamless consumption."
+            ]
+        },{
+            "title": "Seamless Connectivity",
+            "content": [
+                "Collaboration was a cornerstone of our success. I frequently synced with onshore teams, ensuring our web services and system connectivity meshed perfectly with broader organizational goals."
+            ]
+        }]
     }
 ]
