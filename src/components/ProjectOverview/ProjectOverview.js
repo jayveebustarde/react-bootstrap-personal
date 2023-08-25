@@ -7,7 +7,7 @@ import { ProjectContext } from "../../contexts/ProjectContext/ProjectContext";
 const ProjectOverview = () => {
     const { project } = useContext(ProjectContext);
     return (
-        <Row className="project-overview p-3 mx-0 mb-5">
+        <Row className="project-overview p-3 mx-0 mb-5 gx-5">
             <Col lg="3" className="project-image-container">
                 <Image src={require(`../../assets/images/${project.image}`)} alt="ProjectImage" className="project-intro-img rounded-2" />
             </Col>

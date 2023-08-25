@@ -184,18 +184,21 @@
     }],
     "projects": [
     {
-        "id": "proj_zipadoo",
+        "id": "zipadoo",
         "title": "Zipadoo",
         "client": "Zipadoo",
         "overview": "Multiple 3rd party API integrations and synchronization for pulling product inventory of client vendors.",
         "img": "proj_zipadoo.jpg",
-        "isFeatured": true
+        "isFeatured": true,
+        "hasCaseStudy": true
     },{
-        "id": "proj_edenred",
-        "title": "Ticket Restaurant Touch",
+        "id": "erjp",
+        "title": "Ticket Restaurant",
         "client": "Edenred Japan",
         "overview": "Complex migrations, process optimizations, and full SDLC for Edenred Japan's high-traffic web and mobile app.",
-        "img": "proj_edenred.png"
+        "img": "proj_edenred.png",
+        "isFeatured": true,
+        "hasCaseStudy": true
     },{
         "id": "proj_panalitix",
         "title": "Engager",

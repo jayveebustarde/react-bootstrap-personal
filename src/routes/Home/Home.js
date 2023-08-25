@@ -7,10 +7,11 @@ import SkillsCard from "../../components/SkillsCard/SkillsCard";
 import MinorText from "../../components/MinorText/MinorText";
 import PfButton from "../../components/PfButton/PfButton";
 import { Link } from "react-router-dom";
-import { CgFileDocument } from "react-icons/cg";
+import { BsFileText } from "react-icons/bs";
 import RolesTimeline from "../../components/RolesTimeline/RolesTimeline";
 import { ProfileDataContext } from "../../contexts/ProfileContext/ProfileContext";
 import ProjectList from "../../components/ProjectList/ProjectList";
+import ProjectsLink from "../../components/ProjectsLink/ProjectsLink";
 
 const Home = () => {
     const profile = useContext(ProfileDataContext);
@@ -22,12 +23,10 @@ const Home = () => {
                     <p className="lead">{profile.position}</p>
                     <p>{profile.overview}</p>
                     <Stack direction="horizontal" gap={3}>
-                        {/* <PfButton variant="primary">
-                            View Portfolio
-                        </PfButton> */}
+                        <ProjectsLink />
                         <Link to="/resume">
                             <PfButton variant="secondary">
-                                <CgFileDocument /> View Resume
+                                <BsFileText className="fs-5" /> View Resume
                             </PfButton>
                         </Link>
                     </Stack>
@@ -56,7 +55,10 @@ const Home = () => {
             <hr />
             <Section>
                 <SectionTitle>Featured Projects</SectionTitle>
-                <ProjectList />
+                <ProjectList featuredOnly />
+                <Row>
+                    <ProjectsLink />
+                </Row>
             </Section>
         </MainWrapper>
     );

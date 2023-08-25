@@ -1,0 +1,18 @@
+/* Ensure the row is a flex container */
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to next line */
+}
+
+/* Ensure the columns stretch to fill available height */
+.row > [class^="col-"] {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make the card a flex container and ensure it stretches to fill column */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* This ensures the card takes up full height of the column */
+}
