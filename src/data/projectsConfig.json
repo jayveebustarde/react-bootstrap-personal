@@ -132,7 +132,7 @@
         },{
             "title": "Team Formation and System Overhaul",
             "content": [
-                "Following the infrastructure updates, the Japan office recognized the need for a more centralized team to manage the back office system. They tasked me with forming a new team in the Philippines, with the goal to transition responsibilities from the previous team based in India.",
+                "Following the infrastructure updates, the Japan office recognized the need for a more centralized team to manage the back office system. They tasked me help form a new team in the Philippines, with the goal to transition responsibilities from the previous team based in India.",
                 "This changeover process involved a significant knowledge transfer phase. Members from the Indian team shared their insights, workflows, and system intricacies to ensure that the new Philippine team could pick up where they left off without any gaps in operations.",
                 "Part of this transition also demanded a technology upgrade. We decided to move from the older .Net framework to the more modern .Net Core. This transition promised better performance, modularity, and cross-platform capabilities. Alongside this, we also migrated our code repository. The sources previously held in SourceSafe were transitioned to Azure Git, offering a more robust and collaborative version control system.",
                 "Overall, this move aimed to enhance our back office operations, ensuring more streamlined processes and a cohesive team structure."
