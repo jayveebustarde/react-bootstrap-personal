@@ -9,17 +9,17 @@
             {
                 "tools": [
                     {
-                        "icon": "Csharp",
+                        "icon": "SiCsharp",
                         "name": "C#",
                         "color": "#9b4f97"
                     },
                     {
-                        "icon": "Dotnet",
+                        "icon": "SiDotnet",
                         "name": ".Net Framework and .Net Core",
                         "color": "#682a7b"
                     },
                     {
-                        "icon": "Microsoftsqlserver",
+                        "icon": "SiMicrosoftsqlserver",
                         "name": "MS SQL Server",
                         "color": "#c26166"
                     }
@@ -30,17 +30,17 @@
             {
                 "tools": [
                     {
-                        "icon": "Html5",
+                        "icon": "SiHtml5",
                         "name": "HTML5",
                         "color": "#e44d25"
                     },
                     {
-                        "icon": "Css3",
+                        "icon": "SiCss3",
                         "name": "CSS3",
                         "color": "#315fa2"
                     },
                     {
-                        "icon": "Javascript",
+                        "icon": "SiJavascript",
                         "name": "Javascript",
                         "color": "#f0db4f"
                     }
@@ -51,17 +51,17 @@
             {
                 "tools": [
                     {
-                        "icon": "Typescript",
+                        "icon": "SiTypescript",
                         "name": "Typescript",
                         "color": "#2d79c8"
                     },
                     {
-                        "icon": "React",
+                        "icon": "SiReact",
                         "name": "React",
                         "color": "#01d8ff"
                     },
                     {
-                        "icon": "Angular",
+                        "icon": "SiAngular",
                         "name": "Angular",
                         "color": "#e23137 "
                     }
@@ -72,12 +72,12 @@
             {
                 "tools": [
                     {
-                        "icon": "Microsoftazure",
+                        "icon": "SiMicrosoftazure",
                         "name": "Azure",
                         "color": "#217cf7"
                     },
                     {
-                        "icon": "Amazonaws",
+                        "icon": "SiAmazonaws",
                         "name": "Amazon Web Services",
                         "color": "#fe9901"
                     }
@@ -88,12 +88,12 @@
             {
                 "tools": [
                     {
-                        "icon": "Mulesoft",
+                        "icon": "SiMulesoft",
                         "name": "Mulesoft",
                         "color": "#01a1e0"
                     },
                     {
-                        "icon": "Postman",
+                        "icon": "SiPostman",
                         "name": "Postman",
                         "color": "#fd6c34"
                     }
@@ -104,12 +104,12 @@
             {
                 "tools": [
                     {
-                        "icon": "Bootstrap",
+                        "icon": "SiBootstrap",
                         "name": "Bootstrap",
                         "color": "#8412fa"
                     },
                     {
-                        "icon": "Sass",
+                        "icon": "SiSass",
                         "name": "Sass",
                         "color": "#c67ba2"
                     }
@@ -120,17 +120,17 @@
             {
                 "tools": [
                     {
-                        "icon": "Nodedotjs",
+                        "icon": "SiNodedotjs",
                         "name": "NodeJS",
                         "color": "#689f63"
                     },
                     {
-                        "icon": "Npm",
+                        "icon": "SiNpm",
                         "name": "NPM",
                         "color": "#cc0100"
                     },
                     {
-                        "icon": "Webpack",
+                        "icon": "SiWebpack",
                         "name": "Webpack",
                         "color": "#02c1f7" 
                     }
@@ -141,17 +141,17 @@
             {
                 "tools": [
                     {
-                        "icon": "Jirasoftware",
+                        "icon": "SiJirasoftware",
                         "name": "Jira",
                         "color": "#217cf7"
                     },
                     {
-                        "icon": "Confluence",
+                        "icon": "SiConfluence",
                         "name": "Confluence",
                         "color": "#217cf7"
                     },
                     {
-                        "icon": "Git",
+                        "icon": "SiGit",
                         "name": "Git",
                         "color": "#f05133"
                     }
