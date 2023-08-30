@@ -1,36 +1,40 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import { OverlayTrigger, Stack, Tooltip } from "react-bootstrap";
 import "./SkillsCard.scss"
-import * as SiIcons from "react-icons/si"
 
-const SkillsCard = ({tools, children}) => {
-    const icons = tools?.map(tool => {
-        return { 
-        "icon": 'Si' + tool.icon,
-        "color": tool.color,
-        "name": tool.name
-        };
-    });
-    const IconComponents = {};
-    icons.forEach(icon => {
-        IconComponents[icon.icon] = SiIcons[icon.icon]
-    });
+const SkillsCard = ({ tools, children }) => {
+    const [IconComponents, setIconComponents] = useState({});
+
+    useEffect(() => {
+        async function loadIcons() {
+            let loadedIcons = {};
+            for (const tool of tools) {
+                const { icon } = tool;
+                const module = await import("../IconMap/IconMap.js");
+                loadedIcons[icon] = module[icon];
+            }
+            setIconComponents(loadedIcons);
+        }
+        
+        loadIcons();
+    }, [tools]);
+
     return (
         <Stack>
             <Stack direction="horizontal" gap={3} className="mb-2">
                 <Suspense fallback={<div>Loading...</div>}>
-                    {icons.map((item, index) => {
-                        const IconComponent = SiIcons[item.icon];
-                        const iconStyle = { color: item.color };
-                        return (
+                    {tools.map((tool, index) => {
+                        const IconComponent = IconComponents[tool.icon];
+                        const iconStyle = { color: tool.color };
+                        return IconComponent ? (
                             <OverlayTrigger key={index}  overlay={
-                                <Tooltip id={item.icon}>{item.name}</Tooltip>
+                                <Tooltip id={tool.icon}>{tool.name}</Tooltip>
                             } placement="top">
                                 <span>
                                     <IconComponent style={iconStyle} className="skills-icon" />
                                 </span>
                             </OverlayTrigger>        
-                        );
+                        ) : null;
                     })}
                 </Suspense>
             </Stack>
