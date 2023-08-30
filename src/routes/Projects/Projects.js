@@ -5,14 +5,14 @@ import ProjectList from "../../components/ProjectList/ProjectList";
 import PageOverview from "../../components/PageOverview/PageOverview";
 
 const Projects = () => {
-    return (
-        <MainWrapper>
-            <PageOverview title={"Portfolio"} />
-            <Section>
-                <ProjectList />
-            </Section>
-        </MainWrapper>
-    );
+  return (
+    <MainWrapper>
+      <PageOverview title={"Portfolio"} />
+      <Section>
+        <ProjectList />
+      </Section>
+    </MainWrapper>
+  );
 };
 
 export default Projects;
