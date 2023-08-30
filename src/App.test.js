@@ -1,22 +1,24 @@
-import { render } from '@testing-library/react';
-import App from './App';
+import { render } from "@testing-library/react";
+import App from "./App";
 
-jest.mock('react-pdf', () => ({
+jest.mock("react-pdf", () => ({
   Document: () => <div>Mocked Document</div>,
   Page: () => <div>Mocked Page</div>,
   pdfjs: {
-    GlobalWorkerOptions: {}
-  }
+    GlobalWorkerOptions: {},
+  },
 }));
 global.scrollTo = jest.fn();
-window.matchMedia = window.matchMedia || function() {
-  return {
+window.matchMedia =
+  window.matchMedia ||
+  function () {
+    return {
       matches: false,
-      addListener: function() {},
-      removeListener: function() {}
+      addListener: function () {},
+      removeListener: function () {},
+    };
   };
-};
-jest.mock('react-chrono', () => {
+jest.mock("react-chrono", () => {
   return {
     __esModule: true,
     default: () => {
@@ -28,8 +30,6 @@ afterEach(() => {
   jest.clearAllMocks();
 });
 
-
-
-it('renders without crashing', () => {
+it("renders without crashing", () => {
   render(<App />);
 });

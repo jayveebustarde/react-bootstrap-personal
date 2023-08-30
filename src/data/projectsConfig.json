@@ -1,183 +1,207 @@
 [
-    {
-        "id": "zipadoo",
-        "title": "Zipadoo Product Sync",
-        "client": "Zipadoo",
-        "address": "Sweden",
-        "industry": "Online Retail / eCommerce",
-        "website": "https://zipadoo.se",
-        "intro": "Vendor management and API integraton for multi-vendor eCommerce platform.",
-        "image": "proj_zipadoo.jpg",
-        "requirements": [
-            "Develop a web application to manage vendor API integrations with Zipadoo's WooCommerce platform.",
-            "Implement a mapping form for vendor product configurations and category alignment with Zipadoo.",
-            "Establish automated synchronization for regular product uploads, updates, and inventory management from various vendor sources, including APIs and web crawlers."
+  {
+    "id": "zipadoo",
+    "title": "Zipadoo Product Sync",
+    "client": "Zipadoo",
+    "address": "Sweden",
+    "industry": "Online Retail / eCommerce",
+    "website": "https://zipadoo.se",
+    "intro": "Vendor management and API integraton for multi-vendor eCommerce platform.",
+    "image": "proj_zipadoo.jpg",
+    "requirements": [
+      "Develop a web application to manage vendor API integrations with Zipadoo's WooCommerce platform.",
+      "Implement a mapping form for vendor product configurations and category alignment with Zipadoo.",
+      "Establish automated synchronization for regular product uploads, updates, and inventory management from various vendor sources, including APIs and web crawlers."
+    ],
+    "tech": ["NodeJs", "Express", "React", "API Integration"],
+    "sections": [
+      {
+        "title": "Project Overview",
+        "content": [
+          "Zipadoo is an eCommerce platform based on Sweden that aims to partner up with local merchants and vendors to create a centralized same-day delivery online retail platform within the city. The main web application uses Wordpress and Woocommerce to manage the products, orders, and everything related to the eCommerce management of the website."
         ],
-        "sections": [
-            {
-                "title": "Project Overview",
-                "content": [
-                    "Zipadoo is an eCommerce platform based on Sweden that aims to partner up with local merchants and vendors to create a centralized same-day delivery online retail platform within the city. The main web application uses Wordpress and Woocommerce to manage the products, orders, and everything related to the eCommerce management of the website."
-                ],
-                "isMainSection": true
-            }, {
-                "title": "The Challenge",
-                "content": [
-                    "Zipadoo faced the task of integrating a diverse array of eCommerce platforms from multiple vendors, each with its unique infrastructure. This variability demanded a tailored synchronization approach. The primary hurdle was developing a universal tool that ensured seamless integration and user experience.",
-                    "The integration challenge was multi-faceted: while many vendors operated on major eCommerce systems like Shopify and WooCommerce, others utilized niche platforms like BoxNet and Jetshop. Some vendors, limited in their digital capabilities, only provided inventory access through XML files from their Google Shopping feed. Simplifying and unifying these varied approaches was essential to realize Zipadoo's vision."
-                ],
-                "images": ["piechart.png"],
-                "imgInline": true,
-                "isMainSection": true
-            },{
-                "title": "The Approach and Solution",
-                "isMainSection": true
-            },{
-                "title": "Utilizing Google Shopping Feed",
-                "content": [
-                    "Zipadoo faced challenges integrating diverse vendors' platforms, but the common use of Google Shopping Feed by many vendors provided a solution. This feed, popular among vendors, presented product details in a consistent XML format, making data extraction easier for Zipadoo. By tapping into these pre-existing feeds, Zipadoo efficiently unified various vendors, streamlining product listings and simplifying the overall integration process."
-                ],
-                "images": []
-            },{
-                "title": "API-Driven Inventory Integration",
-                "content": [
-                    "Addressing the distinct challenges posed by different eCommerce platforms, Zipadoo further tapped into the APIs of Shopify, WooCommerce, and Sitoo to effectively integrate vendor inventories. This integration was pivotal to ensuring real-time consistency across products displayed on Zipadoo's platform. It wasn't just about showcasing products; it was vital that Zipadoo's inventory mirrored the actual stock availability from each vendor, regardless of their primary platform. Utilizing these APIs allowed for an agile approach to inventory management, ensuring that whether a customer was viewing a product from a major eCommerce system or a niche platform, the stock information was accurate, enhancing user trust and streamlining the purchase process."
-                ],
-                "images": []
-            },{
-                "title": "Customized Web Crawlers for Seamless Data Retrieval",
-                "content": [
-                    "To address vendors that didn't readily provide API access or those on unconventional platforms, Zipadoo employed customized web crawlers. These specialized crawlers were designed to navigate vendor websites, meticulously extracting product data and inventory details. By regularly scanning and retrieving essential product information, these crawlers filled the gaps where traditional API integration might not have been feasible. This ensured that even for the most unconventional or less digitally-equipped vendors, their products and inventories were consistently updated on Zipadoo, ensuring a comprehensive and up-to-date product catalog for users."
-                ],
-                "images": ["integrations.png", "syncform.png"]
-            },{
-                "title": "Unified Product Categorization",
-                "content": [
-                    "In addition to fetching vendor data, an essential part of the integration was sorting out product categories. Different vendors have their own ways of naming and organizing their products. To make sure everything on Zipadoo's platform looked uniform and made sense to our users, we had a straightforward approach. Vendors would upload a CSV file during product synchronization. This file was key; it contained the mapping – connecting the vendor's product categories to Zipadoo's categories. This simple step of uploading a CSV made a big difference. It meant that even though products came from various places, on Zipadoo, they all felt like they belonged to one organized, user-friendly platform."
-                ]
-            }, {
-                "title": "Scheduled Vendor Synchronization",
-                "content": [
-                    "Keeping Zipadoo's product listings fresh and current is crucial for both vendors and customers. That's where setting up a regular sync job comes in handy. We use CRON to manage this task. By running these scheduled CRON jobs, we ensure that the platform consistently reflects the most recent list of products from our vendors. This not only provides a better shopping experience for our customers but also allows vendors to confidently update their products, knowing they'll be promptly showcased on Zipadoo."
-                ]
-            }, {
-                "title": "The Outcome",
-                "content": [
-                    "With the successful implementation of vendor data integration, Zipadoo witnessed a significant surge in both its product range and vendor partnerships. The uniformity in product categorization, achieved through the simple yet effective CSV mapping method, enhanced user navigation and reduced confusion. Moreover, the periodic synchronization ensured by the CRON jobs led to Zipadoo maintaining an up-to-date product list, further boosting customer confidence and satisfaction.",
-                    "Customers now enjoyed a wider variety of products, neatly categorized and always updated. Vendors, on the other hand, appreciated the streamlined process of onboarding their products and the certainty that their offerings were timely represented on the platform. The overall shopping experience on Zipadoo became more cohesive, intuitive, and representative of the vibrant vendor community it partnered with."
-                ],
-                "images": ["butiker.png"],
-                "isMainSection": true
-            },{
-                "title": "Conclusion",
-                "content": [
-                    "Zipadoo's journey underscores the importance of seamless integration in the ever-evolving world of eCommerce. By adeptly navigating challenges—be it diverse vendor platforms or the necessity for uniform categorization—Zipadoo managed to create a harmonized platform that catered to the dynamic needs of both vendors and shoppers. The steps taken, from vendor data retrieval to ensuring regular product updates, highlight the company's commitment to providing an unparalleled shopping experience. It stands as a testament to how thoughtful technological solutions can bridge gaps, unify diverse systems, and, in the end, deliver a platform that's greater than the sum of its parts."
-                ]
-            }
-
+        "isMainSection": true
+      },
+      {
+        "title": "The Challenge",
+        "content": [
+          "Zipadoo faced the task of integrating a diverse array of eCommerce platforms from multiple vendors, each with its unique infrastructure. This variability demanded a tailored synchronization approach. The primary hurdle was developing a universal tool that ensured seamless integration and user experience.",
+          "The integration challenge was multi-faceted: while many vendors operated on major eCommerce systems like Shopify and WooCommerce, others utilized niche platforms like BoxNet and Jetshop. Some vendors, limited in their digital capabilities, only provided inventory access through XML files from their Google Shopping feed. Simplifying and unifying these varied approaches was essential to realize Zipadoo's vision."
+        ],
+        "images": ["piechart.png"],
+        "imgInline": true,
+        "isMainSection": true
+      },
+      {
+        "title": "The Approach and Solution",
+        "isMainSection": true
+      },
+      {
+        "title": "Utilizing Google Shopping Feed",
+        "content": [
+          "Zipadoo faced challenges integrating diverse vendors' platforms, but the common use of Google Shopping Feed by many vendors provided a solution. This feed, popular among vendors, presented product details in a consistent XML format, making data extraction easier for Zipadoo. By tapping into these pre-existing feeds, Zipadoo efficiently unified various vendors, streamlining product listings and simplifying the overall integration process."
+        ],
+        "images": []
+      },
+      {
+        "title": "API-Driven Inventory Integration",
+        "content": [
+          "Addressing the distinct challenges posed by different eCommerce platforms, Zipadoo further tapped into the APIs of Shopify, WooCommerce, and Sitoo to effectively integrate vendor inventories. This integration was pivotal to ensuring real-time consistency across products displayed on Zipadoo's platform. It wasn't just about showcasing products; it was vital that Zipadoo's inventory mirrored the actual stock availability from each vendor, regardless of their primary platform. Utilizing these APIs allowed for an agile approach to inventory management, ensuring that whether a customer was viewing a product from a major eCommerce system or a niche platform, the stock information was accurate, enhancing user trust and streamlining the purchase process."
+        ],
+        "images": []
+      },
+      {
+        "title": "Customized Web Crawlers for Seamless Data Retrieval",
+        "content": [
+          "To address vendors that didn't readily provide API access or those on unconventional platforms, Zipadoo employed customized web crawlers. These specialized crawlers were designed to navigate vendor websites, meticulously extracting product data and inventory details. By regularly scanning and retrieving essential product information, these crawlers filled the gaps where traditional API integration might not have been feasible. This ensured that even for the most unconventional or less digitally-equipped vendors, their products and inventories were consistently updated on Zipadoo, ensuring a comprehensive and up-to-date product catalog for users."
+        ],
+        "images": ["integrations.png", "syncform.png"]
+      },
+      {
+        "title": "Unified Product Categorization",
+        "content": [
+          "In addition to fetching vendor data, an essential part of the integration was sorting out product categories. Different vendors have their own ways of naming and organizing their products. To make sure everything on Zipadoo's platform looked uniform and made sense to our users, we had a straightforward approach. Vendors would upload a CSV file during product synchronization. This file was key; it contained the mapping – connecting the vendor's product categories to Zipadoo's categories. This simple step of uploading a CSV made a big difference. It meant that even though products came from various places, on Zipadoo, they all felt like they belonged to one organized, user-friendly platform."
         ]
-    }, {
-        "id": "erjp",
-        "title": "Modernization of Beneficiary Systems",
-        "client": "Edrenred Japan",
-        "address": "Tokyo, Japan",
-        "industry": "Employee Benefits (B2B)",
-        "website": "https://edenred.jp/",
-        "intro": "Revamping digital infrastructure and enhancing user experience for Edenred (Japan) beneficiaries.",
-        "image": "proj_edenred.png",
-        "requirements": [
-            "Design and develop cohesive and integrated customer-facing websites, ensuring seamless navigation and a user-friendly experience for Edenred's beneficiaries in Japan.",
-            "Transition from the legacy system to an updated .Net solution, maintaining data integrity and ensuring uninterrupted services during the migration phase.",
-            "Implement a robust Mulesoft API gateway to enable efficient data exchange across platforms and better system connectivity"
+      },
+      {
+        "title": "Scheduled Vendor Synchronization",
+        "content": [
+          "Keeping Zipadoo's product listings fresh and current is crucial for both vendors and customers. That's where setting up a regular sync job comes in handy. We use CRON to manage this task. By running these scheduled CRON jobs, we ensure that the platform consistently reflects the most recent list of products from our vendors. This not only provides a better shopping experience for our customers but also allows vendors to confidently update their products, knowing they'll be promptly showcased on Zipadoo."
+        ]
+      },
+      {
+        "title": "The Outcome",
+        "content": [
+          "With the successful implementation of vendor data integration, Zipadoo witnessed a significant surge in both its product range and vendor partnerships. The uniformity in product categorization, achieved through the simple yet effective CSV mapping method, enhanced user navigation and reduced confusion. Moreover, the periodic synchronization ensured by the CRON jobs led to Zipadoo maintaining an up-to-date product list, further boosting customer confidence and satisfaction.",
+          "Customers now enjoyed a wider variety of products, neatly categorized and always updated. Vendors, on the other hand, appreciated the streamlined process of onboarding their products and the certainty that their offerings were timely represented on the platform. The overall shopping experience on Zipadoo became more cohesive, intuitive, and representative of the vibrant vendor community it partnered with."
         ],
-        "sections": [{
-            "title": "Project Overview",
-            "content": [
-                "Edenred, a global giant in the realm of transactional solutions, has carved a unique niche in Japan. While they offer a variety of services, one that stands out prominently is the 'Ticket Restaurant' system.",
-                "'Ticket Restaurant' encapsulates Edenred's essence. It's a simple yet powerful concept: businesses provide their employees with meal vouchers. These vouchers, or 'tickets,' are then accepted by a vast network of eateries, cafes, and restaurants. This not only ensures that employees have access to quality meals but also drives footfall to associated eateries, fostering a win-win ecosystem.",
-                "In Japan, a country where work culture is deeply ingrained, such a benefit is more than just a meal ticket. It's a gesture of appreciation, a nod to the employee's hard work. Moreover, for the local restaurants, it's an opportunity to welcome new patrons, ensuring a steady flow of customers, especially during typical business hours.",
-                "By seamlessly blending this global concept with the unique tastes and preferences of the Japanese populace, Edenred Japan champions a harmonious balance. They connect businesses to restaurants, employees to delightful meals, and create a cycle of mutual benefit and appreciation."
-            ],
-            "images": ["erjphow.png", "trtsteps.png"],
-            "isMainSection": true
-        },{
-            "title": "The Challenge",
-            "content": [
-                "Upon joining iScale Solutions in June 2018 as a Full-Stack Web Engineer, I was immediately intrigued by the challenges and opportunities presented by the Edenred Japan Beneficiary Systems project. Over the next four years, I dove deep into reimagining the platform to cater to the dynamic needs of our beneficiaries.",
-                "Edenred Japan's Beneficiary Systems were at a crossroads. Their legacy system, although once cutting-edge, was no longer meeting the evolving demands of the beneficiaries. The key challenges? An outdated framework, disjointed customer-facing sites, and a lack of efficient data connectivity across platforms."
-            ],
-            "isMainSection": true,
-            "fullWidthImg": true,
-            "images": ["trtss.png"]
-        },{
-            "title": "The Solution Journey",
-            "isMainSection": true
-        },{
-            "title": "Centralizing and Refactoring Web Application Backends",
-            "content": [
-                "One of my initial tasks was to overhaul the backend architecture of the web applications. Even though the beneficiary, client, and admin websites operated from a single SQL database, they lacked unified services. There was a substantial amount of duplicated code across these applications, complicating maintenance and making synchronized updates cumbersome.",
-                "Using C# and ASP.Net MVC, I deconstructed the previous hefty system into concise, efficient components. Each was designed to function independently, yet also efficiently interlink when required. Leveraging Entity Framework, I harmonized access to our existing MSSQL database, ensuring every section of our applications could swiftly and seamlessly tap into the necessary data. This not only streamlined processes but also eliminated redundant data instances.",
-                "Furthermore, as I delved into these updates, I found opportunities to optimize and refine various code segments and algorithms. The revised structure also made it more straightforward to integrate third-party APIs from external vendors, enhancing the versatility and capabilities of our applications."
-            ],
-            "imgInline": true,
-            "images": ["trtbe.png"]
-        },{
-            "title": "Transitioning to Azure Cloud",
-            "content": [
-                "After updating the backend architecture, the next step was modernizing our infrastructure. Our existing on-premises setup was functional, but moving to a cloud platform like Azure promised better scalability and efficiency.",
-                "Working alongside the Infrastructure team, we initiated the migration process. First, we shifted our database to an Azure VM instance, ensuring smooth data transition and optimized operations. Next, our web application was relocated to Azure, capitalizing on its enhanced security and performance features.",
-                "To streamline our development processes, we utilized Azure DevOps repositories for better version control. The introduction of a Continuous Integration/Continuous Deployment (CI/CD) pipeline was a game-changer. It automated testing and deployment of code updates, making our release cycles faster and more reliable.",
-                "This shift to Azure modernized our infrastructure, setting us up for future growth and adaptability."
-            ]
-        },{
-            "title": "Team Formation and System Overhaul",
-            "content": [
-                "Following the infrastructure updates, the Japan office recognized the need for a more centralized team to manage the back office system. They tasked me help form a new team in the Philippines, with the goal to transition responsibilities from the previous team based in India.",
-                "This changeover process involved a significant knowledge transfer phase. Members from the Indian team shared their insights, workflows, and system intricacies to ensure that the new Philippine team could pick up where they left off without any gaps in operations.",
-                "Part of this transition also demanded a technology upgrade. We decided to move from the older .Net framework to the more modern .Net Core. This transition promised better performance, modularity, and cross-platform capabilities. Alongside this, we also migrated our code repository. The sources previously held in SourceSafe were transitioned to Azure Git, offering a more robust and collaborative version control system.",
-                "Overall, this move aimed to enhance our back office operations, ensuring more streamlined processes and a cohesive team structure."
-            ],
-            "imgInline": true,
-            "images": ["erjpteam.jpeg"]
-        },{
-            "title": "MuleSoft API Gateway Implementation",
-            "content": [
-                "In parallel with the ongoing systems migrations and team formation, another pivotal task was handed to me: the integration of a MuleSoft API gateway. Edenred Global had specific requirements regarding the Ticket Restaurant API contracts, which were fundamental across all Edenred systems globally. My primary responsibility was to ensure that this API gateway not only adhered to MuleSoft's best practices but was also tailored to suit Edenred Japan's unique business operations.",
-                "The challenge was intricate; I was to construct a three-tier API that would bridge the gap between the global contract requirements and the specific backend system for Edenred Japan. This undertaking was made possible through a close-knit collaboration with the API and mobile app team based in France. Our joint efforts were instrumental in rolling out a backend that was compatible with Edenred Japan's needs and could be effortlessly consumed by the newly unveiled mobile application.",
-                "A crucial aspect of this API development was ensuring its robustness, especially given the predictable surges in traffic. I recognized that lunchtime would witness a spike in users accessing the app to scout for restaurants. To address this, I focused on enhancing the API's scalability and elasticity. This way, the system was adept at accommodating the increased workload during peak hours, ensuring users had a seamless and responsive experience when using the app."
-            ],
-            "images": ["erjpmule.png"]
-        },{
-            "title": "The Result",
-            "content": [
-                "The entire journey of overhauling Edenred Japan's system and transitioning teams, along with implementing a modern API gateway, culminated in a series of noteworthy results:"
-            ],
-            "isMainSection": true
-        }, {
-            "title": "Enhanced Efficiency:",
-            "content": [
-                "With a centralized team in the Philippines, a shift to Azure cloud, and a streamlined back office, we significantly reduced system redundancies and operational bottlenecks. The transition enabled more rapid responses to challenges and paved the way for agile software development."
-            ]
-        }, {
-            "title": "Seamless User Experience:",
-            "content": [
-                "The MuleSoft API Gateway's implementation, tailored to Edenred Japan's needs, allowed for smooth interaction between the mobile app and backend system. Especially during peak usage times, the optimizations ensured users had a responsive and uninterrupted experience when accessing restaurant information."
-            ]
-        }, {
-            "title": "Cohesive Global Collaboration:",
-            "content": [
-                "Working closely with teams from different parts of the world, particularly France, showcased the power of collaborative efforts in IT projects. It underlined the importance of knowledge sharing and leveraging global expertise to meet local business needs."
-            ]
-        }, {
-            "title": "Future-Ready Infrastructure: ",
-            "content": [
-                "The transitions and upgrades carried out ensured that Edenred Japan's systems were not just meeting current demands but were also equipped to handle future growth and changes in the industry. The adoption of .Net Core and the shift to Azure Git meant that the systems were built on modern tech stacks that would remain relevant and efficient in the years to come."
-            ]
-        }, {
-            "title": "Positive Business Impact:",
-            "content": [
-                "All these changes directly translated to business benefits. With optimized systems and processes, Edenred Japan was better positioned to serve its customers, maintain its leading position in the market, and explore new opportunities for expansion and innovation."
-            ]
-        }]
-    }
+        "images": ["butiker.png"],
+        "isMainSection": true
+      },
+      {
+        "title": "Conclusion",
+        "content": [
+          "Zipadoo's journey underscores the importance of seamless integration in the ever-evolving world of eCommerce. By adeptly navigating challenges—be it diverse vendor platforms or the necessity for uniform categorization—Zipadoo managed to create a harmonized platform that catered to the dynamic needs of both vendors and shoppers. The steps taken, from vendor data retrieval to ensuring regular product updates, highlight the company's commitment to providing an unparalleled shopping experience. It stands as a testament to how thoughtful technological solutions can bridge gaps, unify diverse systems, and, in the end, deliver a platform that's greater than the sum of its parts."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "erjp",
+    "title": "Modernization of Beneficiary Systems",
+    "client": "Edrenred Japan",
+    "address": "Tokyo, Japan",
+    "industry": "Employee Benefits (B2B)",
+    "website": "https://edenred.jp/",
+    "intro": "Revamping digital infrastructure and enhancing user experience for Edenred (Japan) beneficiaries.",
+    "image": "proj_edenred.png",
+    "requirements": [
+      "Design and develop cohesive and integrated customer-facing websites, ensuring seamless navigation and a user-friendly experience for Edenred's beneficiaries in Japan.",
+      "Transition from the legacy system to an updated .Net solution, maintaining data integrity and ensuring uninterrupted services during the migration phase.",
+      "Implement a robust Mulesoft API gateway to enable efficient data exchange across platforms and better system connectivity"
+    ],
+    "sections": [
+      {
+        "title": "Project Overview",
+        "content": [
+          "Edenred, a global giant in the realm of transactional solutions, has carved a unique niche in Japan. While they offer a variety of services, one that stands out prominently is the 'Ticket Restaurant' system.",
+          "'Ticket Restaurant' encapsulates Edenred's essence. It's a simple yet powerful concept: businesses provide their employees with meal vouchers. These vouchers, or 'tickets,' are then accepted by a vast network of eateries, cafes, and restaurants. This not only ensures that employees have access to quality meals but also drives footfall to associated eateries, fostering a win-win ecosystem.",
+          "In Japan, a country where work culture is deeply ingrained, such a benefit is more than just a meal ticket. It's a gesture of appreciation, a nod to the employee's hard work. Moreover, for the local restaurants, it's an opportunity to welcome new patrons, ensuring a steady flow of customers, especially during typical business hours.",
+          "By seamlessly blending this global concept with the unique tastes and preferences of the Japanese populace, Edenred Japan champions a harmonious balance. They connect businesses to restaurants, employees to delightful meals, and create a cycle of mutual benefit and appreciation."
+        ],
+        "images": ["erjphow.png", "trtsteps.png"],
+        "isMainSection": true
+      },
+      {
+        "title": "The Challenge",
+        "content": [
+          "Upon joining iScale Solutions in June 2018 as a Full-Stack Web Engineer, I was immediately intrigued by the challenges and opportunities presented by the Edenred Japan Beneficiary Systems project. Over the next four years, I dove deep into reimagining the platform to cater to the dynamic needs of our beneficiaries.",
+          "Edenred Japan's Beneficiary Systems were at a crossroads. Their legacy system, although once cutting-edge, was no longer meeting the evolving demands of the beneficiaries. The key challenges? An outdated framework, disjointed customer-facing sites, and a lack of efficient data connectivity across platforms."
+        ],
+        "isMainSection": true,
+        "fullWidthImg": true,
+        "images": ["trtss.png"]
+      },
+      {
+        "title": "The Solution Journey",
+        "isMainSection": true
+      },
+      {
+        "title": "Centralizing and Refactoring Web Application Backends",
+        "content": [
+          "One of my initial tasks was to overhaul the backend architecture of the web applications. Even though the beneficiary, client, and admin websites operated from a single SQL database, they lacked unified services. There was a substantial amount of duplicated code across these applications, complicating maintenance and making synchronized updates cumbersome.",
+          "Using C# and ASP.Net MVC, I deconstructed the previous hefty system into concise, efficient components. Each was designed to function independently, yet also efficiently interlink when required. Leveraging Entity Framework, I harmonized access to our existing MSSQL database, ensuring every section of our applications could swiftly and seamlessly tap into the necessary data. This not only streamlined processes but also eliminated redundant data instances.",
+          "Furthermore, as I delved into these updates, I found opportunities to optimize and refine various code segments and algorithms. The revised structure also made it more straightforward to integrate third-party APIs from external vendors, enhancing the versatility and capabilities of our applications."
+        ],
+        "imgInline": true,
+        "images": ["trtbe.png"]
+      },
+      {
+        "title": "Transitioning to Azure Cloud",
+        "content": [
+          "After updating the backend architecture, the next step was modernizing our infrastructure. Our existing on-premises setup was functional, but moving to a cloud platform like Azure promised better scalability and efficiency.",
+          "Working alongside the Infrastructure team, we initiated the migration process. First, we shifted our database to an Azure VM instance, ensuring smooth data transition and optimized operations. Next, our web application was relocated to Azure, capitalizing on its enhanced security and performance features.",
+          "To streamline our development processes, we utilized Azure DevOps repositories for better version control. The introduction of a Continuous Integration/Continuous Deployment (CI/CD) pipeline was a game-changer. It automated testing and deployment of code updates, making our release cycles faster and more reliable.",
+          "This shift to Azure modernized our infrastructure, setting us up for future growth and adaptability."
+        ]
+      },
+      {
+        "title": "Team Formation and System Overhaul",
+        "content": [
+          "Following the infrastructure updates, the Japan office recognized the need for a more centralized team to manage the back office system. They tasked me help form a new team in the Philippines, with the goal to transition responsibilities from the previous team based in India.",
+          "This changeover process involved a significant knowledge transfer phase. Members from the Indian team shared their insights, workflows, and system intricacies to ensure that the new Philippine team could pick up where they left off without any gaps in operations.",
+          "Part of this transition also demanded a technology upgrade. We decided to move from the older .Net framework to the more modern .Net Core. This transition promised better performance, modularity, and cross-platform capabilities. Alongside this, we also migrated our code repository. The sources previously held in SourceSafe were transitioned to Azure Git, offering a more robust and collaborative version control system.",
+          "Overall, this move aimed to enhance our back office operations, ensuring more streamlined processes and a cohesive team structure."
+        ],
+        "imgInline": true,
+        "images": ["erjpteam.jpeg"]
+      },
+      {
+        "title": "MuleSoft API Gateway Implementation",
+        "content": [
+          "In parallel with the ongoing systems migrations and team formation, another pivotal task was handed to me: the integration of a MuleSoft API gateway. Edenred Global had specific requirements regarding the Ticket Restaurant API contracts, which were fundamental across all Edenred systems globally. My primary responsibility was to ensure that this API gateway not only adhered to MuleSoft's best practices but was also tailored to suit Edenred Japan's unique business operations.",
+          "The challenge was intricate; I was to construct a three-tier API that would bridge the gap between the global contract requirements and the specific backend system for Edenred Japan. This undertaking was made possible through a close-knit collaboration with the API and mobile app team based in France. Our joint efforts were instrumental in rolling out a backend that was compatible with Edenred Japan's needs and could be effortlessly consumed by the newly unveiled mobile application.",
+          "A crucial aspect of this API development was ensuring its robustness, especially given the predictable surges in traffic. I recognized that lunchtime would witness a spike in users accessing the app to scout for restaurants. To address this, I focused on enhancing the API's scalability and elasticity. This way, the system was adept at accommodating the increased workload during peak hours, ensuring users had a seamless and responsive experience when using the app."
+        ],
+        "images": ["erjpmule.png"]
+      },
+      {
+        "title": "The Result",
+        "content": [
+          "The entire journey of overhauling Edenred Japan's system and transitioning teams, along with implementing a modern API gateway, culminated in a series of noteworthy results:"
+        ],
+        "isMainSection": true
+      },
+      {
+        "title": "Enhanced Efficiency:",
+        "content": [
+          "With a centralized team in the Philippines, a shift to Azure cloud, and a streamlined back office, we significantly reduced system redundancies and operational bottlenecks. The transition enabled more rapid responses to challenges and paved the way for agile software development."
+        ]
+      },
+      {
+        "title": "Seamless User Experience:",
+        "content": [
+          "The MuleSoft API Gateway's implementation, tailored to Edenred Japan's needs, allowed for smooth interaction between the mobile app and backend system. Especially during peak usage times, the optimizations ensured users had a responsive and uninterrupted experience when accessing restaurant information."
+        ]
+      },
+      {
+        "title": "Cohesive Global Collaboration:",
+        "content": [
+          "Working closely with teams from different parts of the world, particularly France, showcased the power of collaborative efforts in IT projects. It underlined the importance of knowledge sharing and leveraging global expertise to meet local business needs."
+        ]
+      },
+      {
+        "title": "Future-Ready Infrastructure: ",
+        "content": [
+          "The transitions and upgrades carried out ensured that Edenred Japan's systems were not just meeting current demands but were also equipped to handle future growth and changes in the industry. The adoption of .Net Core and the shift to Azure Git meant that the systems were built on modern tech stacks that would remain relevant and efficient in the years to come."
+        ]
+      },
+      {
+        "title": "Positive Business Impact:",
+        "content": [
+          "All these changes directly translated to business benefits. With optimized systems and processes, Edenred Japan was better positioned to serve its customers, maintain its leading position in the market, and explore new opportunities for expansion and innovation."
+        ]
+      }
+    ]
+  }
 ]

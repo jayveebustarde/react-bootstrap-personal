@@ -1,19 +1,18 @@
-import './styles/custom.scss';
-import './App.css';
+import "./styles/custom.scss";
+import "./App.css";
 import React from "react";
-import Layout from'./routes/Layout/Layout';
+import Layout from "./routes/Layout/Layout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from './routes/Home/Home';
-import Resume from './routes/Resume/Resume';
-import Contact from './routes/Contact/Contact';
-import ProjectDetails from './routes/ProjectDetails/ProjectDetails';
-import Projects from './routes/Projects/Projects';
-import NotFound from './routes/NotFound/NotFound';
-import ProfileProvider from './contexts/ProfileContext/ProfileProvider';
-import ProjectProvider from './contexts/ProjectContext/ProjectProvider';
+import Home from "./routes/Home/Home";
+import Resume from "./routes/Resume/Resume";
+import Contact from "./routes/Contact/Contact";
+import ProjectDetails from "./routes/ProjectDetails/ProjectDetails";
+import Projects from "./routes/Projects/Projects";
+import NotFound from "./routes/NotFound/NotFound";
+import ProfileProvider from "./contexts/ProfileContext/ProfileProvider";
+import ProjectProvider from "./contexts/ProjectContext/ProjectProvider";
 
 function App() {
-
   const router = createBrowserRouter([
     {
       path: "/",
@@ -33,24 +32,24 @@ function App() {
         },
         {
           path: "projects",
-          element: <Projects />
+          element: <Projects />,
         },
         {
           path: "projects/:id",
-          element: <ProjectDetails />
+          element: <ProjectDetails />,
         },
         {
           path: "*",
           element: <NotFound />,
         },
-      ]
-    }
+      ],
+    },
   ]);
   return (
     <ProfileProvider>
       <ProjectProvider>
         <RouterProvider router={router}>
-            <div className="App" />
+          <div className="App" />
         </RouterProvider>
       </ProjectProvider>
     </ProfileProvider>
