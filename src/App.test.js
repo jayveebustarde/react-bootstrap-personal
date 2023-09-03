@@ -1,4 +1,5 @@
-import { render } from "@testing-library/react";
+import { act, render } from "@testing-library/react";
+import { Chrono } from "react-chrono";
 import App from "./App";
 
 jest.mock("react-pdf", () => ({
@@ -18,18 +19,17 @@ window.matchMedia =
       removeListener: function () {},
     };
   };
-jest.mock("react-chrono", () => {
-  return {
-    __esModule: true,
-    default: () => {
-      return <div>Mocked Chrono</div>;
-    },
-  };
-});
+jest.mock("react-chrono", () => ({
+  ...jest.requireActual("react-chrono"), // This will preserve other exports from `react-chrono`
+  Chrono: jest.fn(() => <div>Mocked Chrono</div>), // Here we"re mocking Chrono to return a simple div for test purposes
+}));
+
 afterEach(() => {
   jest.clearAllMocks();
 });
 
-it("renders without crashing", () => {
-  render(<App />);
+it("renders without crashing", async () => {
+  await act(async () => {
+    render(<App />);
+  });
 });
