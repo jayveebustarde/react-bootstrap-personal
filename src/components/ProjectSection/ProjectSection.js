@@ -22,7 +22,7 @@ const ProjectSection = ({ projectSection }) => {
             ))}
           </Col>
           {projectSection.imgInline && (
-            <Col xl={6}>
+            <Col xl={6} className="text-center">
               <Image
                 className="project-section-img rounded-4"
                 src={require(`../../assets/images/${projectSection.images[0]}`)}
@@ -38,6 +38,7 @@ const ProjectSection = ({ projectSection }) => {
             {projectSection.images.length === 1 && <Col />}
             {projectSection.images.map((img, ix) => (
               <Col
+                className="text-center"
                 key={ix}
                 lg={
                   projectSection.images.length === 1 &&
