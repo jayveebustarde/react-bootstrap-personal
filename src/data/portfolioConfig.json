@@ -217,11 +217,12 @@
       ]
     },
     {
-      "id": "proj_panalitix",
+      "id": "engager",
       "title": "Engager",
       "client": "Panalitix",
       "overview": "Design and development of multi tenant web-based tools and learning platform for accountants.",
       "img": "proj_engager.png",
+      "hasCaseStudy": true,
       "tech": ["C#", ".Net Core", "AngularJs", "AWS", "Material Design", "SQL"]
     },
     {

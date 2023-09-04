@@ -203,5 +203,101 @@
         ]
       }
     ]
+  },
+  {
+    "id": "engager",
+    "title": "Engager - A SaaS Solution For Accountants",
+    "client": "Panalitix",
+    "address": "Queensland, Australia",
+    "industry": "Accounting, Business Advisory",
+    "website": "https://panalitix.com",
+    "intro": "Empowering Modern Accountancy with Seamless Client Management, Integrated Learning Tools, and Efficient Scheduling",
+    "image": "proj_engager.png",
+    "requirements": [
+      "Design a SaaS architecture leveraging a multi-database shared app tenancy model to ensure data separation and scalability for multiple users.",
+      "Integrate educational resources and learning tools to keep accountants updated with industry trends.",
+      "Incorporate an intuitive meeting scheduler for streamlined client engagement and appointment management."
+    ],
+    "sections": [
+      {
+        "title": "Project Overview",
+        "content": [
+          "I joined the team as a senior software developer at EMAPTA, based in Makati, PH. Our team was assembled to work exclusively for Panalitix. Our role was defined as offshore developers, tasked with bringing the Engager platform to life. Operating under the Kanban methodology, our workflow was streamlined and focused, with daily meetings scheduled with the project manager to ensure the steady and coordinated progress of the project.",
+          "Panalitix is a company focused on assisting accounting firms in enhancing their operations and profitability through the use of technology and data analytics. They offer a range of educational materials to help accountants stay current with industry standards and regulatory changes. Additionally, they provide tools that facilitate a shift from traditional financial reporting roles to more advisory-centric positions, enabling accountants to offer actionable business insights to their clients.",
+          "In line with their commitment to modernization, Panalitix introduced 'Engager', a SaaS platform designed to be a one-stop solution for accountants and business partners. This platform is not just a tool but a comprehensive support system for accountants navigating the digital landscape, offering features ranging from data-driven performance metrics to facilitating professional networking through industry events and webinars."
+        ],
+        "images": ["pan_team.jpg"],
+        "isMainSection": true,
+        "imgInline": true
+      },
+      {
+        "title": "The Challenges",
+        "isMainSection": true
+      },
+      {
+        "title": "Multi-Tenancy SaaS Solution Integration",
+        "content": [
+          "The integration of a multi-tenancy SaaS solution required meticulous planning and execution to accommodate multiple users without compromising on data security and performance. It was essential to ensure that the multi-database shared app tenancy model was implemented effectively to allow for seamless scalability, data isolation, and concurrent user handling, ensuring a smooth user experience and operational efficiency."
+        ]
+      },
+      {
+        "title": "Customizable Step-Based Process Workflow",
+        "content": [
+          "Developing a customizable step-based process workflow for individual accountants was another primary hurdle. The goal was to create a system that allows users to easily tailor their workflows according to specific preferences and operational requirements, maintaining a balance between flexibility and user-friendliness. This involved crafting an adaptable and intuitive user interface that could cater to various workflow complexities efficiently."
+        ]
+      },
+      {
+        "title": "Integration of Educational Resources and Learning Tools",
+        "content": [
+          "A considerable challenge lay in the seamless integration of up-to-date educational resources and learning tools into the platform. It was essential to devise a dynamic module that could frequently update content, providing accountants with the latest industry trends and insights. This required creating a system capable of sourcing and updating content swiftly, ensuring users always have access to the most recent and relevant information to aid in their professional growth."
+        ]
+      },
+      {
+        "title": "The Solution Journey",
+        "isMainSection": true
+      },
+      {
+        "title": "Implementing Bridge Model Multi-Tenancy Architecture on AWS",
+        "content": [
+          "In the developmental stage of the Engager platform, the integration of a bridge model multi-tenancy architecture hosted on AWS was central. This architecture allowed for the dynamic creation of databases for new tenants while efficiently utilizing shared resources across diverse users.",
+          "The team used AWS EC2 for hosting the application, setting up a stable and scalable computing environment. AWS Elastic Beanstalk came in handy for the streamlined deployment and management of the applications, automating numerous infrastructure tasks. The AWS RDS for SQL Server managed relational databases, facilitating the straightforward handling of industry-standard SQL databases.",
+          "For secure and scalable object storage, AWS S3 was integrated, catering to the storage of static assets which could be served either directly or through AWS CloudFront for enhanced performance. AWS CloudFront was harnessed to distribute content globally with low latency, enabling swift content delivery to the users.",
+          "Alongside these AWS tools, a .Net API Backend utilizing a code-first migration approach was employed. This played a critical role in the backend development, automating the creation of databases for new tenants on-the-fly and simplifying the multi-tenancy implementation and management. This concerted approach was designed to alleviate operational complexities associated with a multi-tenant architecture, promising smooth user onboarding while sustaining high levels of performance and security."
+        ],
+        "imgInline": true,
+        "images": ["pan_multitenant.png"]
+      },
+      {
+        "title": "Developing a Customizable Step-Based Workflow",
+        "content": [
+          "In the journey to develop the Engager platform, a significant milestone was the creation of a highly customizable step-based workflow tailored for accountants within the application. This functionality aimed to revolutionize how accountants managed their schedules and client meetings, offering automation options to streamline these processes. Moreover, the workflow integrated a series of learning tools available within the app, a feature designed to keep the users abreast with the evolving industry trends and insights.",
+          "To achieve this, the team utilized the .Net Web API which provided the necessary endpoints for customization, thereby facilitating the integration of various features seamlessly. The user interface and experience (UI/UX) were crafted using AngularJS coupled with Material Design, creating a modern and intuitive layout that would enhance the user experience. This blend of technologies allowed for a dynamic interaction between the users and the system, ensuring a smooth, customizable, and engaging user journey throughout the platform."
+        ],
+        "images": ["pan_step1.png", "pan_step2.png"]
+      },
+      {
+        "title": "Seamless Integration of Educational Resources and Learning Tools",
+        "content": [
+          "The final significant phase in the solutions journey was addressing the integration of cutting-edge educational resources and learning tools within the Engager platform. Given the rapid evolution of the industry, it was vital to construct a dynamic module capable of consistent updates with the latest trends and insights. The objective was to empower accountants with a reservoir of up-to-date knowledge at their fingertips, fostering continuous professional growth.",
+          "To achieve this, the development team worked on creating a system that could not only source but also update content swiftly and efficiently. This meant integrating functionalities that allowed for the regular infusion of fresh content, thereby ensuring that users always had access to the most recent and pertinent information to facilitate their professional development. This approach was pivotal in nurturing a learning-centric ecosystem within the platform, where users could seamlessly access a wealth of information, further enhancing their proficiency and adaptability in the ever-changing business landscape."
+        ],
+        "fullWidthImg": true,
+        "images": ["pan_projects.png"]
+      },
+      {
+        "title": "The Result",
+        "content": [
+          "The Engager project saw a successful completion with a notable contribution from the development team at EMAPTA in Manila. The newly developed platform offers a solid multi-tenancy SaaS solution, ensuring data security and enabling smooth user experience even with a growing number of users. Its customizable step-based workflow was well-received, allowing accountants the ability to modify operational procedures according to their individual preferences and requirements.",
+          "Furthermore, the integration of educational resources and learning tools into the platform marked a significant milestone. This feature ensured that users could easily access and assimilate up-to-date industry insights, aiding in their professional development without having to leave the platform. This proved vital in keeping the users engaged and informed, promoting a culture of continuous learning within the industry."
+        ],
+        "isMainSection": "true"
+      },
+      {
+        "title": "Conclusion",
+        "content": [
+          "The Engager project showcases the successful collaboration between the teams at EMAPTA and Panalitix. Despite the challenges encountered during the development phase, the team managed to craft a tool that caters to the modern accountant's needs for flexibility, efficiency, and continuous learning. The project stands as a significant step towards integrating advanced technology and educational resources within the accounting sector, presenting a practical and user-friendly solution to facilitate daily operations and professional growth. It represents a noteworthy addition to Panalitix's portfolio, demonstrating the potential to become a favored tool among accountants seeking to streamline their workflow and stay abreast of industry trends."
+        ]
+      }
+    ]
   }
 ]
