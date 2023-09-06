@@ -136,7 +136,7 @@
           }
         ],
         "title": "Node Development & Modules",
-        "overview": "Through tools like Node.js, NPM, and Webpack, I streamline the development process by automating tasks, managing dependencies, and optimizing performance, enabling efficient module bundling and deployment."
+        "overview": "Using Node.js, NPM, and Webpack, I automate tasks and optimize performance, ensuring efficient bundling and deployment."
       },
       {
         "tools": [
@@ -157,7 +157,7 @@
           }
         ],
         "title": "Source Control & Agile Project Management",
-        "overview": "I effectively manage project workflows, track issues, manage code versions, collaborate with teams, and document development processes, ensuring efficient project management and documentation using Git, Jira and Confluence."
+        "overview": "I manage project workflows, track issues, collaborate with teams, and document processes using Git, Jira, and Confluence, ensuring efficient project management."
       }
     ]
   },

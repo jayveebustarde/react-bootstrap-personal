@@ -1,4 +1,6 @@
-export {
+// this was created as compromise to avoid loading the whole react-icons/si module but still make the display of Tools icons dynamic based on the json data
+
+import {
   SiCsharp,
   SiDotnet,
   SiMicrosoftsqlserver,
@@ -22,4 +24,28 @@ export {
   SiGit,
 } from "react-icons/si";
 
-// this was created as compromise to avoid loading the whole react-icons/si module but still make the display of Tools icons dynamic based on the json data
+const IconMap = {
+  SiCsharp,
+  SiDotnet,
+  SiMicrosoftsqlserver,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiAngular,
+  SiMicrosoftazure,
+  SiAmazonaws,
+  SiMulesoft,
+  SiPostman,
+  SiBootstrap,
+  SiSass,
+  SiNodedotjs,
+  SiNpm,
+  SiWebpack,
+  SiJirasoftware,
+  SiConfluence,
+  SiGit,
+};
+
+export default IconMap;
