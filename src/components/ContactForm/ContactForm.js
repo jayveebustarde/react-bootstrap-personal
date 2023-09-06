@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Alert, Col, Form, Row } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 import { IoIosSend } from "react-icons/io";
@@ -6,24 +6,24 @@ import FormInput from "../FormInput/FormInput";
 import FormTextArea from "../FormInput/FormTextArea";
 import PfButton from "../PfButton/PfButton";
 
+const INITIAL_FORM_DATA = {
+  user_name: "",
+  user_email: "",
+  message: "",
+};
+
 const ContactForm = () => {
   const [validated, setValidated] = useState(false);
   const [disableForm, setDisabledForm] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(0);
-  const [formData, setFormData] = useState({
-    user_name: "",
-    user_email: "",
-    message: "",
-  });
+  const [submitStatus, setSubmitStatus] = useState({ status: 0, message: "" });
+  const [formData, setFormData] = useState(INITIAL_FORM_DATA);
+  const [contactNumber, setContactNumber] = useState("");
 
   const formRef = useRef();
-  let contactNumber;
 
-  const emailJsConfig = {
-    apiKey: process.env.REACT_APP_EMAILJS_API_KEY,
-    serviceId: process.env.REACT_APP_EMAILJS_SERVICE_ID,
-    templateId: process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-  };
+  useEffect(() => {
+    resetContactNumber();
+  }, []);
 
   const handleChange = (event) => {
     setFormData({
@@ -32,8 +32,7 @@ const ContactForm = () => {
     });
   };
 
-  const resetContactNumber = () => (contactNumber = (Math.random() * 1000) | 0);
-  resetContactNumber();
+  const resetContactNumber = () => setContactNumber((Math.random() * 1000) | 0);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -43,19 +42,19 @@ const ContactForm = () => {
     if (form.checkValidity()) {
       emailjs
         .sendForm(
-          emailJsConfig.serviceId,
-          emailJsConfig.templateId,
+          process.env.REACT_APP_EMAILJS_SERVICE_ID,
+          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
           form,
-          emailJsConfig.apiKey,
+          process.env.REACT_APP_EMAILJS_API_KEY,
         )
         .then(
           (result) => {
             resetForm();
-            setSubmitStatus(1);
+            setSubmitStatus({ status: 1, message: "Email successfully sent." });
           },
-          (error) => {
+          () => {
             resetContactNumber();
-            setSubmitStatus(2);
+            setSubmitStatus({ status: 2, message: "Failed to send email." });
             setDisabledForm(false);
           },
         );
@@ -67,32 +66,24 @@ const ContactForm = () => {
   };
 
   const resetForm = () => {
-    setFormData({
-      user_email: "",
-      user_name: "",
-      message: "",
-    });
+    setFormData(INITIAL_FORM_DATA);
     resetContactNumber();
     setDisabledForm(false);
+    setValidated(false);
+    if (formRef.current) {
+      formRef.current.reset();
+    }
   };
 
   return (
     <>
       <Alert
-        variant="success"
-        show={submitStatus === 1}
-        onClose={() => setSubmitStatus(0)}
+        variant={submitStatus.status === 1 ? "success" : "danger"}
+        show={submitStatus.status !== 0}
+        onClose={() => setSubmitStatus({ status: 0, message: "" })}
         dismissible
       >
-        Email successfully sent.
-      </Alert>
-      <Alert
-        variant="danger"
-        show={submitStatus === 2}
-        onClose={() => setSubmitStatus(0)}
-        dismissible
-      >
-        Failed to send email.
+        {submitStatus.message}
       </Alert>
       <Form
         noValidate
