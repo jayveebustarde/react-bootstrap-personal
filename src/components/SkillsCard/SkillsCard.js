@@ -4,34 +4,30 @@ import IconMap from "../IconMap/IconMap.js";
 import "./SkillsCard.scss";
 
 const SkillsCard = ({ tools, children }) => {
-  const [IconComponents, setIconComponents] = useState({});
+  const [IconComponents, setIconComponents] = useState([]);
 
   useEffect(() => {
-    let loadedIcons = {};
-    for (const tool of tools) {
-      const { icon } = tool;
-      loadedIcons[icon] = IconMap[icon];
-    }
+    let loadedIcons = tools.map((tool) => IconMap[tool]);
     setIconComponents(loadedIcons);
   }, [tools]);
 
   return (
     <Stack>
       <Stack direction="horizontal" gap={3} className="mb-2">
-        {tools.map((tool, index) => {
-          const IconComponent = IconComponents[tool.icon];
+        {IconComponents.map((tool, index) => {
+          const IconComponent = tool.icon;
           const iconStyle = { color: tool.color };
-          return IconComponent ? (
+          return (
             <OverlayTrigger
               key={index}
-              overlay={<Tooltip id={tool.icon}>{tool.name}</Tooltip>}
+              overlay={<Tooltip id={tool.name}>{tool.name}</Tooltip>}
               placement="top"
             >
               <span>
                 <IconComponent style={iconStyle} className="skills-icon" />
               </span>
             </OverlayTrigger>
-          ) : null;
+          );
         })}
       </Stack>
       {children}

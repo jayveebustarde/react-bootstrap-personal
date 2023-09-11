@@ -7,155 +7,42 @@
     "overview": "",
     "skills": [
       {
-        "tools": [
-          {
-            "icon": "SiCsharp",
-            "name": "C#",
-            "color": "#9b4f97"
-          },
-          {
-            "icon": "SiDotnet",
-            "name": ".Net Framework and .Net Core",
-            "color": "#682a7b"
-          },
-          {
-            "icon": "SiMicrosoftsqlserver",
-            "name": "MS SQL Server",
-            "color": "#c26166"
-          }
-        ],
+        "tools": [ "Csharp", "Dotnet", "Microsoftsqlserver" ],
         "title": "Backend & Database Development",
         "overview": "I bring extensive experience in C# and .NET, proficiently utilizing the framework's power and flexibility to construct robust, scalable applications throughout the entire software stack."
       },
       {
-        "tools": [
-          {
-            "icon": "SiHtml5",
-            "name": "HTML5",
-            "color": "#e44d25"
-          },
-          {
-            "icon": "SiCss3",
-            "name": "CSS3",
-            "color": "#315fa2"
-          },
-          {
-            "icon": "SiJavascript",
-            "name": "Javascript",
-            "color": "#f0db4f"
-          }
-        ],
+        "tools": [ "Html5", "Css3", "Javascript" ],
         "title": "Web Development",
         "overview": "With expertise in HTML5, CSS3, and JavaScript, I create visually appealing and interactive user interfaces, incorporating modern design principles and responsive web development techniques."
       },
       {
-        "tools": [
-          {
-            "icon": "SiTypescript",
-            "name": "Typescript",
-            "color": "#2d79c8"
-          },
-          {
-            "icon": "SiReact",
-            "name": "React",
-            "color": "#01d8ff"
-          },
-          {
-            "icon": "SiAngular",
-            "name": "Angular",
-            "color": "#e23137 "
-          }
-        ],
+        "tools": [ "Typescript", "React", "Angular" ],
         "title": "Frontend Libraries & Frameworks",
         "overview": "Leveraging TypeScript, React, and Angular, I develop dynamic and feature-rich frontend applications, harnessing the power of these frameworks to deliver exceptional user experiences."
       },
       {
-        "tools": [
-          {
-            "icon": "SiMicrosoftazure",
-            "name": "Azure",
-            "color": "#217cf7"
-          },
-          {
-            "icon": "SiAmazonaws",
-            "name": "Amazon Web Services",
-            "color": "#fe9901"
-          }
-        ],
+        "tools": [ "Microsoftazure", "Amazonaws" ],
         "title": "Azure & AWS Cloud Services",
         "overview": "With my experience in both Azure and Amazon Web Services, I am capable in choosing the right cloud services, deployment, and overall management of scalable applications in the cloud."
       },
       {
-        "tools": [
-          {
-            "icon": "SiMulesoft",
-            "name": "Mulesoft",
-            "color": "#01a1e0"
-          },
-          {
-            "icon": "SiPostman",
-            "name": "Postman",
-            "color": "#fd6c34"
-          }
-        ],
+        "tools": [ "Mulesoft", "Postman" ],
         "title": "API Development & Testing",
         "overview": "I am experienced in creating web APIs, API gateways and overall API development including using tools like Mulesoft and Postman."
       },
       {
-        "tools": [
-          {
-            "icon": "SiBootstrap",
-            "name": "Bootstrap",
-            "color": "#8412fa"
-          },
-          {
-            "icon": "SiSass",
-            "name": "Sass",
-            "color": "#c67ba2"
-          }
-        ],
+        "tools": [ "Bootstrap", "Sass" ],
         "title": "CSS Libraries & Frameworks",
         "overview": "Using libraries like Bootstrap and SASS, I create visually cohesive and responsive designs, ensuring cross-browser compatibility and efficient styling for enhanced user experiences."
       },
       {
-        "tools": [
-          {
-            "icon": "SiNodedotjs",
-            "name": "NodeJS",
-            "color": "#689f63"
-          },
-          {
-            "icon": "SiNpm",
-            "name": "NPM",
-            "color": "#cc0100"
-          },
-          {
-            "icon": "SiWebpack",
-            "name": "Webpack",
-            "color": "#02c1f7"
-          }
-        ],
+        "tools": [ "Nodedotjs", "Npm", "Webpack" ],
         "title": "Node Development & Modules",
         "overview": "Using Node.js, NPM, and Webpack, I automate tasks and optimize performance, ensuring efficient bundling and deployment."
       },
       {
-        "tools": [
-          {
-            "icon": "SiJirasoftware",
-            "name": "Jira",
-            "color": "#217cf7"
-          },
-          {
-            "icon": "SiConfluence",
-            "name": "Confluence",
-            "color": "#217cf7"
-          },
-          {
-            "icon": "SiGit",
-            "name": "Git",
-            "color": "#f05133"
-          }
-        ],
+        "tools": [ "Jirasoftware", "Confluence", "Git"],
         "title": "Source Control & Agile Project Management",
         "overview": "I manage project workflows, track issues, collaborate with teams, and document processes using Git, Jira, and Confluence, ensuring efficient project management."
       }
@@ -206,15 +93,7 @@
       "img": "proj_edenred.png",
       "isFeatured": true,
       "hasCaseStudy": true,
-      "tech": [
-        "C#",
-        ".Net Framework",
-        ".Net Core",
-        "AngularJs",
-        "Mulesoft API",
-        "Azure",
-        "SQL"
-      ]
+      "tech": [ "C#", ".Net Framework", ".Net Core", "AngularJs", "Mulesoft API", "Azure", "SQL" ]
     },
     {
       "id": "engager",
