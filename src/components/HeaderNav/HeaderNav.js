@@ -20,6 +20,7 @@ import { FaLaptopCode } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import profileData from "../../data/portfolioConfig.json";
 import profileImg from "../../assets/images/bwprofile.jpg";
+import "../HeaderNav/HeaderNav.scss";
 
 const CircleIconLink = () => {
   const linkedinUrl = "https://www.linkedin.com/in/jayveebustarde/";
