@@ -32,12 +32,13 @@ const Home = () => {
           </Stack>
         </Stack>
       </Section>
+      <hr className="invisible" />
       <Section>
         <SectionTitle>What I do</SectionTitle>
         <Row className="mt-1 g-5">
           {profile.whatIDo.skills.map((item, index) => {
             return (
-              <Col key={index} xs={6} md={6} lg={3}>
+              <Col key={index} xs={12} sm={6} lg={3}>
                 <SkillsCard tools={item.tools}>
                   <h6>{item.title}</h6>
                   <MinorText>{item.overview}</MinorText>

@@ -11,14 +11,14 @@ const ProjectCard = ({ project }) => {
   return (
     <div className="hoverable-card">
       <Row className="project-card g-0">
-        <Col xs md={5} className="project-image-container">
+        <Col lg={5} sm={12} className="project-image-container">
           <Image
             src={require(`../../assets/images/${project.img}`)}
             alt="ProjectImage"
             className="project-card-img"
           />
         </Col>
-        <Col xs md={7} className="px-3">
+        <Col lg={7} sm={12} className="px-3">
           <Stack>
             <h5 className="my-3">{project.title}</h5>
             <MinorText>{project.overview}</MinorText>
