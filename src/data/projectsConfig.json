@@ -13,7 +13,7 @@
       "Implement a mapping form for vendor product configurations and category alignment with Zipadoo.",
       "Establish automated synchronization for regular product uploads, updates, and inventory management from various vendor sources, including APIs and web crawlers."
     ],
-    "tech": ["NodeJs", "Express", "React", "API Integration"],
+    "tech": ["Nodedotjs", "Express", "React", "Bootstrap", "CPanel", "WooCommerce"],
     "sections": [
       {
         "title": "Project Overview",
@@ -34,7 +34,8 @@
       },
       {
         "title": "The Approach and Solution",
-        "isMainSection": true
+        "isMainSection": true,
+        "displayTools": true
       },
       {
         "title": "Utilizing Google Shopping Feed",
