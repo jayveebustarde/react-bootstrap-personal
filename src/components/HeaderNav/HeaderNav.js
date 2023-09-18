@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   Col,
@@ -47,12 +47,13 @@ const CircleIconLink = () => {
   );
 };
 
-const HeaderNavLink = ({ BsIcon, hrefLink, navText }) => {
+const HeaderNavLink = ({ BsIcon, hrefLink, navText, onNavLinkClick }) => {
   return (
     <Nav.Link
       as={NavLink}
       to={hrefLink}
       className={({ isActive }) => (isActive ? "active-nav-link" : "")}
+      onClick={onNavLinkClick}
     >
       <BsIcon className="link-icon mx-2" />
       {navText}
@@ -61,12 +62,20 @@ const HeaderNavLink = ({ BsIcon, hrefLink, navText }) => {
 };
 
 const HeaderNav = () => {
+  const [navExpanded, setNavExpanded] = useState(false);
+  const handleNavClick = () => setNavExpanded(false);
+
   return (
     <header className="app-header text-center">
       <Container fluid>
         <Row>
           <Col className=" header-sidebar">
-            <Navbar expand="lg" className="flex-column">
+            <Navbar
+              expand="lg"
+              className="flex-column"
+              expanded={navExpanded}
+              onToggle={(expanded) => setNavExpanded(expanded)}
+            >
               <div className="nav-header">
                 <Navbar.Brand href="/">
                   <h4 className="m-auto py-3 header-brand">
@@ -94,21 +103,25 @@ const HeaderNav = () => {
                     BsIcon={BsFillPersonFill}
                     hrefLink="/"
                     navText="About Me"
+                    onNavLinkClick={handleNavClick}
                   />
                   <HeaderNavLink
                     BsIcon={BsFillFileTextFill}
                     hrefLink="/resume"
                     navText="Resume"
+                    onNavLinkClick={handleNavClick}
                   />
                   <HeaderNavLink
                     BsIcon={FaLaptopCode}
                     hrefLink="/projects"
                     navText="Projects"
+                    onNavLinkClick={handleNavClick}
                   />
                   <HeaderNavLink
                     BsIcon={BsFillEnvelopePaperFill}
                     hrefLink="/contact"
                     navText="Contact"
+                    onNavLinkClick={handleNavClick}
                   />
                 </Nav>
               </Navbar.Collapse>
