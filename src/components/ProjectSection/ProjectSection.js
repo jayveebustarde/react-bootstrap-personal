@@ -1,12 +1,5 @@
 import React, { useContext } from "react";
-import {
-  Col,
-  Image,
-  OverlayTrigger,
-  Row,
-  Stack,
-  Tooltip,
-} from "react-bootstrap";
+import { Col, Image, OverlayTrigger, Row, Tooltip } from "react-bootstrap";
 import IconMap from "../IconMap/IconMap.js";
 import { ProjectContext } from "../../contexts/ProjectContext/ProjectContext";
 import "../ProjectSection/ProjectSection.scss";
@@ -25,27 +18,24 @@ const ProjectSection = ({ projectSection }) => {
         {projectSection.title}
       </p>
       {projectSection.displayTools && (
-        <Row xs="auto">
-          <div></div>
-          <Stack direction="horizontal" className="mx-auto">
-            {project.tech.map((item, index) => {
-              const tool = IconMap[item];
-              if (!tool) return null;
-              const iconStyle = { color: tool.color };
-              return (
+        <Row md="auto" className="justify-content-center">
+          {project.tech.map((item, index) => {
+            const tool = IconMap[item];
+            if (!tool) return null;
+            const iconStyle = { color: tool.color };
+            return (
+              <Col key={index} className="text-center p-3">
                 <OverlayTrigger
-                  key={index}
                   overlay={<Tooltip id={tool.name}>{tool.name}</Tooltip>}
                   placement="top"
                 >
-                  <span className="m-3 ">
+                  <span className="">
                     <tool.icon style={iconStyle} className="proj-tech" />
                   </span>
                 </OverlayTrigger>
-              );
-            })}
-          </Stack>
-          <div></div>
+              </Col>
+            );
+          })}
         </Row>
       )}
       {projectSection.content && (

@@ -25,6 +25,8 @@ import {
   SiExpress,
   SiWoocommerce,
   SiCpanel,
+  SiAzuredevops,
+  SiMaterialdesign,
 } from "react-icons/si";
 
 const IconMap = {
@@ -64,6 +66,12 @@ const IconMap = {
   Express: { icon: SiExpress, color: "black", name: "ExpressJs" },
   WooCommerce: { icon: SiWoocommerce, color: "#9b4f97", name: "WooCommerce" },
   CPanel: { icon: SiCpanel, color: "#ff6c2c", name: "CPanel" },
+  AzDevops: { icon: SiAzuredevops, color: "#3c7bbf", name: "Azure DevOps" },
+  MaterialDesign: {
+    icon: SiMaterialdesign,
+    color: "#757575",
+    name: "Material Design",
+  },
 };
 
 export default IconMap;

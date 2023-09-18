@@ -101,6 +101,7 @@
       "Transition from the legacy system to an updated .Net solution, maintaining data integrity and ensuring uninterrupted services during the migration phase.",
       "Implement a robust Mulesoft API gateway to enable efficient data exchange across platforms and better system connectivity"
     ],
+    "tech": ["Csharp", "Dotnet", "Microsoftsqlserver", "Angular", "Mulesoft", "Bootstrap", "Microsoftazure", "AzDevops"],
     "sections": [
       {
         "title": "Project Overview",
@@ -125,7 +126,8 @@
       },
       {
         "title": "The Solution Journey",
-        "isMainSection": true
+        "isMainSection": true,
+        "displayTools": true
       },
       {
         "title": "Centralizing and Refactoring Web Application Backends",
@@ -219,6 +221,7 @@
       "Integrate educational resources and learning tools to keep accountants updated with industry trends.",
       "Incorporate an intuitive meeting scheduler for streamlined client engagement and appointment management."
     ],
+    "tech": ["Csharp", "Dotnet", "Microsoftsqlserver", "Amazonaws", "Angular", "MaterialDesign", "Sass"],
     "sections": [
       {
         "title": "Project Overview",
@@ -255,7 +258,8 @@
       },
       {
         "title": "The Solution Journey",
-        "isMainSection": true
+        "isMainSection": true,
+        "displayTools": true
       },
       {
         "title": "Implementing Bridge Model Multi-Tenancy Architecture on AWS",
