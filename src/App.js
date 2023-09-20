@@ -11,6 +11,7 @@ import Projects from "./routes/Projects/Projects";
 import NotFound from "./routes/NotFound/NotFound";
 import ProfileProvider from "./contexts/ProfileContext/ProfileProvider";
 import ProjectProvider from "./contexts/ProjectContext/ProjectProvider";
+import DarkModeProvider from "./contexts/DarkModeContext/DarkModeProvider";
 
 function App() {
   const router = createBrowserRouter([
@@ -46,13 +47,15 @@ function App() {
     },
   ]);
   return (
-    <ProfileProvider>
-      <ProjectProvider>
-        <RouterProvider router={router}>
-          <div className="App" />
-        </RouterProvider>
-      </ProjectProvider>
-    </ProfileProvider>
+    <DarkModeProvider>
+      <ProfileProvider>
+        <ProjectProvider>
+          <RouterProvider router={router}>
+            <div className="App" />
+          </RouterProvider>
+        </ProjectProvider>
+      </ProfileProvider>
+    </DarkModeProvider>
   );
 }
 

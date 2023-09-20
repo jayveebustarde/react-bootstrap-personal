@@ -1,8 +1,11 @@
 @import "~bootstrap/scss/bootstrap";
-
+$color-mode-type: data;
 $primary: cornflowerblue;
-
 $sidebar-width: 280px;
+
+@include color-mode(dark){
+    $primary: #1d2a3a;
+}
 
 .stack-justify {
     display: flex;

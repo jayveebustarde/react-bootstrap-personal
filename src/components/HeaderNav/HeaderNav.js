@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   Button,
   Col,
@@ -16,11 +16,13 @@ import {
   BsGithub,
   BsLinkedin,
 } from "react-icons/bs";
+import { MdOutlineDarkMode } from "react-icons/md";
 import { FaLaptopCode } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import profileData from "../../data/portfolioConfig.json";
 import profileImg from "../../assets/images/bwprofile.jpg";
 import "../HeaderNav/HeaderNav.scss";
+import { DarkModeContext } from "../../contexts/DarkModeContext/DarkModeContext";
 
 const CircleIconLink = () => {
   const linkedinUrl = "https://www.linkedin.com/in/jayveebustarde/";
@@ -63,6 +65,7 @@ const HeaderNavLink = ({ BsIcon, hrefLink, navText, onNavLinkClick }) => {
 
 const HeaderNav = () => {
   const [navExpanded, setNavExpanded] = useState(false);
+  const { isDarkMode, setIsDarkMode } = useContext(DarkModeContext);
   const handleNavClick = () => setNavExpanded(false);
 
   return (
@@ -123,6 +126,14 @@ const HeaderNav = () => {
                     navText="Contact"
                     onNavLinkClick={handleNavClick}
                   />
+                  <hr />
+                  <Button
+                    variant="light"
+                    className="circle-icon-link"
+                    onClick={() => setIsDarkMode(!isDarkMode)}
+                  >
+                    <MdOutlineDarkMode className="inverse-icon " />
+                  </Button>
                 </Nav>
               </Navbar.Collapse>
             </Navbar>
