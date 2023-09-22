@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import { ProfileDataContext } from "../../contexts/ProfileContext/ProfileContext";
+import { DarkModeContext } from "../../contexts/DarkModeContext/DarkModeContext";
 import RolesTimeline from "./RolesTimeline";
 
 describe("<RolesTimeline />", () => {
@@ -14,11 +15,17 @@ describe("<RolesTimeline />", () => {
       },
     ],
   };
+  const mockDarkModeContext = {
+    isDarkMode: true,
+    setIsDarkMode: () => null,
+  };
   it("renders correctly", () => {
     render(
-      <ProfileDataContext.Provider value={mockContextValue}>
-        <RolesTimeline />
-      </ProfileDataContext.Provider>,
+      <DarkModeContext.Provider value={mockDarkModeContext}>
+        <ProfileDataContext.Provider value={mockContextValue}>
+          <RolesTimeline />
+        </ProfileDataContext.Provider>
+      </DarkModeContext.Provider>,
     );
   });
 });
