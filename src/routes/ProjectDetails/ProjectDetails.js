@@ -33,6 +33,7 @@ const ProjectDetails = () => {
       <PageOverview title={"Case Study: " + project.title}>
         <p>{project.intro}</p>
       </PageOverview>
+      <hr className="dark-hr" />
       <Section>
         <Stack>
           <ProjectOverview />

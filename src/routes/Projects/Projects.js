@@ -8,6 +8,7 @@ const Projects = () => {
   return (
     <MainWrapper>
       <PageOverview title={"Portfolio"} />
+      <hr className="dark-hr" />
       <Section>
         <ProjectList />
       </Section>

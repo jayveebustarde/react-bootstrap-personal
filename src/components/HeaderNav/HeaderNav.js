@@ -16,7 +16,7 @@ import {
   BsGithub,
   BsLinkedin,
 } from "react-icons/bs";
-import { MdOutlineDarkMode } from "react-icons/md";
+import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { FaLaptopCode } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import profileData from "../../data/portfolioConfig.json";
@@ -127,13 +127,20 @@ const HeaderNav = () => {
                     onNavLinkClick={handleNavClick}
                   />
                   <hr />
-                  <Button
-                    variant="light"
-                    className="circle-icon-link"
-                    onClick={() => setIsDarkMode(!isDarkMode)}
-                  >
-                    <MdOutlineDarkMode className="inverse-icon " />
-                  </Button>
+                  <div className="w-100 d-flex justify-content-center">
+                    <Button
+                      variant="light"
+                      className="circle-icon-link"
+                      onClick={() => setIsDarkMode(!isDarkMode)}
+                    >
+                      {!isDarkMode && (
+                        <MdOutlineDarkMode className="norm-icon" />
+                      )}
+                      {isDarkMode && (
+                        <MdOutlineLightMode className="inverse-icon " />
+                      )}
+                    </Button>
+                  </div>
                 </Nav>
               </Navbar.Collapse>
             </Navbar>

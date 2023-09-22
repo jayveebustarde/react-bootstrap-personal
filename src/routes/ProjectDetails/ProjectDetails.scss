@@ -1,3 +1,5 @@
+@import "../../styles/custom.scss";
+
 .project-image-container {
     display: flex;
     justify-content: center;
@@ -14,4 +16,11 @@
 .project-overview {
     background: #fafafa;
     border: 1px solid rgba(0,0,0,0.025);
+}
+
+@include color-mode(dark) {
+    .project-overview {
+        background-color: $secondary-bg;
+        // border: 1px solid #fafafa;
+    }
 }

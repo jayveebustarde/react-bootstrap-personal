@@ -9,3 +9,17 @@
         background-color: $primary !important;
     }
 }
+
+@include color-mode(dark){
+    .timeline-card-content {
+        background-color: #1d2a3a;
+        
+        span{
+            background-color: #1d2a3a;
+        }
+
+        .rc-card-title, .card-sub-title, .card-description > p {
+            color:rgb(222, 226, 230);
+        }
+    }
+}

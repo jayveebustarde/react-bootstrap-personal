@@ -18,6 +18,7 @@ const Contact = () => {
           </Link>
         </p>
       </PageOverview>
+      <hr className="dark-hr" />
       <Section>
         <Row className="justify-content-md-center">
           <Col xs lg="8">

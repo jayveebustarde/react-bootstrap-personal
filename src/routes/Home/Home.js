@@ -32,7 +32,7 @@ const Home = () => {
           </Stack>
         </Stack>
       </Section>
-      <hr className="invisible" />
+      <hr className="dark-hr" />
       <Section>
         <SectionTitle>What I do</SectionTitle>
         <Row className="mt-1 g-5">

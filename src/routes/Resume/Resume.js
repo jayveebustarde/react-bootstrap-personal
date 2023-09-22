@@ -18,6 +18,7 @@ const Resume = () => {
           <GrDocumentPdf /> Download Pdf
         </PfDlButton>
       </PageOverview>
+      <hr className="dark-hr" />
       <Section>
         <Row className="justify-content-md-center overflow-auto">
           <Col></Col>

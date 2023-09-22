@@ -1,11 +1,20 @@
+@import "../../styles/custom.scss";
+
 .project-card-img {
     max-width: 100%;
     height: auto;
 }
 
 .project-card {
-    background: #fafafa;
+    background-color: #fafafa;
     border: 1px solid rgba(0,0,0,0.025);
+}
+
+@include color-mode(dark) {
+    .project-card {
+        background-color: $secondary-bg;
+        // border: 1px solid #fafafa;
+    }
 }
 
 .project-image-container {
