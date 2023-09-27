@@ -12,10 +12,10 @@
 
 @include color-mode(dark){
     .timeline-card-content {
-        background-color: #1d2a3a;
+        background-color: $secondary-bg;
         
         span{
-            background-color: #1d2a3a;
+            background-color: $secondary-bg;
         }
 
         .rc-card-title, .card-sub-title, .card-description > p {

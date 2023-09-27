@@ -13,13 +13,13 @@
     height: auto;
 }
 
-.project-overview {
+.project-overview , .project-footer{
     background: #fafafa;
     border: 1px solid rgba(0,0,0,0.025);
 }
 
 @include color-mode(dark) {
-    .project-overview {
+    .project-overview, .project-footer {
         background-color: $secondary-bg;
         // border: 1px solid #fafafa;
     }

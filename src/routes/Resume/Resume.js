@@ -4,7 +4,7 @@ import { Col, Row } from "react-bootstrap";
 import Section from "../../components/Section/Section";
 import PdfViewer from "../../components/PdfViewer/PdfViewer";
 import resumePdf from "../../assets/files/resume.pdf";
-import { GrDocumentPdf } from "react-icons/gr";
+import { BsFillFileTextFill } from "react-icons/bs";
 import PfDlButton from "../../components/PfButton/PfDlButton";
 import PageOverview from "../../components/PageOverview/PageOverview";
 
@@ -15,7 +15,7 @@ const Resume = () => {
     <MainWrapper>
       <PageOverview title={"Resume"}>
         <PfDlButton href={resumePdf} fileName={fileName}>
-          <GrDocumentPdf /> Download Pdf
+          <BsFillFileTextFill /> Download Pdf
         </PfDlButton>
       </PageOverview>
       <hr className="dark-hr" />

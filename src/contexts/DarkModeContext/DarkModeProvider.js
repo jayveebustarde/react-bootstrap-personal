@@ -3,7 +3,9 @@ import { DarkModeContext } from "./DarkModeContext";
 
 const DarkModeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
-    const savedDarkMode = localStorage.getItem("dark-mode");
+    const savedDarkMode =
+      localStorage.getItem("dark-mode") ??
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
     return savedDarkMode !== null ? JSON.parse(savedDarkMode) : false;
   });
 

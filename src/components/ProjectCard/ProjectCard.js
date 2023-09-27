@@ -25,7 +25,7 @@ const ProjectCard = ({ project }) => {
             <p className="mt-auto">
               <small className="text-muted">Client: {project.client}</small>
             </p>
-            <div className="mt-auto">
+            <div className="mt-auto mb-3">
               {project.tech?.map((item, index) => {
                 return (
                   <span

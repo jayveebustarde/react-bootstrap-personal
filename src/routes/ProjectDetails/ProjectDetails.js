@@ -8,6 +8,7 @@ import Projects from "../../data/projectsConfig.json";
 import ProjectSection from "../../components/ProjectSection/ProjectSection";
 import { ProjectContext } from "../../contexts/ProjectContext/ProjectContext";
 import ProjectOverview from "../../components/ProjectOverview/ProjectOverview";
+import ProjectFooter from "../../components/ProjectFooter/ProjectFooter";
 import "./ProjectDetails.scss";
 
 const ProjectDetails = () => {
@@ -42,6 +43,7 @@ const ProjectDetails = () => {
           ))}
         </Stack>
       </Section>
+      <ProjectFooter />
     </MainWrapper>
   );
 };
