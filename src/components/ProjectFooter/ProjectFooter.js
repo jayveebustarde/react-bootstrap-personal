@@ -2,6 +2,7 @@ import React from "react";
 import PfButton from "../PfButton/PfButton";
 import { IoIosSend } from "react-icons/io";
 import PageOverview from "../PageOverview/PageOverview";
+import { Link } from "react-router-dom";
 
 const ProjectFooter = () => {
   const title = "Want me to help with your project?";
@@ -11,9 +12,11 @@ const ProjectFooter = () => {
   return (
     <PageOverview title={title} className="project-footer py-lg-5">
       {subtitle}
-      <PfButton type="submit">
-        <IoIosSend /> Hire Me
-      </PfButton>
+      <Link to="/contact">
+        <PfButton type="submit">
+          <IoIosSend /> Hire Me
+        </PfButton>
+      </Link>
     </PageOverview>
   );
 };
