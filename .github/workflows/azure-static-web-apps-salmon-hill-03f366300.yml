@@ -16,7 +16,7 @@ jobs:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action == 'closed')
     steps:
       - name: Run Common Quality Checks
-        uses: ./.github/workflows/common-quality-checks.yml
+        uses: ./.github/workflows/quality-checks.yml
         with:
           node-version: '20'
       - name: Build And Deploy

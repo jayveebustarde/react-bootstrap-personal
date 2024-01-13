@@ -15,6 +15,6 @@ jobs:
     if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
     steps:
       - name: Run Common Quality Checks
-        uses: ./.github/workflows/common-quality-checks.yml
+        uses: ./.github/workflows/quality-checks.yml
         with:
           node-version: '20'
