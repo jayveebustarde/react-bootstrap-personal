@@ -16,9 +16,10 @@ jobs:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action == 'closed')
     steps:
       - name: Run Common Quality Checks
-        uses: ./.github/actions/checks
+        uses: ./.github/workflows/common-quality-checks.yml
         with:
           node-version: '20'
+
       - name: Build And Deploy
         uses: Azure/static-web-apps-deploy@v1
         with:
