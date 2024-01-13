@@ -7,9 +7,6 @@ on:
       - main
     paths-ignore:
       - '**.md'
-    # This condition ensures it only runs for Dependabot PRs
-    branches-ignore:
-      - dependabot/**
 
 jobs:
   dependabot_checks:
