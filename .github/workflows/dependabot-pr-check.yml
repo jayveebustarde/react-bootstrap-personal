@@ -14,6 +14,9 @@ jobs:
     name: Dependabot Checks
     if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
       - name: Run Common Quality Checks
         uses: ./.github/workflows/quality-check.yml
         with:
