@@ -12,6 +12,7 @@ jobs:
       node-version: '20'
 
   build_and_deploy:
+    needs: quality-check
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
