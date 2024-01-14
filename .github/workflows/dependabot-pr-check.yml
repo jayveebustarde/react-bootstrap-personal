@@ -9,15 +9,8 @@ on:
       - '**.md'
 
 jobs:
-  dependabot_checks:
-    runs-on: ubuntu-latest
-    name: Dependabot Checks
+  quality-check:
+    uses: ./.github/workflows/quality-check.yml
+    with:
+      node-version: '20'
     if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Run Common Quality Checks
-        uses: ./.github/workflows/quality-check.yml
-        with:
-          node-version: '20'
