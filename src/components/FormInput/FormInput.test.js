@@ -1,7 +1,6 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
-import FormInput from "./FormInput"; // Adjust the import path as necessary
+import FormInput from "./FormInput";
 
 describe("<FormInput />", () => {
   let component;
