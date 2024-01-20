@@ -1,17 +1,16 @@
-import React from "react";
-import { render } from "@testing-library/react";
-import { ProfileDataContext } from "../../contexts/ProfileContext/ProfileContext";
-import { DarkModeContext } from "../../contexts/DarkModeContext/DarkModeContext";
-import RolesTimeline from "./RolesTimeline";
+import { render } from '@testing-library/react';
+import { ProfileDataContext } from '../../contexts/ProfileContext/ProfileContext';
+import { DarkModeContext } from '../../contexts/DarkModeContext/DarkModeContext';
+import RolesTimeline from './RolesTimeline';
 
-describe("<RolesTimeline />", () => {
+describe('<RolesTimeline />', () => {
   const mockContextValue = {
     roles: [
       {
-        title: "2023 - 2023",
-        cardTitle: "Role 1",
-        cardSubtitle: "Role 1 address",
-        cardDetailedText: "Role 1 details",
+        title: '2023 - 2023',
+        cardTitle: 'Role 1',
+        cardSubtitle: 'Role 1 address',
+        cardDetailedText: 'Role 1 details',
       },
     ],
   };
@@ -19,7 +18,7 @@ describe("<RolesTimeline />", () => {
     isDarkMode: true,
     setIsDarkMode: () => null,
   };
-  it("renders correctly", () => {
+  it('renders correctly', () => {
     render(
       <DarkModeContext.Provider value={mockDarkModeContext}>
         <ProfileDataContext.Provider value={mockContextValue}>

@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Col, Row } from "react-bootstrap";
-import ProjectCard from "../ProjectCard/ProjectCard";
-import { ProfileDataContext } from "../../contexts/ProfileContext/ProfileContext";
+import { useContext, useEffect, useState } from 'react';
+import { Col, Row } from 'react-bootstrap';
+import ProjectCard from '../ProjectCard/ProjectCard';
+import { ProfileDataContext } from '../../contexts/ProfileContext/ProfileContext';
 // import "./ProjectList.scss"
 
 const ProjectList = ({ featuredOnly }) => {
@@ -17,7 +17,7 @@ const ProjectList = ({ featuredOnly }) => {
   }, [featuredOnly, profile]);
 
   return (
-    <Row className="g-5 py-4">
+    <Row className='g-5 py-4'>
       {filteredProjects.map((item, index) => {
         return (
           <Col key={index} sm={12} md={6}>

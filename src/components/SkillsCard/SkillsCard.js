@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { OverlayTrigger, Stack, Tooltip } from "react-bootstrap";
-import IconMap from "../IconMap/IconMap.js";
-import "./SkillsCard.scss";
+import { useState, useEffect } from 'react';
+import { OverlayTrigger, Stack, Tooltip } from 'react-bootstrap';
+import IconMap from '../IconMap/IconMap.js';
+import './SkillsCard.scss';
 
 const SkillsCard = ({ tools, children }) => {
   const [IconComponents, setIconComponents] = useState([]);
@@ -13,7 +13,7 @@ const SkillsCard = ({ tools, children }) => {
 
   return (
     <Stack>
-      <Stack direction="horizontal" gap={3} className="mb-2">
+      <Stack direction='horizontal' gap={3} className='mb-2'>
         {IconComponents.map((tool, index) => {
           const IconComponent = tool.icon;
           const iconStyle = { color: tool.color };
@@ -21,10 +21,10 @@ const SkillsCard = ({ tools, children }) => {
             <OverlayTrigger
               key={index}
               overlay={<Tooltip id={tool.name}>{tool.name}</Tooltip>}
-              placement="top"
+              placement='top'
             >
               <span>
-                <IconComponent style={iconStyle} className="skills-icon" />
+                <IconComponent style={iconStyle} className='skills-icon' />
               </span>
             </OverlayTrigger>
           );

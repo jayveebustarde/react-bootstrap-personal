@@ -1,22 +1,21 @@
-import "./styles/custom.scss";
-import "./App.css";
-import React from "react";
-import Layout from "./routes/Layout/Layout";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./routes/Home/Home";
-import Resume from "./routes/Resume/Resume";
-import Contact from "./routes/Contact/Contact";
-import ProjectDetails from "./routes/ProjectDetails/ProjectDetails";
-import Projects from "./routes/Projects/Projects";
-import NotFound from "./routes/NotFound/NotFound";
-import ProfileProvider from "./contexts/ProfileContext/ProfileProvider";
-import ProjectProvider from "./contexts/ProjectContext/ProjectProvider";
-import DarkModeProvider from "./contexts/DarkModeContext/DarkModeProvider";
+import './styles/custom.scss';
+import './App.css';
+import Layout from './routes/Layout/Layout';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from './routes/Home/Home';
+import Resume from './routes/Resume/Resume';
+import Contact from './routes/Contact/Contact';
+import ProjectDetails from './routes/ProjectDetails/ProjectDetails';
+import Projects from './routes/Projects/Projects';
+import NotFound from './routes/NotFound/NotFound';
+import ProfileProvider from './contexts/ProfileContext/ProfileProvider';
+import ProjectProvider from './contexts/ProjectContext/ProjectProvider';
+import DarkModeProvider from './contexts/DarkModeContext/DarkModeProvider';
 
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: '/',
       element: <Layout />,
       children: [
         {
@@ -24,23 +23,23 @@ function App() {
           element: <Home />,
         },
         {
-          path: "resume",
+          path: 'resume',
           element: <Resume />,
         },
         {
-          path: "contact",
+          path: 'contact',
           element: <Contact />,
         },
         {
-          path: "projects",
+          path: 'projects',
           element: <Projects />,
         },
         {
-          path: "projects/:id",
+          path: 'projects/:id',
           element: <ProjectDetails />,
         },
         {
-          path: "*",
+          path: '*',
           element: <NotFound />,
         },
       ],
@@ -51,7 +50,7 @@ function App() {
       <ProfileProvider>
         <ProjectProvider>
           <RouterProvider router={router}>
-            <div className="App" />
+            <div className='App' />
           </RouterProvider>
         </ProjectProvider>
       </ProfileProvider>

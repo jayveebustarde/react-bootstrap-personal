@@ -1,12 +1,42 @@
 {
-  "extends": ["react-app", "plugin:prettier/recommended"],
-  "plugins": ["prettier"],
+  "extends": [
+    "react-app",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import",
+    "prettier"
+  ],
   "rules": {
     "prettier/prettier": [
       "error",
       {
         "endOfLine": "auto"
       }
-    ]
+    ],
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off",
+    "react/jsx-uses-vars": "warn",
+    "react/prop-types": "off",
+    "jsx-a11y/anchor-is-valid": "warn",
+    "import/no-anonymous-default-export": "warn",
+    "no-unused-vars": "warn",
+    "eqeqeq": ["warn", "always"],
+    "curly": "warn",
+    "semi": ["warn", "always"],
+    "quotes": ["warn", "single"],
+    "arrow-spacing": ["warn", { "before": true, "after": true }]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }

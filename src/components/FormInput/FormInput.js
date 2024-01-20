@@ -1,5 +1,4 @@
-import React from "react";
-import { FloatingLabel, Form } from "react-bootstrap";
+import { FloatingLabel, Form } from 'react-bootstrap';
 
 const FormInput = ({
   label,
@@ -17,7 +16,7 @@ const FormInput = ({
         <Form.Control
           type={type}
           placeholder={placeholder}
-          size="sm"
+          size='sm'
           name={name}
           value={value}
           onChange={onChange}

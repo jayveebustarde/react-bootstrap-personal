@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { ProjectContext } from "./ProjectContext";
+import { useState } from 'react';
+import { ProjectContext } from './ProjectContext';
 
 const ProjectProvider = ({ children }) => {
   const [project, setProject] = useState(null);

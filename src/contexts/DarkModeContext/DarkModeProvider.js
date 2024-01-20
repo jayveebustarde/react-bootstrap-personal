@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from "react";
-import { DarkModeContext } from "./DarkModeContext";
+import { useState, useEffect } from 'react';
+import { DarkModeContext } from './DarkModeContext';
 
 const DarkModeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const savedDarkMode =
-      localStorage.getItem("dark-mode") ??
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
+      localStorage.getItem('dark-mode') ??
+      window.matchMedia('(prefers-color-scheme: dark)').matches;
     return savedDarkMode !== null ? JSON.parse(savedDarkMode) : false;
   });
 
   useEffect(() => {
-    localStorage.setItem("dark-mode", JSON.stringify(isDarkMode));
+    localStorage.setItem('dark-mode', JSON.stringify(isDarkMode));
     document.documentElement.setAttribute(
-      "data-bs-theme",
-      isDarkMode ? "dark" : "light",
+      'data-bs-theme',
+      isDarkMode ? 'dark' : 'light',
     );
   }, [isDarkMode]);
 

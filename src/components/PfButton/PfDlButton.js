@@ -1,6 +1,5 @@
-import React from "react";
-import "./PfButton.scss";
-import PfButton from "./PfButton";
+import './PfButton.scss';
+import PfButton from './PfButton';
 
 const PfDlButton = ({ href, fileName, variant, children }) => {
   return (
@@ -8,7 +7,7 @@ const PfDlButton = ({ href, fileName, variant, children }) => {
       variant={variant}
       href={href}
       download={fileName}
-      className="pf-btn my-2"
+      className='pf-btn my-2'
     >
       {children}
     </PfButton>

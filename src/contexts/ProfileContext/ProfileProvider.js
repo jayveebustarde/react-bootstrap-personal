@@ -1,6 +1,5 @@
-import React from "react";
-import PfConfig from "../../data/portfolioConfig.json";
-import { ProfileDataContext } from "./ProfileContext";
+import PfConfig from '../../data/portfolioConfig.json';
+import { ProfileDataContext } from './ProfileContext';
 
 const ProfileProvider = ({ children }) => {
   return (

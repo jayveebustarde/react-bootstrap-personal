@@ -1,6 +1,5 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
-import HeaderNav from "../../components/HeaderNav/HeaderNav";
+import { Outlet } from 'react-router-dom';
+import HeaderNav from '../../components/HeaderNav/HeaderNav';
 
 const Layout = () => {
   return (

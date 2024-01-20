@@ -1,5 +1,4 @@
-import React from "react";
-import { FloatingLabel, Form } from "react-bootstrap";
+import { FloatingLabel, Form } from 'react-bootstrap';
 
 const FormTextArea = ({
   label,
@@ -13,9 +12,9 @@ const FormTextArea = ({
   return (
     <FloatingLabel controlId={cId} label={label}>
       <Form.Control
-        as="textarea"
+        as='textarea'
         placeholder={placeholder}
-        style={{ height: "150px" }}
+        style={{ height: '150px' }}
         name={name}
         value={value}
         onChange={onChange}
