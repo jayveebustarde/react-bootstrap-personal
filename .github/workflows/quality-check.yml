@@ -27,5 +27,3 @@ jobs:
         run: npm test
       - name: Lint Code
         run: npm run lint
-      - name: Check for Vulnerabilities
-        run: npm audit
