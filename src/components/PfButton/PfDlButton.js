@@ -1,16 +1,16 @@
 import './PfButton.scss';
-import PfButton from './PfButton';
+import { Button } from 'react-bootstrap';
 
 const PfDlButton = ({ href, fileName, variant, children }) => {
   return (
-    <PfButton
+    <Button
       variant={variant}
       href={href}
       download={fileName}
       className='pf-btn my-2'
     >
       {children}
-    </PfButton>
+    </Button>
   );
 };
 
