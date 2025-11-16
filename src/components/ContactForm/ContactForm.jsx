@@ -41,10 +41,10 @@ const ContactForm = () => {
 
     if (form.checkValidity()) {
       sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        import.meta.env.REACT_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         form,
-        process.env.REACT_APP_EMAILJS_API_KEY,
+        import.meta.env.REACT_APP_EMAILJS_API_KEY,
       ).then(
         (result) => {
           resetForm();

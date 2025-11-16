@@ -1,4 +1,4 @@
-@import "../../styles/custom.scss";
+@use "../../styles/custom" as *;
 
 .project-card-img {
     max-width: 100%;
@@ -10,12 +10,11 @@
     border: 1px solid rgba(0,0,0,0.025);
 }
 
-@include color-mode(dark) {
-    .project-card {
+[data-bs-theme="dark"] .project-card {
         background-color: $secondary-bg;
         // border: 1px solid #fafafa;
     }
-}
+
 
 .project-image-container {
     display: flex;

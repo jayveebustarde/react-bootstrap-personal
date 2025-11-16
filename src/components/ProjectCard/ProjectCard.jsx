@@ -4,15 +4,17 @@ import './ProjectCard.scss';
 import { Link } from 'react-router-dom';
 import PfButton from '../PfButton/PfButton';
 import { BiSolidShow } from 'react-icons/bi';
+import { getProjectImageUrl } from '../../utils/imageLoader';
 
 const ProjectCard = ({ project }) => {
-  // const projImg = imp
+  const projImgSrc = getProjectImageUrl(project.img);
+
   return (
     <div className='hoverable-card'>
       <Row className='project-card g-0'>
         <Col lg={5} sm={12} className='project-image-container'>
           <Image
-            src={require(`../../assets/images/${project.img}`)}
+            src={projImgSrc}
             alt='ProjectImage'
             className='project-card-img'
           />

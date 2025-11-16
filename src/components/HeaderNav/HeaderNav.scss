@@ -1,4 +1,4 @@
-@import "../../styles/custom.scss";
+@use "../../styles/custom" as *;
 
 .app-header {
     background-color: $primary;
@@ -85,7 +85,7 @@
     }
 }
 
-@include color-mode(dark){
+[data-bs-theme="dark"] .dark-hr {
     .app-header {
         background-color: #1d2a3a;
     }

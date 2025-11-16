@@ -1,8 +1,8 @@
-@import "~bootstrap/scss/bootstrap";
+
 $color-mode-type: data;
 $primary: cornflowerblue;
 $sidebar-width: 280px;
-
+$white: #fff;
 $secondary-bg: #151e29;
 
 .stack-justify {
@@ -21,12 +21,12 @@ hr {
     text-align: justify;
 }
 
+/* Default: hide .dark-hr */
 .dark-hr {
-    display: none;
+  display: none;
 }
 
-@include color-mode(dark) {
-    .dark-hr {
-        display: block;
-    }
+/* Show it when your app is in dark mode */
+[data-bs-theme="dark"] .dark-hr {
+  display: block;
 }

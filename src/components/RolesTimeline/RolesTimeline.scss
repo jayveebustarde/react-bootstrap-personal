@@ -1,4 +1,4 @@
-@import "../../styles/custom.scss";
+@use "../../styles/custom" as *;
 
 .timeline-item-title.active {
     background-color: transparent !important;
@@ -10,7 +10,7 @@
     }
 }
 
-@include color-mode(dark){
+[data-bs-theme="dark"] {
     .timeline-card-content {
         background-color: $secondary-bg;
         

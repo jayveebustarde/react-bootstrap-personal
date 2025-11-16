@@ -3,14 +3,17 @@ import { Col, Image, Row, Stack } from 'react-bootstrap';
 import { FaIndustry } from 'react-icons/fa';
 import { FaLink, FaLocationDot } from 'react-icons/fa6';
 import { ProjectContext } from '../../contexts/ProjectContext/ProjectContext';
+import { getProjectImageUrl } from '../../utils/imageLoader';
 
 const ProjectOverview = () => {
   const { project } = useContext(ProjectContext);
+  const projImgSrc = getProjectImageUrl(project.image);
+
   return (
     <Row className='project-overview p-3 mx-0 mb-5 gx-5'>
       <Col lg='3' className='project-image-container'>
         <Image
-          src={require(`../../assets/images/${project.image}`)}
+          src={projImgSrc}
           alt='ProjectImage'
           className='project-intro-img rounded-2'
         />

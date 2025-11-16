@@ -1,8 +1,9 @@
 import { useContext } from 'react';
 import { Col, Image, OverlayTrigger, Row, Tooltip } from 'react-bootstrap';
 import IconMap from '../IconMap/IconMap.js';
-import { ProjectContext } from '../../contexts/ProjectContext/ProjectContext';
+import { ProjectContext } from '../../contexts/ProjectContext/ProjectContext.jsx';
 import '../ProjectSection/ProjectSection.scss';
+import { getProjectImageUrl } from '../../utils/imageLoader'; 
 
 const ProjectSection = ({ projectSection }) => {
   const { project } = useContext(ProjectContext);
@@ -49,38 +50,51 @@ const ProjectSection = ({ projectSection }) => {
               </p>
             ))}
           </Col>
-          {projectSection.imgInline && (
+          {projectSection.imgInline && projectSection.images?.[0] && (
             <Col xl={6} className='text-center'>
-              <Image
-                className='project-section-img rounded-4'
-                src={require(`../../assets/images/${projectSection.images[0]}`)}
-              />
+              {(() => {
+                const inlineImgSrc = getProjectImageUrl(
+                  projectSection.images[0],
+                );
+                if (!inlineImgSrc) return null;
+
+                return (
+                  <Image
+                    className='project-section-img rounded-4'
+                    src={inlineImgSrc}
+                    alt={projectSection.title || 'Project section image'}
+                  />
+                );
+              })()}
             </Col>
           )}
         </Row>
-      )}
-      {projectSection.images &&
-        projectSection.images.length > 0 &&
-        !projectSection.imgInline && (
+      )}  
+      {projectSection.images && projectSection.images.length > 0 && !projectSection.imgInline && (
           <Row className='my-3'>
             {projectSection.images.length === 1 && <Col />}
-            {projectSection.images.map((img, ix) => (
-              <Col
-                className='text-center'
-                key={ix}
-                lg={
-                  projectSection.images.length === 1 &&
-                  projectSection.fullWidthImg
-                    ? 12
-                    : 6
-                }
-              >
-                <Image
-                  className='project-section-img rounded-3'
-                  src={require(`../../assets/images/${img}`)}
-                />
-              </Col>
-            ))}
+
+            {projectSection.images.map((img, ix) => {
+              const imgSrc = getProjectImageUrl(img);
+              if (!imgSrc) return null;
+
+              const colSize = projectSection.images.length === 1 && projectSection.fullWidthImg ? 12 : 6;
+
+              return (
+                <Col
+                  className='text-center'
+                  key={ix}
+                  lg={colSize}
+                >
+                  <Image
+                    className='project-section-img rounded-3'
+                    src={imgSrc}
+                    alt={projectSection.title || 'Project section image'}
+                  />
+                </Col>
+              );
+            })}
+
             {projectSection.images.length === 1 && <Col />}
           </Row>
         )}
