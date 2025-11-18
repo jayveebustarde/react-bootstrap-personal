@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useMemo } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import { ProfileDataContext } from '../../contexts/ProfileContext/ProfileContext';
@@ -6,15 +6,14 @@ import { ProfileDataContext } from '../../contexts/ProfileContext/ProfileContext
 
 const ProjectList = ({ featuredOnly }) => {
   const profile = useContext(ProfileDataContext);
-  const [filteredProjects, setFilteredProjects] = useState([]);
 
-  useEffect(() => {
-    if (featuredOnly) {
-      setFilteredProjects(profile.projects.filter((item) => item.isFeatured));
-    } else {
-      setFilteredProjects(profile.projects);
-    }
-  }, [featuredOnly, profile]);
+  const filteredProjects = useMemo(
+    () =>
+      featuredOnly
+        ? profile.projects.filter((item) => item.isFeatured)
+        : profile.projects,
+    [featuredOnly, profile.projects],
+  );
 
   return (
     <Row className='g-5 py-4'>

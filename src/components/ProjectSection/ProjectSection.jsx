@@ -3,7 +3,7 @@ import { Col, Image, OverlayTrigger, Row, Tooltip } from 'react-bootstrap';
 import IconMap from '../IconMap/IconMap.js';
 import { ProjectContext } from '../../contexts/ProjectContext/ProjectContext.jsx';
 import '../ProjectSection/ProjectSection.scss';
-import { getProjectImageUrl } from '../../utils/imageLoader'; 
+import { getProjectImageUrl } from '../../utils/imageLoader';
 
 const ProjectSection = ({ projectSection }) => {
   const { project } = useContext(ProjectContext);
@@ -56,7 +56,9 @@ const ProjectSection = ({ projectSection }) => {
                 const inlineImgSrc = getProjectImageUrl(
                   projectSection.images[0],
                 );
-                if (!inlineImgSrc) return null;
+                if (!inlineImgSrc) {
+                  return null;
+                }
 
                 return (
                   <Image
@@ -69,23 +71,27 @@ const ProjectSection = ({ projectSection }) => {
             </Col>
           )}
         </Row>
-      )}  
-      {projectSection.images && projectSection.images.length > 0 && !projectSection.imgInline && (
+      )}
+      {projectSection.images &&
+        projectSection.images.length > 0 &&
+        !projectSection.imgInline && (
           <Row className='my-3'>
             {projectSection.images.length === 1 && <Col />}
 
             {projectSection.images.map((img, ix) => {
               const imgSrc = getProjectImageUrl(img);
-              if (!imgSrc) return null;
+              if (!imgSrc) {
+                return null;
+              }
 
-              const colSize = projectSection.images.length === 1 && projectSection.fullWidthImg ? 12 : 6;
+              const colSize =
+                projectSection.images.length === 1 &&
+                projectSection.fullWidthImg
+                  ? 12
+                  : 6;
 
               return (
-                <Col
-                  className='text-center'
-                  key={ix}
-                  lg={colSize}
-                >
+                <Col className='text-center' key={ix} lg={colSize}>
                   <Image
                     className='project-section-img rounded-3'
                     src={imgSrc}

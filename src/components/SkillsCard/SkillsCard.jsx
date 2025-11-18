@@ -1,20 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useMemo } from 'react';
 import { OverlayTrigger, Stack, Tooltip } from 'react-bootstrap';
 import IconMap from '../IconMap/IconMap.js';
 import './SkillsCard.scss';
 
 const SkillsCard = ({ tools, children }) => {
-  const [IconComponents, setIconComponents] = useState([]);
-
-  useEffect(() => {
-    let loadedIcons = tools.map((tool) => IconMap[tool]);
-    setIconComponents(loadedIcons);
-  }, [tools]);
+  const iconComponents = useMemo(
+    () => tools.map((toolKey) => IconMap[toolKey]),
+    [tools],
+  );
 
   return (
     <Stack>
       <Stack direction='horizontal' gap={3} className='mb-2'>
-        {IconComponents.map((tool, index) => {
+        {iconComponents.map((tool, index) => {
           const IconComponent = tool.icon;
           const iconStyle = { color: tool.color };
           return (

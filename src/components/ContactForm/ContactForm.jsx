@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { Alert, Col, Form, Row } from 'react-bootstrap';
 import { sendForm } from '@emailjs/browser';
 import { IoIosSend } from 'react-icons/io';
@@ -12,18 +12,22 @@ const INITIAL_FORM_DATA = {
   message: '',
 };
 
+const generateContactNumber = () => (Math.random() * 1000) | 0;
+
 const ContactForm = () => {
   const [validated, setValidated] = useState(false);
   const [disableForm, setDisabledForm] = useState(false);
   const [submitStatus, setSubmitStatus] = useState({ status: 0, message: '' });
   const [formData, setFormData] = useState(INITIAL_FORM_DATA);
-  const [contactNumber, setContactNumber] = useState('');
+  const [contactNumber, setContactNumber] = useState(() =>
+    generateContactNumber(),
+  );
 
   const formRef = useRef();
 
-  useEffect(() => {
-    resetContactNumber();
-  }, []);
+  const resetContactNumber = () => {
+    setContactNumber(generateContactNumber());
+  };
 
   const handleChange = (event) => {
     setFormData({
@@ -31,8 +35,6 @@ const ContactForm = () => {
       [event.target.name]: event.target.value,
     });
   };
-
-  const resetContactNumber = () => setContactNumber((Math.random() * 1000) | 0);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -46,7 +48,7 @@ const ContactForm = () => {
         form,
         import.meta.env.REACT_APP_EMAILJS_API_KEY,
       ).then(
-        (result) => {
+        () => {
           resetForm();
           setSubmitStatus({ status: 1, message: 'Email successfully sent.' });
         },

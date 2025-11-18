@@ -13,8 +13,10 @@ const placeholder = placeholderModule ? placeholderModule.default : undefined;
  * - returns: URL string or placeholder (or undefined)
  */
 export function getProjectImageUrl(filename) {
-    console.log(filename);
-  if (!filename) return placeholder;
+  console.log(filename);
+  if (!filename) {
+    return placeholder;
+  }
 
   const key = filename.startsWith('/src/')
     ? filename
@@ -25,7 +27,7 @@ export function getProjectImageUrl(filename) {
   if (!mod) {
     if (import.meta.env.DEV) {
       console.warn(
-        `[imageLoader] Image not found for "${filename}". Expected key: "${key}"`
+        `[imageLoader] Image not found for "${filename}". Expected key: "${key}"`,
       );
     }
     return placeholder;
