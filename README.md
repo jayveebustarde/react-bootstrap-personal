@@ -6,7 +6,6 @@ A personal portfolio website built with **React** and **Vite**, deployed to **Az
 
 > Originally bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and later migrated to [Vite](https://vitejs.dev/) for faster dev server startup and improved build performance.
 
----
 
 ## 🚀 Tech Stack
 
@@ -21,7 +20,6 @@ A personal portfolio website built with **React** and **Vite**, deployed to **Az
 - **Linting / Formatting**: ESLint + Prettier
 - **CI/CD**: GitHub Actions → Azure Static Web Apps
 
----
 
 ## 🧑‍💻 Getting Started
 
@@ -48,7 +46,6 @@ npm run dev
 
 Then open the URL printed in the terminal (usually `http://localhost:5173`).
 
----
 
 ## 📦 Available Scripts
 These scripts are defined in `package.json`:
@@ -67,7 +64,6 @@ Runs the test suite (currently using the existing Jest setup / test runner confi
 - `npm run lint`
 Runs ESLint with the project’s configuration to check and optionally fix code style issues.
 
----
 
 ## 🗂 Project Structure (high level)
 ```text
@@ -98,7 +94,6 @@ src/
 - `contexts/` – React context providers for profile data, projects, and dark mode.
 - `styles/` – Global and SCSS styles shared across the app.
 
----
 
 ## ✉️ EmailJS Configuration
 
@@ -106,7 +101,7 @@ The contact form uses EmailJS to send emails directly from the frontend.
 
 You’ll need to configure your service ID, template ID, and public API key as environment variables (see `ContactForm` for exact usage). These are accessed via `import.meta.env`, consistent with Vite’s environment variable system.
 
->Make sure not to commit your secrets to version control. Use a `.env` file locally and configure environment variables in your hosting provider (Azure).
+>Make sure not to commit your secrets to version control. Use an `.env` file locally and configure environment variables in your hosting provider (Azure).
 
 ---
 
@@ -127,7 +122,7 @@ On every push to the `main` branch:
 - Builds the app with Vite.
 - Uploads the contents of the `dist/` folder to Azure Static Web Apps using `Azure/static-web-apps-deploy@v1`.
 
->If you change the output directory in vite.config, make sure output_location in azure-deploy.yml stays in sync.
+>If you change the output directory in `vite.config`, make sure output_location in `azure-deploy.yml` stays in sync.
 
 ---
 
