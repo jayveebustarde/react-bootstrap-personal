@@ -43,10 +43,10 @@ const ContactForm = () => {
 
     if (form.checkValidity()) {
       sendForm(
-        import.meta.env.REACT_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form,
-        import.meta.env.REACT_APP_EMAILJS_API_KEY,
+        import.meta.env.VITE_EMAILJS_API_KEY,
       ).then(
         () => {
           resetForm();

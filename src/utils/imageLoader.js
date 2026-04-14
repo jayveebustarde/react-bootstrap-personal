@@ -13,7 +13,6 @@ const placeholder = placeholderModule ? placeholderModule.default : undefined;
  * - returns: URL string or placeholder (or undefined)
  */
 export function getProjectImageUrl(filename) {
-  console.log(filename);
   if (!filename) {
     return placeholder;
   }

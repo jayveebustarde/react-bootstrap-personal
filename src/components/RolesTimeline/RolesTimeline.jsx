@@ -12,7 +12,7 @@ const RolesTimeline = () => {
     () =>
       isDarkMode
         ? { cardBgColor: '#1d2a3a', primary: 'cornflowerblue' }
-        : { primary: 'cornflowerblue', cardBgColor: 'red' },
+        : { primary: 'cornflowerblue', cardBgColor: '#ffffff' },
     [isDarkMode],
   );
 

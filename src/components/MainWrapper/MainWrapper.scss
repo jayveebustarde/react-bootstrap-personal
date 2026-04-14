@@ -1,9 +1,9 @@
 @use "../../styles/custom" as *;
 
 .main-wrapper {
-    @media (max-width: 1000px) {
+    margin-left: $sidebar-width;
+
+    @media (max-width: 991px) {
         margin-left: 0;
     }
-
-    margin-left: $sidebar-width;
 }
