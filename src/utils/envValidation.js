@@ -51,6 +51,6 @@ export function getEmailJSConfig() {
   return {
     serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
     templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-    apiKey: import.meta.env.VITE_EMAILJS_API_KEY,
+    publicKey: import.meta.env.VITE_EMAILJS_API_KEY,
   };
 }

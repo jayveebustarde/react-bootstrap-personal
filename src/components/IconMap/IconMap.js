@@ -1,17 +1,12 @@
 // this was created as compromise to avoid loading the whole react-icons/si module but still make the display of Tools icons dynamic based on the json data
 
 import {
-  SiCsharp,
   SiDotnet,
-  SiMicrosoftsqlserver,
   SiHtml5,
-  SiCss3,
   SiJavascript,
   SiTypescript,
   SiReact,
   SiAngular,
-  SiMicrosoftazure,
-  SiAmazonaws,
   SiMulesoft,
   SiPostman,
   SiBootstrap,
@@ -25,31 +20,33 @@ import {
   SiExpress,
   SiWoocommerce,
   SiCpanel,
-  SiAzuredevops,
   SiMaterialdesign,
 } from 'react-icons/si';
 
+import { TbBrandCSharp, TbSql, TbBrandAws, TbBrandAzure, TbBrandCss3 } from 'react-icons/tb';
+import { VscAzure } from 'react-icons/vsc';
+
 const IconMap = {
-  Csharp: { icon: SiCsharp, color: '#9b4f97', name: 'C#' },
+  Csharp: { icon: TbBrandCSharp, color: '#9b4f97', name: 'C#' },
   Dotnet: { icon: SiDotnet, color: '#682a7b', name: '.Net' },
   Microsoftsqlserver: {
-    icon: SiMicrosoftsqlserver,
+    icon: TbSql,
     color: '#c26166',
     name: 'MS SQL',
   },
   Html5: { icon: SiHtml5, color: '#e44d25', name: 'HTML5' },
-  Css3: { icon: SiCss3, color: '#315fa2', name: 'CSS3' },
+  Css3: { icon: TbBrandCss3, color: '#315fa2', name: 'CSS3' },
   Javascript: { icon: SiJavascript, color: '#f0db4f', name: 'Javascript' },
   Typescript: { icon: SiTypescript, color: '#2d79c8', name: 'Typescript' },
   React: { icon: SiReact, color: '#01d8ff', name: 'React' },
   Angular: { icon: SiAngular, color: '#e23137 ', name: 'Angular' },
   Microsoftazure: {
-    icon: SiMicrosoftazure,
+    icon: TbBrandAzure,
     color: '#217cf7',
     name: 'Microsoft Azure',
   },
   Amazonaws: {
-    icon: SiAmazonaws,
+    icon: TbBrandAws,
     color: '#fe9901',
     name: 'Amazon Web Services',
   },
@@ -66,7 +63,7 @@ const IconMap = {
   Express: { icon: SiExpress, color: 'black', name: 'ExpressJs' },
   WooCommerce: { icon: SiWoocommerce, color: '#9b4f97', name: 'WooCommerce' },
   CPanel: { icon: SiCpanel, color: '#ff6c2c', name: 'CPanel' },
-  AzDevops: { icon: SiAzuredevops, color: '#3c7bbf', name: 'Azure DevOps' },
+  AzDevops: { icon: VscAzure, color: '#3c7bbf', name: 'Azure DevOps' },
   MaterialDesign: {
     icon: SiMaterialdesign,
     color: '#757575',

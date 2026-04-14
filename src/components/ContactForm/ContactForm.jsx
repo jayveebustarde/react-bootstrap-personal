@@ -82,7 +82,7 @@ const ContactForm = () => {
     const form = formRef.current;
 
     if (form.checkValidity()) {
-      sendForm(config.serviceId, config.templateId, form, config.apiKey).then(
+      sendForm(config.serviceId, config.templateId, form, { publicKey: config.publicKey }).then(
         () => {
           resetForm();
           setIsSending(false);
