@@ -1,8 +1,9 @@
 import { render, fireEvent, screen } from '@testing-library/react';
+import { vi } from 'vitest';
 import FormTextArea from './FormTextArea';
 
 describe('<FormTextArea />', () => {
-  const mockOnChange = jest.fn();
+  const mockOnChange = vi.fn();
 
   it('renders correctly', () => {
     render(

@@ -1,9 +1,10 @@
 import { render, fireEvent } from '@testing-library/react';
+import { vi } from 'vitest';
 import FormInput from './FormInput';
 
 describe('<FormInput />', () => {
   let component;
-  const mockOnChange = jest.fn();
+  const mockOnChange = vi.fn();
 
   beforeEach(() => {
     component = render(

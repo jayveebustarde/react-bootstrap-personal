@@ -1,9 +1,10 @@
 import { render, fireEvent } from '@testing-library/react';
+import { vi } from 'vitest';
 import ContactForm from './ContactForm';
 
 // Mock the emailjs.sendForm to avoid actual HTTP requests
-jest.mock('@emailjs/browser', () => ({
-  sendForm: jest.fn(() => Promise.resolve()),
+vi.mock('@emailjs/browser', () => ({
+  sendForm: vi.fn(() => Promise.resolve()),
 }));
 
 describe('<ContactForm />', () => {
