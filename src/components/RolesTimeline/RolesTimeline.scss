@@ -1,7 +1,19 @@
 @use "../../styles/custom" as *;
 
+.timeline-item-title {
+    border-radius: 12px !important;
+    border: 1px solid rgba(100, 149, 237, 0.35) !important;
+    background-color: rgba(100, 149, 237, 0.12) !important;
+    color: #2a4f84 !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.2px;
+}
+
 .timeline-item-title.active {
-    background-color: transparent !important;
+    border-color: rgba(100, 149, 237, 0.7) !important;
+    background-color: #dbe9ff !important;
+    color: #102a4a !important;
+    box-shadow: 0 4px 10px rgba(100, 149, 237, 0.2);
 }
 
 .timeline-vertical-circle {
@@ -11,6 +23,19 @@
 }
 
 [data-bs-theme="dark"] {
+    .timeline-item-title {
+        border-color: rgba(100, 149, 237, 0.5) !important;
+        background-color: rgba(100, 149, 237, 0.2) !important;
+        color: #d4e3fa !important;
+    }
+
+    .timeline-item-title.active {
+        border-color: rgba(255, 255, 255, 0.45) !important;
+        background-color: #f3f7ff !important;
+        color: #132f54 !important;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
     .timeline-card-content {
         background-color: $secondary-bg;
         

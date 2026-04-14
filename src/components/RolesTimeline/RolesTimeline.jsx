@@ -1,5 +1,6 @@
 import { useContext, useMemo } from 'react';
 import { Chrono } from 'react-chrono';
+import 'react-chrono/dist/style.css';
 import '../RolesTimeline/RolesTimeline.scss';
 import { ProfileDataContext } from '../../contexts/ProfileContext/ProfileContext';
 import { DarkModeContext } from '../../contexts/DarkModeContext/DarkModeContext';
@@ -22,9 +23,11 @@ const RolesTimeline = () => {
         items={profile.roles}
         mode='VERTICAL_ALTERNATING'
         hideControls={true}
+        disableToolbar={true}
         disableClickOnCircle={true}
         cardHeight={150}
-        enableDarkToggle={true}
+        darkMode={isDarkMode}
+        enableDarkToggle={false}
         theme={cardTheme}
       />
     </div>
