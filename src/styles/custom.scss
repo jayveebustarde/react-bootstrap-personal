@@ -5,6 +5,23 @@ $sidebar-width: 280px;
 $white: #fff;
 $secondary-bg: #151e29;
 
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--bs-font-sans-serif);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+}
+
 .stack-justify {
     display: flex;
     align-items: center;
