@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
-import { Alert, Col, Form, Row } from 'react-bootstrap';
+import { Alert, Col, Form, Row, Spinner } from 'react-bootstrap';
 import { sendForm } from '@emailjs/browser';
 import { IoIosSend } from 'react-icons/io';
 import FormInput from '../FormInput/FormInput';
@@ -18,6 +18,7 @@ const generateContactNumber = () => (Math.random() * 1000) | 0;
 const ContactForm = () => {
   const [validated, setValidated] = useState(false);
   const [disableForm, setDisabledForm] = useState(false);
+  const [isSending, setIsSending] = useState(false);
   const [submitStatus, setSubmitStatus] = useState({ status: 0, message: '' });
   const [formData, setFormData] = useState(INITIAL_FORM_DATA);
   const [contactNumber, setContactNumber] = useState(() =>
@@ -39,6 +40,17 @@ const ContactForm = () => {
       });
     }
   }, []);
+
+  // Auto-dismiss success alert after 5 seconds
+  useEffect(() => {
+    if (submitStatus.status === 1) {
+      const timer = setTimeout(
+        () => setSubmitStatus({ status: 0, message: '' }),
+        5000,
+      );
+      return () => clearTimeout(timer);
+    }
+  }, [submitStatus.status]);
 
   const resetContactNumber = () => {
     setContactNumber(generateContactNumber());
@@ -66,16 +78,19 @@ const ContactForm = () => {
     }
 
     setDisabledForm(true);
+    setIsSending(true);
     const form = formRef.current;
 
     if (form.checkValidity()) {
       sendForm(config.serviceId, config.templateId, form, config.apiKey).then(
         () => {
           resetForm();
+          setIsSending(false);
           setSubmitStatus({ status: 1, message: 'Email successfully sent.' });
         },
         () => {
           resetContactNumber();
+          setIsSending(false);
           setSubmitStatus({ status: 2, message: 'Failed to send email.' });
           setDisabledForm(false);
         },
@@ -83,6 +98,7 @@ const ContactForm = () => {
     } else {
       event.stopPropagation();
       setDisabledForm(false);
+      setIsSending(false);
     }
     setValidated(true);
   };
@@ -155,8 +171,22 @@ const ContactForm = () => {
               />
             </Form.Group>
           </Row>
-          <PfButton type='submit'>
-            <IoIosSend /> Send Now
+          <PfButton type='submit' disabled={isSending}>
+            {isSending ? (
+              <>
+                <Spinner
+                  as='span'
+                  animation='border'
+                  size='sm'
+                  role='status'
+                  aria-hidden='true'
+                  className='me-2'
+                />
+                Sending...
+              </>
+            ) : (
+              <><IoIosSend /> Send Now</>
+            )}
           </PfButton>
         </fieldset>
       </Form>

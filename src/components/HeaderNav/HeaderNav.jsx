@@ -34,6 +34,8 @@ const CircleIconLink = () => {
         className='circle-icon-link'
         href={linkedinUrl}
         target='_blank'
+        aria-label='Visit LinkedIn profile'
+        rel='noopener noreferrer'
       >
         <BsLinkedin className='inverse-icon ' />
       </Button>
@@ -42,6 +44,8 @@ const CircleIconLink = () => {
         className='circle-icon-link'
         href={githubUrl}
         target='_blank'
+        aria-label='Visit GitHub profile'
+        rel='noopener noreferrer'
       >
         <BsGithub className='inverse-icon' />
       </Button>
@@ -93,7 +97,7 @@ const HeaderNav = () => {
                     <div className='image-container'>
                       <Image
                         src={profileImg}
-                        alt='profile'
+                        alt='Jayvee Bustarde profile photo'
                         className='profile-img'
                         roundedCircle
                       />
@@ -132,6 +136,7 @@ const HeaderNav = () => {
                       variant='light'
                       className='circle-icon-link'
                       onClick={() => setIsDarkMode(!isDarkMode)}
+                      aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
                     >
                       {!isDarkMode && (
                         <MdOutlineDarkMode className='norm-icon' />

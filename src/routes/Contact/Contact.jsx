@@ -1,4 +1,5 @@
 import MainWrapper from '../../components/MainWrapper/MainWrapper';
+import { Helmet } from 'react-helmet-async';
 import Section from '../../components/Section/Section';
 import { Row, Col } from 'react-bootstrap';
 import ContactForm from '../../components/ContactForm/ContactForm';
@@ -7,6 +8,11 @@ import PageOverview from '../../components/PageOverview/PageOverview';
 const Contact = () => {
   return (
     <MainWrapper>
+      <Helmet>
+        <title>Contact | Jayvee Bustarde</title>
+        <meta name='description' content='Get in touch with Jayvee Bustarde for project inquiries or collaborations.' />
+        <meta property='og:title' content='Contact | Jayvee Bustarde' />
+      </Helmet>
       <PageOverview title={'Contact'}>
         <p>
           Interested in hiring me for your project or just want to say hi? You

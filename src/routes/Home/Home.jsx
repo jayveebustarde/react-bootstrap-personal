@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { Helmet } from 'react-helmet-async';
 import MainWrapper from '../../components/MainWrapper/MainWrapper';
 import Section from '../../components/Section/Section';
 import { Col, Row, Stack } from 'react-bootstrap';
@@ -17,6 +18,13 @@ const Home = () => {
   const profile = useContext(ProfileDataContext);
   return (
     <MainWrapper>
+      <Helmet>
+        <title>Jayvee Bustarde | Full-stack .Net Developer</title>
+        <meta name='description' content={profile.overview} />
+        <meta property='og:title' content='Jayvee Bustarde | Full-stack .Net Developer' />
+        <meta property='og:description' content={profile.overview} />
+        <meta property='og:type' content='website' />
+      </Helmet>
       <Section isHeader>
         <Stack>
           <h1>{profile.name}</h1>

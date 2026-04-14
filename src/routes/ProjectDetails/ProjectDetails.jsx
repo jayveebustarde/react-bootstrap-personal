@@ -1,4 +1,5 @@
 import { useContext, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import MainWrapper from '../../components/MainWrapper/MainWrapper';
 import Section from '../../components/Section/Section';
 import { Stack } from 'react-bootstrap';
@@ -31,6 +32,12 @@ const ProjectDetails = () => {
 
   return (
     <MainWrapper>
+      <Helmet>
+        <title>{project.title} | Jayvee Bustarde</title>
+        <meta name='description' content={project.intro} />
+        <meta property='og:title' content={`${project.title} | Jayvee Bustarde`} />
+        <meta property='og:description' content={project.intro} />
+      </Helmet>
       <PageOverview title={'Case Study: ' + project.title}>
         <p>{project.intro}</p>
       </PageOverview>

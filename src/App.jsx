@@ -1,21 +1,32 @@
 import './styles/custom.scss';
 import './App.css';
 
+import { lazy, Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Spinner } from 'react-bootstrap';
 
 import Layout from './routes/Layout/Layout';
-import Home from './routes/Home/Home';
-import Resume from './routes/Resume/Resume';
-import Contact from './routes/Contact/Contact';
-import ProjectDetails from './routes/ProjectDetails/ProjectDetails';
-import Projects from './routes/Projects/Projects';
-import NotFound from './routes/NotFound/NotFound';
+
+const Home = lazy(() => import('./routes/Home/Home'));
+const Resume = lazy(() => import('./routes/Resume/Resume'));
+const Contact = lazy(() => import('./routes/Contact/Contact'));
+const ProjectDetails = lazy(() => import('./routes/ProjectDetails/ProjectDetails'));
+const Projects = lazy(() => import('./routes/Projects/Projects'));
+const NotFound = lazy(() => import('./routes/NotFound/NotFound'));
 
 import ProfileProvider from './contexts/ProfileContext/ProfileProvider';
 import ProjectProvider from './contexts/ProjectContext/ProjectProvider';
 import DarkModeProvider from './contexts/DarkModeContext/DarkModeProvider';
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 import RouterErrorPage from './components/RouterErrorPage/RouterErrorPage';
+
+const PageLoader = () => (
+  <div className='d-flex justify-content-center align-items-center' style={{ minHeight: '60vh' }}>
+    <Spinner animation='border' role='status' variant='primary'>
+      <span className='visually-hidden'>Loading...</span>
+    </Spinner>
+  </div>
+);
 
 // Component that throws error during render (for testing ErrorBoundary)
 const ErrorTest = () => {
@@ -66,7 +77,9 @@ function App() {
       <DarkModeProvider>
         <ProfileProvider>
           <ProjectProvider>
-            <RouterProvider router={router} />
+            <Suspense fallback={<PageLoader />}>
+              <RouterProvider router={router} />
+            </Suspense>
           </ProjectProvider>
         </ProfileProvider>
       </DarkModeProvider>

@@ -1,4 +1,5 @@
 import MainWrapper from '../../components/MainWrapper/MainWrapper';
+import { Helmet } from 'react-helmet-async';
 import { Col, Row } from 'react-bootstrap';
 import Section from '../../components/Section/Section';
 import PdfViewer from '../../components/PdfViewer/PdfViewer';
@@ -12,6 +13,11 @@ const Resume = () => {
 
   return (
     <MainWrapper>
+      <Helmet>
+        <title>Resume | Jayvee Bustarde</title>
+        <meta name='description' content='View and download the resume of Jayvee Bustarde, Full-stack .Net Developer.' />
+        <meta property='og:title' content='Resume | Jayvee Bustarde' />
+      </Helmet>
       <PageOverview title={'Resume'}>
         <PfDlButton href={resumePdf} fileName={fileName}>
           <BsFillFileTextFill /> Download Pdf
