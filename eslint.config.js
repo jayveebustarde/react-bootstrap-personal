@@ -1,5 +1,6 @@
 import js from '@eslint/js';
 import prettierConfig from 'eslint-config-prettier';
+import reactPlugin from 'eslint-plugin-react';
 
 export default [
   {
@@ -7,6 +8,14 @@ export default [
   },
   {
     files: ['**/*.{js,jsx}'],
+    plugins: {
+      react: reactPlugin,
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
     languageOptions: {
       parserOptions: {
         ecmaVersion: 'latest',
@@ -63,6 +72,8 @@ export default [
     files: ['**/*.{js,jsx}'],
     rules: {
       'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      'react/jsx-uses-vars': 'warn',
+      'react/react-in-jsx-scope': 'off',
       'no-console': ['warn', { allow: ['warn', 'error'] }],
     },
   },
