@@ -9,6 +9,7 @@ jobs:
   quality-check:
     name: Quality Check
     uses: ./.github/workflows/quality-check.yml
+    secrets: inherit
     with:
       node-version: '25.x'
 
@@ -21,6 +22,16 @@ jobs:
         uses: actions/checkout@v4
         with:
           persist-credentials: false
+      - name: Validate EmailJS build secrets
+        shell: bash
+        env:
+          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
+          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
+          VITE_EMAILJS_API_KEY: ${{ secrets.VITE_EMAILJS_API_KEY }}
+        run: |
+          test -n "$VITE_EMAILJS_SERVICE_ID" || { echo "Missing VITE_EMAILJS_SERVICE_ID"; exit 1; }
+          test -n "$VITE_EMAILJS_TEMPLATE_ID" || { echo "Missing VITE_EMAILJS_TEMPLATE_ID"; exit 1; }
+          test -n "$VITE_EMAILJS_API_KEY" || { echo "Missing VITE_EMAILJS_API_KEY"; exit 1; }
       - name: Build And Deploy
         uses: Azure/static-web-apps-deploy@v1
         env:
