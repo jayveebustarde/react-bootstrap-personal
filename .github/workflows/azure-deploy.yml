@@ -25,9 +25,9 @@ jobs:
       - name: Validate EmailJS build secrets
         shell: bash
         env:
-          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
-          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
-          VITE_EMAILJS_API_KEY: ${{ secrets.VITE_EMAILJS_API_KEY }}
+          VITE_EMAILJS_SERVICE_ID: ${{ secrets.EMAILJS_SERVICE_ID }}
+          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE_ID }}
+          VITE_EMAILJS_API_KEY: ${{ secrets.EMAILJS_API_KEY }}
         run: |
           test -n "$VITE_EMAILJS_SERVICE_ID" || { echo "Missing VITE_EMAILJS_SERVICE_ID"; exit 1; }
           test -n "$VITE_EMAILJS_TEMPLATE_ID" || { echo "Missing VITE_EMAILJS_TEMPLATE_ID"; exit 1; }
@@ -35,9 +35,9 @@ jobs:
       - name: Build And Deploy
         uses: Azure/static-web-apps-deploy@v1
         env:
-          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
-          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
-          VITE_EMAILJS_API_KEY: ${{ secrets.VITE_EMAILJS_API_KEY }}
+          VITE_EMAILJS_SERVICE_ID: ${{ secrets.EMAILJS_SERVICE_ID }}
+          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE_ID }}
+          VITE_EMAILJS_API_KEY: ${{ secrets.EMAILJS_API_KEY }}
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_SALMON_HILL_03F366300 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}

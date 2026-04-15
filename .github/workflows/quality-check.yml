@@ -22,9 +22,9 @@ jobs:
       - name: Validate EmailJS build secrets
         shell: bash
         env:
-          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
-          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
-          VITE_EMAILJS_API_KEY: ${{ secrets.VITE_EMAILJS_API_KEY }}
+          VITE_EMAILJS_SERVICE_ID: ${{ secrets.EMAILJS_SERVICE_ID }}
+          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE_ID }}
+          VITE_EMAILJS_API_KEY: ${{ secrets.EMAILJS_API_KEY }}
         run: |
           test -n "$VITE_EMAILJS_SERVICE_ID" || { echo "Missing VITE_EMAILJS_SERVICE_ID"; exit 1; }
           test -n "$VITE_EMAILJS_TEMPLATE_ID" || { echo "Missing VITE_EMAILJS_TEMPLATE_ID"; exit 1; }
@@ -33,9 +33,9 @@ jobs:
         run: npm ci
       - name: Build
         env:
-          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
-          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
-          VITE_EMAILJS_API_KEY: ${{ secrets.VITE_EMAILJS_API_KEY }}
+          VITE_EMAILJS_SERVICE_ID: ${{ secrets.EMAILJS_SERVICE_ID }}
+          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE_ID }}
+          VITE_EMAILJS_API_KEY: ${{ secrets.EMAILJS_API_KEY }}
         run: npm run build
       - name: Run Tests
         run: npm test
